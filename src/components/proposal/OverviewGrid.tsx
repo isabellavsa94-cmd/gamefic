@@ -4,16 +4,16 @@ const groups = [
   {
     num: "01",
     title: "Social Media",
-    subtitle: "Modulo detalhado com base no PDF anterior para Instagram e LinkedIn.",
+    subtitle: "Instagram e LinkedIn para fortalecer marca, autoridade e relacionamento.",
     href: "#g1",
     image:
       "https://images.pexels.com/photos/6954174/pexels-photo-6954174.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
-    items: ["Instagram", "LinkedIn", "16 + 12/8 conteudos"],
+    items: ["Instagram", "LinkedIn", "16 + 12/8 conteúdos"],
   },
   {
     num: "02",
-    title: "Trafego Pago",
-    subtitle: "Google Ads e Meta Ads com foco em geracao de leads e otimizacao continua.",
+    title: "Tráfego Pago",
+    subtitle: "Google Ads e Meta Ads para acelerar geração de leads com foco em performance.",
     href: "#g2",
     image:
       "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
@@ -22,20 +22,20 @@ const groups = [
   {
     num: "03",
     title: "Inbound (RD Station)",
-    subtitle: "Integracao com CRM, captacao e operacao de e-mail marketing recorrente.",
+    subtitle: "Captação, CRM e e-mail marketing para nutrir oportunidades e apoiar o comercial.",
     href: "#g3",
     image:
       "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
-    items: ["RD Station", "Integracao", "4 e-mails/mes"],
+    items: ["RD Station", "Integração", "4 e-mails/mês"],
   },
   {
     num: "04",
-    title: "Criacao de Site",
-    subtitle: "Landing page principal de conversao integrada ao ecossistema de campanhas.",
+    title: "Criação de Site",
+    subtitle: "Landing page e tracking para converter melhor e mensurar com mais precisão.",
     href: "#g4",
     image:
       "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
-    items: ["Landing page", "Conversao", "Tracking"],
+    items: ["Landing page", "Conversão", "Tracking"],
   },
 ];
 
@@ -56,14 +56,14 @@ export default function OverviewGrid() {
       <div className="container relative">
         <div className="reveal mx-auto max-w-[720px] text-center">
           <div className="text-[12px] font-semibold uppercase tracking-[0.18em] text-primary">
-            Escopo atual
+            Frentes da proposta
           </div>
           <h2 className="mt-4 font-display text-[clamp(34px,4vw,56px)] font-extrabold leading-[1.02] tracking-[-0.05em] text-primary">
-            4 frentes para a proposta da Gamefic.
+            Uma estrutura pensada para fortalecer marca, gerar leads e converter melhor.
           </h2>
           <p className="mt-4 text-[16px] leading-[1.8] text-slate-600">
-            O site agora organiza o material em quatro frentes, mas com um segundo pacote ja
-            consolidado comercialmente para performance e automacao.
+            Cada frente cumpre um papel claro no crescimento: atrair atenção, capturar demanda,
+            nutrir oportunidades e transformar interesse em ação comercial.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ export default function OverviewGrid() {
                 </div>
 
                 <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 font-display text-[14px] font-extrabold text-white">
-                  Ver detalhes
+                  Explorar frente
                   <span>{">"}</span>
                 </div>
               </div>

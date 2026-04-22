@@ -3,18 +3,18 @@ import { useReveal } from "@/hooks/useReveal";
 const steps = [
   {
     num: "01",
-    title: "Aprovar o modulo de Social Media",
-    desc: "Validar o escopo ja detalhado para Instagram + LinkedIn e confirmar a opcao de LinkedIn escolhida.",
+    title: "Definir o pacote de entrada",
+    desc: "Escolher se a prioridade inicial será Social Media, Performance e Automação ou a combinação dos dois blocos.",
   },
   {
     num: "02",
-    title: "Fechar os escopos complementares",
-    desc: "Definir o detalhamento comercial de Trafego Pago, Inbound com RD Station e Criacao de Site.",
+    title: "Realizar o kickoff estratégico",
+    desc: "Alinhar objetivos, prioridades, mensagens, ofertas e critérios de acompanhamento para começar com direção clara.",
   },
   {
     num: "03",
-    title: "Kickoff e inicio da operacao",
-    desc: "Assinatura, briefing e inicio oficial do projeto conforme a frente ou pacote aprovado.",
+    title: "Colocar a operação no ar",
+    desc: "Iniciar a execução com cronograma, campanhas, captação e acompanhamento contínuo das entregas aprovadas.",
   },
 ];
 
@@ -31,14 +31,14 @@ export default function NextSteps() {
       <div className="container relative">
         <div className="reveal mx-auto max-w-[760px] text-center">
           <div className="text-[12px] font-semibold uppercase tracking-[0.18em] text-accent">
-            Proximos passos
+            Próximo passo
           </div>
           <h2 className="mt-4 font-display text-[clamp(34px,4vw,56px)] font-extrabold leading-[1.02] tracking-[-0.05em]">
-            Como avancamos a partir daqui.
+            Se fizer sentido para a Gamefic, o próximo movimento é começar.
           </h2>
           <p className="mt-4 text-[16px] leading-[1.8] text-white/78">
-            A proposta ja pode destravar o modulo de Social Media e, em paralelo, receber os
-            detalhamentos dos outros tres escopos.
+            A aprovação destrava uma operação pensada para dar consistência à presença digital e
+            mais estrutura para geração de oportunidades.
           </p>
         </div>
 

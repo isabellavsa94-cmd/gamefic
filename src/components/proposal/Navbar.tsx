@@ -46,7 +46,7 @@ export default function Navbar() {
           onClick={() => scrollTo("#proximos-passos")}
           className="rounded-full bg-accent px-5 py-3 font-display text-[15px] font-extrabold text-primary shadow-[0_10px_24px_rgba(0,255,141,0.28)] transition-transform hover:-translate-y-0.5"
         >
-          Avançar
+          Quero avançar
         </button>
       </div>
     </nav>

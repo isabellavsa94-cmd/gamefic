@@ -3,27 +3,27 @@ import { useReveal } from "@/hooks/useReveal";
 const insights = [
   {
     icon: "01",
-    text: "<strong>Social Media ja documentado:</strong> o PDF anterior foi incorporado como base oficial do modulo de Instagram + LinkedIn.",
+    text: "<strong>Presença mais forte:</strong> Instagram e LinkedIn passam a trabalhar posicionamento, autoridade e relacionamento com consistência.",
   },
   {
     icon: "02",
-    text: "<strong>Escopo inicial com 4 frentes:</strong> Social Media, Trafego Pago, Inbound com RD Station e Criacao de Site.",
+    text: "<strong>Mídia com foco em resultado:</strong> Google Ads e Meta Ads entram para acelerar geração de leads e reduzir a dependência de crescimento orgânico.",
   },
   {
     icon: "03",
-    text: "<strong>Modelo modular:</strong> a proposta pode evoluir sem precisar refazer toda a apresentacao a cada novo escopo definido.",
+    text: "<strong>Captação estruturada:</strong> landing page, formulários e CRM criam um fluxo mais organizado entre marketing e comercial.",
   },
   {
     icon: "04",
-    text: "<strong>Detalhamento atual mais maduro:</strong> Social Media ja contem volumetria, etapas, prazo minimo e valor mensal.",
+    text: "<strong>Inbound em operação:</strong> RD Station e e-mail marketing ajudam a manter relacionamento e aproveitar melhor cada lead captado.",
   },
   {
     icon: "05",
-    text: "<strong>Trafego, Inbound e Site:</strong> entram nesta versao como frentes previstas, com descricao orientadora e espaco para detalhamento posterior.",
+    text: "<strong>Mensuração mais confiável:</strong> tracking avançado melhora a leitura da origem das conversões e apoia otimizações com mais segurança.",
   },
   {
     icon: "06",
-    text: "<strong>Objetivo desta adaptacao:</strong> sair do formato antigo e deixar o site-proposta pronto para receber os proximos modulos sem perder coerencia visual.",
+    text: "<strong>Modelo escalável:</strong> a proposta permite começar com prioridade clara e ampliar a operação sem perder coerência estratégica.",
   },
 ];
 
@@ -37,19 +37,19 @@ export default function ContextSection() {
         <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr]">
           <div className="reveal lg:sticky lg:top-28 lg:self-start">
             <div className="text-[12px] font-semibold uppercase tracking-[0.18em] text-primary">
-              Diagnostico da proposta
+              Oportunidade
             </div>
             <h2 className="mt-4 font-display text-[clamp(34px,4vw,54px)] font-extrabold leading-[1.02] tracking-[-0.05em] text-balance text-primary">
-              O que esta versao do site ja entrega.
+              Por que este escopo faz sentido agora.
             </h2>
             <p className="mt-5 text-[16px] leading-[1.85] text-slate-600">
-              A proposta agora deixa de ser um layout genérico e passa a refletir o escopo real em
-              construcao para a Gamefic. O ponto de partida mais concreto e o documento de Social
-              Media, que agora vira a primeira frente formal da apresentacao.
+              A Gamefic já tem espaço para crescer com mais força no digital. O ponto aqui não é
+              apenas publicar ou anunciar, mas criar uma operação que conecte presença, geração de
+              demanda, captação e relacionamento em uma lógica comercial mais madura.
             </p>
             <p className="mt-4 text-[16px] leading-[1.85] text-slate-600">
-              As demais frentes entram como modulos previstos para complementar o plano comercial,
-              mantendo consistencia visual e narrativa enquanto os outros escopos sao finalizados.
+              Este escopo foi desenhado para atacar os pontos que mais impactam resultado:
+              posicionamento, tráfego qualificado, conversão e organização do funil.
             </p>
           </div>
 

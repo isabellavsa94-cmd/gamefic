@@ -10,17 +10,17 @@ export default function Footer() {
               <BrandLogo className="h-10 w-auto md:h-11" />
             </div>
             <div className="mt-5 font-display text-[32px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
-              Proposta comercial modular para a Gamefic.
+              Uma proposta para transformar presença digital em demanda qualificada.
             </div>
             <p className="mt-4 text-[15px] leading-[1.8] text-slate-600">
-              Esta versao do site consolida o modulo de Social Media e prepara os escopos de
-              Trafego Pago, Inbound com RD Station e Criacao de Site.
+              Conteúdo, performance, inbound e conversão integrados para apoiar crescimento com
+              mais clareza comercial.
             </p>
           </div>
 
           <div className="grid gap-4 text-[14px] text-slate-600 md:grid-cols-3">
             {[
-              { label: "Responsavel pela proposta", value: "Isabella Vieira Souto" },
+              { label: "Responsável pela proposta", value: "Isabella Vieira Souto" },
               { label: "E-mail", value: "isabellavsa94@gmail.com" },
               { label: "WhatsApp", value: "+55 21 99767-8292" },
             ].map((item) => (

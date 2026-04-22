@@ -1,15 +1,15 @@
 import { useReveal } from "@/hooks/useReveal";
 
 const stats = [
-  { num: "2", label: "pacotes comerciais ja estruturados" },
-  { num: "R$ 5,9k", label: "novo pacote mensal de performance" },
-  { num: "R$ 10k", label: "verba de midia sugerida" },
+  { num: "4", label: "frentes integradas para gerar demanda" },
+  { num: "R$ 5,9k", label: "pacote mensal de performance" },
+  { num: "R$ 10k", label: "verba de mídia recomendada" },
 ];
 
 const summaryItems = [
-  "Social Media continua como modulo fechado de entrada",
-  "Performance e automacao agora viram um segundo pacote fechado",
-  "Trafego, landing page, tracking, RD e email entram no mesmo bloco comercial",
+  "Presença digital mais forte para sustentar marca e autoridade",
+  "Operação de performance para transformar tráfego em leads",
+  "Estrutura de conversão com landing page, RD Station e tracking",
 ];
 
 const scrollTo = (href: string) => {
@@ -39,20 +39,19 @@ export default function Hero() {
               Proposta Comercial · Gamefic
             </div>
             <div className="mb-5 font-display text-[clamp(28px,3vw,36px)] font-semibold tracking-[-0.03em] text-white/92">
-              Escopo inicial de marketing digital
+              Marketing digital com foco em crescimento
             </div>
             <h1 className="max-w-[12ch] font-display text-[clamp(42px,6.4vw,76px)] font-extrabold leading-[0.98] tracking-[-0.05em] text-balance">
-              Social media, trafego, inbound e site em uma proposta modular.
+              Uma operação digital para fazer a Gamefic crescer com consistência.
             </h1>
             <p className="mt-6 max-w-[620px] text-[17px] leading-[1.8] text-white/80 md:text-[19px]">
-              Este material foi reorganizado para a Gamefic com quatro frentes previstas:
-              <strong className="font-semibold text-white"> Social Media (2 canais)</strong>,
-              <strong className="font-semibold text-white"> Trafego Pago</strong>,
+              Esta proposta combina
+              <strong className="font-semibold text-white"> Social Media</strong>,
+              <strong className="font-semibold text-white"> Tráfego Pago</strong>,
               <strong className="font-semibold text-white"> Inbound com RD Station</strong> e
-              <strong className="font-semibold text-white"> Criacao de site</strong>. Agora, alem
-              do modulo de Social Media, o site tambem passa a trazer um
-              <strong className="font-semibold text-white"> pacote mensal de performance e automacao comercial</strong>
-              com valor sugerido de <strong className="font-semibold text-white">R$ 5.900/mes</strong>.
+              <strong className="font-semibold text-white"> página de conversão</strong> em uma
+              estrutura pensada para atrair demanda, capturar oportunidades e apoiar o comercial da
+              Gamefic com mais previsibilidade.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -61,14 +60,14 @@ export default function Hero() {
                 onClick={() => scrollTo("#servicos")}
                 className="rounded-full bg-accent px-6 py-3 font-display text-[16px] font-extrabold text-primary transition-transform hover:-translate-y-0.5"
               >
-                Ver escopo
+                Ver proposta
               </button>
               <button
                 type="button"
                 onClick={() => scrollTo("#investimento")}
                 className="rounded-full border border-white/24 bg-white/10 px-6 py-3 font-display text-[16px] font-extrabold text-white transition-colors hover:bg-white/16"
               >
-                Ver investimento
+                Analisar investimento
               </button>
             </div>
 
@@ -92,10 +91,10 @@ export default function Hero() {
           <div className="reveal relative">
             <div className="gamefic-glow relative overflow-hidden rounded-[34px] border border-white/16 bg-[rgba(255,255,255,0.09)] p-6 backdrop-blur-md">
               <div className="text-[13px] font-semibold uppercase tracking-[0.18em] text-accent">
-                Resumo do escopo
+                Direção estratégica
               </div>
               <div className="mt-4 font-display text-[30px] font-extrabold leading-[1.05] tracking-[-0.04em] text-white">
-                O que esta proposta cobre agora?
+                O que esta proposta entrega para a Gamefic?
               </div>
 
               <div className="mt-6 space-y-3">
@@ -114,14 +113,14 @@ export default function Hero() {
 
               <div className="mt-7 rounded-[28px] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.05))] p-5">
                 <div className="text-[11px] uppercase tracking-[0.18em] text-white/62">
-                  Cliente
+                  Foco inicial
                 </div>
                 <div className="mt-2 font-display text-[24px] font-extrabold tracking-[-0.03em] text-white">
                   Gamefic
                 </div>
                 <div className="mt-4 text-[14px] leading-[1.7] text-white/76">
-                  Responsavel mencionado no documento base: Rubens Melo. Esta versao agora possui
-                  dois blocos comerciais reais: Social Media e Performance + Automacao.
+                  Construir uma operação capaz de atrair, capturar e nutrir oportunidades com mais
+                  clareza comercial e melhor capacidade de mensuração.
                 </div>
               </div>
             </div>
