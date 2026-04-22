@@ -80,7 +80,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="reveal relative flex items-center justify-center">
+          <div className="reveal relative flex items-center justify-center overflow-visible">
             <GameCar />
           </div>
         </div>

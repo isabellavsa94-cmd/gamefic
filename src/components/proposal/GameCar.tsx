@@ -1,90 +1,86 @@
+import { useEffect, useRef } from "react";
+
+const carImage = `${import.meta.env.BASE_URL}hero-car.png`;
+
 export default function GameCar() {
+  const frameRef = useRef<HTMLDivElement>(null);
+  const carRef = useRef<HTMLImageElement>(null);
+  const trailRef = useRef<HTMLDivElement>(null);
+  const glowRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    let raf = 0;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const update = () => {
+      raf = 0;
+
+      const frame = frameRef.current;
+      const car = carRef.current;
+      const trail = trailRef.current;
+      const glow = glowRef.current;
+
+      if (!frame || !car || !trail || !glow) return;
+
+      const hero = frame.closest("section");
+      if (!hero) return;
+
+      const rect = hero.getBoundingClientRect();
+      const distanceScrolled = Math.max(0, -rect.top);
+      const totalDistance = Math.max(rect.height * 0.72, 1);
+      const progress = Math.min(1, distanceScrolled / totalDistance);
+      const eased = reduceMotion ? 0 : Math.pow(progress, 2.4);
+
+      const x = eased * window.innerWidth * 0.72;
+      const y = eased * 28;
+      const rotate = eased * 7;
+      const scale = 1 - eased * 0.08;
+      const trailWidth = 28 + eased * 210;
+      const trailOpacity = 0.18 + eased * 0.5;
+      const glowScale = 1 + eased * 0.55;
+
+      car.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${rotate}deg) scale(${scale})`;
+      trail.style.width = `${trailWidth}px`;
+      trail.style.opacity = `${trailOpacity}`;
+      trail.style.transform = `translate3d(${x * 0.32}px, ${8 + eased * 18}px, 0) scaleX(${1 + eased * 0.9})`;
+      glow.style.transform = `translate3d(${x * 0.2}px, 0, 0) scale(${glowScale})`;
+      glow.style.opacity = `${0.32 - eased * 0.18}`;
+    };
+
+    const requestTick = () => {
+      if (!raf) raf = window.requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener("scroll", requestTick, { passive: true });
+    window.addEventListener("resize", requestTick);
+
+    return () => {
+      window.removeEventListener("scroll", requestTick);
+      window.removeEventListener("resize", requestTick);
+      if (raf) window.cancelAnimationFrame(raf);
+    };
+  }, []);
+
   return (
-    <div className="relative mx-auto w-full max-w-[560px]">
-      <div className="absolute inset-x-[14%] bottom-6 h-16 rounded-full bg-[rgba(2,10,70,0.28)] blur-3xl" />
-
-      <svg
-        viewBox="0 0 760 420"
-        className="relative w-full h-auto drop-shadow-[0_28px_60px_rgba(10,16,70,0.38)]"
-        aria-hidden="true"
-      >
-        <ellipse cx="380" cy="348" rx="248" ry="24" fill="rgba(6,16,76,0.18)" />
-
-        <g transform="translate(50 36)">
-          <path
-            d="M132 220L88 192L118 178L178 196L202 176L252 170L236 202L132 220Z"
-            fill="#ffc42e"
-          />
-          <path
-            d="M164 198L122 168L146 156L206 176L226 156L266 150L252 182L164 198Z"
-            fill="#ff8a1f"
-          />
-
-          <path
-            d="M462 132L544 154L560 190L510 176L444 150Z"
-            fill="#ffc42e"
-          />
-          <path
-            d="M448 144L520 168L528 198L478 184L434 164Z"
-            fill="#ff8a1f"
-          />
-
-          <path
-            d="M154 270C174 224 238 188 314 176H444C480 176 520 192 552 220L612 272L596 300H144L154 270Z"
-            fill="#ff3658"
-          />
-
-          <path
-            d="M228 212C262 180 310 162 346 162H430C462 162 494 174 518 196L548 222H228V212Z"
-            fill="#ff5a3f"
-          />
-
-          <path
-            d="M250 214C284 186 324 172 354 172H424C444 172 468 182 490 198L520 222H250V214Z"
-            fill="#8729ff"
-            opacity="0.92"
-          />
-
-          <path
-            d="M268 216C296 194 330 182 358 182H416C434 182 454 190 474 204L496 222H268V216Z"
-            fill="#4ae4ff"
-          />
-
-          <path
-            d="M214 232H548V252H198L214 232Z"
-            fill="#ff8a1f"
-          />
-
-          <path
-            d="M560 232H606L632 252H574L560 232Z"
-            fill="#ffc42e"
-          />
-
-          <path
-            d="M142 292H602L590 316H130L142 292Z"
-            fill="#7d0f41"
-          />
-
-          <path
-            d="M200 252L236 246L256 270L198 272L200 252Z"
-            fill="#ffcf42"
-          />
-
-          <circle cx="234" cy="306" r="48" fill="#4e1645" />
-          <circle cx="234" cy="306" r="28" fill="#ffcb2f" />
-          <circle cx="234" cy="306" r="12" fill="#ff5d33" />
-
-          <circle cx="520" cy="306" r="48" fill="#4e1645" />
-          <circle cx="520" cy="306" r="28" fill="#ffcb2f" />
-          <circle cx="520" cy="306" r="12" fill="#ff5d33" />
-
-          <circle cx="156" cy="286" r="10" fill="#ffcb2f" />
-          <circle cx="592" cy="268" r="10" fill="#ffcb2f" />
-
-          <rect x="350" y="200" width="12" height="24" rx="6" fill="#1732ff" />
-          <rect x="412" y="200" width="12" height="24" rx="6" fill="#1732ff" />
-        </g>
-      </svg>
+    <div ref={frameRef} className="relative mx-auto w-full max-w-[820px] overflow-visible">
+      <div
+        ref={trailRef}
+        className="absolute left-[10%] top-[50%] h-10 -translate-y-1/2 rounded-full bg-[linear-gradient(90deg,rgba(255,214,66,0),rgba(255,214,66,0.95))] blur-[10px]"
+        style={{ width: 28, opacity: 0.18, willChange: "transform, width, opacity" }}
+      />
+      <div
+        ref={glowRef}
+        className="absolute inset-x-[16%] bottom-10 h-14 rounded-full bg-[rgba(11,19,83,0.26)] blur-3xl"
+        style={{ willChange: "transform, opacity" }}
+      />
+      <img
+        ref={carRef}
+        src={carImage}
+        alt="Carrinho pixel art da Gamefic"
+        className="relative w-full h-auto select-none drop-shadow-[0_28px_65px_rgba(12,18,78,0.42)]"
+        style={{ imageRendering: "pixelated", willChange: "transform" }}
+      />
     </div>
   );
 }
