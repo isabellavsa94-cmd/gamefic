@@ -41,8 +41,8 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
             Acesso restrito
           </h1>
           <p className="mt-3 text-center text-[15px] leading-[1.75] text-white/76">
-            Digite a senha para visualizar a proposta na nova linguagem visual inspirada no site
-            da Gamefic.
+            Digite a senha para visualizar a proposta comercial da Gamefic com o escopo atual da
+            apresentacao.
           </p>
 
           <div className="mt-7 rounded-full bg-white px-5 py-3">

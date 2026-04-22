@@ -3,31 +3,27 @@ import { useReveal } from "@/hooks/useReveal";
 const insights = [
   {
     icon: "01",
-    text: "<strong>Fábrica própria e formulações exclusivas:</strong> diferencial competitivo real frente a marcas que terceirizam tudo.",
+    text: "<strong>Social Media ja documentado:</strong> o PDF anterior foi incorporado como base oficial do modulo de Instagram + LinkedIn.",
   },
   {
     icon: "02",
-    text: "<strong>Base de clientes fiel no Pará:</strong> pode se tornar um motor de prova social e expansão nacional.",
+    text: "<strong>Escopo inicial com 4 frentes:</strong> Social Media, Trafego Pago, Inbound com RD Station e Criacao de Site.",
   },
   {
     icon: "03",
-    text: "<strong>Portfólio de 60 produtos prontos para escalar:</strong> amplitude de catálogo que acelera o go-to-market digital sem depender de novos desenvolvimentos.",
+    text: "<strong>Modelo modular:</strong> a proposta pode evoluir sem precisar refazer toda a apresentacao a cada novo escopo definido.",
   },
   {
     icon: "04",
-    text: "<strong>Mercado de R$ 240bi+ em crescimento:</strong> o setor de beleza e cuidados pessoais no Brasil cresce mais de 11% ao ano, e quem não se posicionar digitalmente agora vai ficar para trás.",
+    text: "<strong>Detalhamento atual mais maduro:</strong> Social Media ja contem volumetria, etapas, prazo minimo e valor mensal.",
   },
   {
     icon: "05",
-    text: "<strong>Ausência de identidade visual atualizada:</strong> os rótulos e a comunicação visual não traduzem o nível do produto.",
+    text: "<strong>Trafego, Inbound e Site:</strong> entram nesta versao como frentes previstas, com descricao orientadora e espaco para detalhamento posterior.",
   },
   {
     icon: "06",
-    text: "<strong>Presença digital subaproveitada:</strong> nenhuma estratégia de conteúdo, tráfego pago ou marketplace estruturado.",
-  },
-  {
-    icon: "07",
-    text: "<strong>Concorrentes nativos digitais crescendo rápido:</strong> marcas novas, sem fábrica própria, já dominam redes sociais e marketplaces com branding forte e tráfego pago agressivo.",
+    text: "<strong>Objetivo desta adaptacao:</strong> sair do formato antigo e deixar o site-proposta pronto para receber os proximos modulos sem perder coerencia visual.",
   },
 ];
 
@@ -41,18 +37,19 @@ export default function ContextSection() {
         <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr]">
           <div className="reveal lg:sticky lg:top-28 lg:self-start">
             <div className="text-[12px] font-semibold uppercase tracking-[0.18em] text-primary">
-              Diagnóstico
+              Diagnostico da proposta
             </div>
             <h2 className="mt-4 font-display text-[clamp(34px,4vw,54px)] font-extrabold leading-[1.02] tracking-[-0.05em] text-balance text-primary">
-              O que encontramos e o que muda agora.
+              O que esta versao do site ja entrega.
             </h2>
             <p className="mt-5 text-[16px] leading-[1.85] text-slate-600">
-              A Derm'Attive já tem produto, histórico e operação. O que falta é um sistema de marca
-              e crescimento digital que traduza essa força em percepção, alcance e vendas.
+              A proposta agora deixa de ser um layout genérico e passa a refletir o escopo real em
+              construcao para a Gamefic. O ponto de partida mais concreto e o documento de Social
+              Media, que agora vira a primeira frente formal da apresentacao.
             </p>
             <p className="mt-4 text-[16px] leading-[1.85] text-slate-600">
-              A estética abaixo usa a lógica visual da Gamefic: comunicação clara, hierarquia forte,
-              contraste alto e blocos que organizam decisão.
+              As demais frentes entram como modulos previstos para complementar o plano comercial,
+              mantendo consistencia visual e narrativa enquanto os outros escopos sao finalizados.
             </p>
           </div>
 

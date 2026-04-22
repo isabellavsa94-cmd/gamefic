@@ -3,24 +3,38 @@ import { useReveal } from "@/hooks/useReveal";
 const phases = [
   {
     num: "1",
-    phase: "Mês 1–2 · Fundação",
-    title: "Bases visuais e estratégicas",
-    desc: "Rebranding, planejamento de conteúdo estratégico e ensaio fotográfico. Tudo que vem depois depende disso estar pronto.",
-    tags: ["Rebranding", "Planejamento", "Ensaio"],
+    phase: "Etapa 1",
+    title: "Contrato",
+    desc: "Formalizacao da parceria para dar inicio ao projeto e alinhar seguranca, escopo e expectativas.",
+    tags: ["Contrato", "Aprovacao", "Inicio"],
   },
   {
     num: "2",
-    phase: "Mês 2–3 · Infraestrutura Digital",
-    title: "Site, catálogo e marketplaces no ar",
-    desc: "Desenvolvimento do site com e-commerce, catálogo para representantes e setup completo no Mercado Livre.",
-    tags: ["E-commerce", "Catálogo", "Marketplace"],
+    phase: "Etapa 2",
+    title: "Briefing",
+    desc: "Coleta aprofundada de informacoes sobre objetivos, publico, marca, concorrentes e expectativas.",
+    tags: ["Briefing", "Imersao", "Alinhamento"],
   },
   {
     num: "3",
-    phase: "Mês 3 · Ativação",
-    title: "Social media e tráfego ativos",
-    desc: "Início da gestão de Instagram, TikTok, canal dedicado e campanhas de mídia com os primeiros influenciadores ativados.",
-    tags: ["Social", "Tráfego", "Influência"],
+    phase: "Etapa 3",
+    title: "Planejamento (1o mes)",
+    desc: "Construcao do planejamento estrategico do Social Media com pilares, diretrizes e linha editorial.",
+    tags: ["Planejamento", "Personas", "Tom de voz"],
+  },
+  {
+    num: "4",
+    phase: "Etapas 4 a 6",
+    title: "Cronograma, pecas e agendamento",
+    desc: "A partir do 2o mes, criacao do cronograma, desenvolvimento das pecas, edicao de videos e agendamento das publicacoes.",
+    tags: ["Cronograma", "Pecas", "Agendamento"],
+  },
+  {
+    num: "5",
+    phase: "Etapa 7",
+    title: "Relatorio e otimizacoes",
+    desc: "Leitura de resultados, relatorio mensal e ajustes continuos para evoluir a operacao.",
+    tags: ["Relatorio", "Insights", "Otimizacao"],
   },
 ];
 
@@ -35,18 +49,18 @@ export default function TimelineSection() {
             Cronograma
           </div>
           <h2 className="mt-4 font-display text-[clamp(34px,4vw,54px)] font-extrabold leading-[1.02] tracking-[-0.05em] text-primary">
-            Como a implementação acontece na prática.
+            Como o projeto de Social Media acontece.
           </h2>
           <p className="mt-4 text-[16px] leading-[1.8] text-slate-600">
-            Assim como no site da Gamefic, a leitura foi organizada em blocos muito claros para
-            facilitar decisão e priorização.
+            Este fluxo foi trazido diretamente da proposta anterior e agora organiza a leitura da
+            frente de Social Media dentro do site.
           </p>
         </div>
 
         <div className="relative mt-14">
           <div className="absolute left-[24px] top-8 hidden h-1 w-[calc(100%-48px)] bg-[linear-gradient(90deg,#2447ff,#00ff8d,#8800e3)] md:block" />
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
             {phases.map((phase) => (
               <article
                 key={phase.num}
@@ -61,7 +75,7 @@ export default function TimelineSection() {
                   </div>
                 </div>
 
-                <h3 className="mt-5 font-display text-[28px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
+                <h3 className="mt-5 font-display text-[26px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
                   {phase.title}
                 </h3>
                 <p className="mt-4 text-[15px] leading-[1.8] text-slate-600">{phase.desc}</p>

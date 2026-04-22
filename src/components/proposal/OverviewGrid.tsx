@@ -1,47 +1,41 @@
 import { useReveal } from "@/hooks/useReveal";
-import producaoVisualImg from "@/assets/producao-visual-card.png";
-import brandingPackagingImg from "@/assets/branding-packaging.jpg";
 
 const groups = [
   {
     num: "01",
-    title: "Produção Visual & Ferramentas",
-    subtitle: "A base visual de toda a comunicação da marca.",
+    title: "Social Media",
+    subtitle: "Modulo detalhado com base no PDF anterior para Instagram e LinkedIn.",
     href: "#g1",
-    image: producaoVisualImg,
-    items: ["Ensaio fotográfico", "Catálogo impresso"],
+    image:
+      "https://images.pexels.com/photos/6954174/pexels-photo-6954174.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
+    items: ["Instagram", "LinkedIn", "16 + 12/8 conteudos"],
   },
   {
     num: "02",
-    title: "Plataformas de Venda",
-    subtitle: "Os canais onde a marca passa a vender com consistência.",
+    title: "Trafego Pago",
+    subtitle: "Frente prevista para aquisicao e performance, ainda em detalhamento complementar.",
     href: "#g2",
-    image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
-    items: ["E-commerce", "Mercado Livre"],
+    image:
+      "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
+    items: ["Meta / Google", "KPIs", "Escopo a definir"],
   },
   {
     num: "03",
-    title: "Conteúdo & Social Media",
-    subtitle: "Presença social com estratégia, frequência e linguagem.",
+    title: "Inbound (RD Station)",
+    subtitle: "Estrutura para nutricao, automacoes e relacionamento com base em funil.",
     href: "#g3",
-    image: "https://images.pexels.com/photos/5081930/pexels-photo-5081930.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
-    items: ["Planejamento", "Instagram + TikTok", "Influenciadores"],
+    image:
+      "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
+    items: ["Automacoes", "Fluxos", "Escopo a definir"],
   },
   {
     num: "04",
-    title: "Aquisição & Performance",
-    subtitle: "Crescimento em tráfego e demanda qualificada.",
+    title: "Criacao de Site",
+    subtitle: "Modulo previsto para apresentar a marca e apoiar conversao e captacao.",
     href: "#g4",
-    image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
-    items: ["Meta Ads", "Google Ads"],
-  },
-  {
-    num: "05",
-    title: "Branding & Embalagem",
-    subtitle: "A identidade que sustenta toda a percepção de valor.",
-    href: "#g5",
-    image: brandingPackagingImg,
-    items: ["Rebranding", "Redesign de rótulos"],
+    image:
+      "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
+    items: ["Institucional", "Conversao", "Escopo a definir"],
   },
 ];
 
@@ -62,18 +56,18 @@ export default function OverviewGrid() {
       <div className="container relative">
         <div className="reveal mx-auto max-w-[720px] text-center">
           <div className="text-[12px] font-semibold uppercase tracking-[0.18em] text-primary">
-            Escopo completo
+            Escopo atual
           </div>
           <h2 className="mt-4 font-display text-[clamp(34px,4vw,56px)] font-extrabold leading-[1.02] tracking-[-0.05em] text-primary">
-            5 frentes, uma estratégia integrada.
+            4 frentes para a proposta da Gamefic.
           </h2>
           <p className="mt-4 text-[16px] leading-[1.8] text-slate-600">
-            Em vez de peças isoladas, a proposta conecta branding, venda, conteúdo e performance
-            num sistema visual inspirado no site da Gamefic.
+            O site agora organiza o material em quatro modulos. O primeiro ja esta fechado com o
+            documento de Social Media. Os outros tres entram preparados para evolucao comercial.
           </p>
         </div>
 
-        <div className="reveal-stagger mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="reveal-stagger mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {groups.map((g) => (
             <button
               key={g.num}
@@ -95,7 +89,7 @@ export default function OverviewGrid() {
               </div>
 
               <div className="p-6">
-                <h3 className="font-display text-[28px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
+                <h3 className="font-display text-[26px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
                   {g.title}
                 </h3>
                 <p className="mt-3 text-[15px] leading-[1.8] text-slate-600">{g.subtitle}</p>

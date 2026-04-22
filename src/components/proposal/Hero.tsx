@@ -1,16 +1,15 @@
 import { useReveal } from "@/hooks/useReveal";
-import heroSkinImg from "@/assets/hero-skin.png";
 
 const stats = [
-  { num: "11", label: "frentes estratégicas cobertas" },
-  { num: "60", label: "produtos para posicionar no digital" },
-  { num: "1", label: "marca com potencial nacional inexplorado" },
+  { num: "4", label: "frentes previstas no escopo" },
+  { num: "2", label: "canais de social media" },
+  { num: "6", label: "meses minimos de projeto social" },
 ];
 
 const summaryItems = [
-  "Rebranding, conteúdo, e-commerce e tráfego em um plano integrado",
-  "Estrutura pensada para escalar a marca nacionalmente",
-  "Execução faseada para reduzir atrito e acelerar resultado",
+  "Social Media ja detalhado com base na proposta existente",
+  "Trafego Pago, Inbound e Site previstos como modulos complementares",
+  "Estrutura modular para a proposta crescer sem retrabalho",
 ];
 
 const scrollTo = (href: string) => {
@@ -37,18 +36,21 @@ export default function Hero() {
         <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="reveal">
             <div className="mb-5 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-[12px] font-semibold uppercase tracking-[0.18em] text-accent">
-              Proposta Derm'Attive 2026
+              Proposta Comercial · Gamefic
             </div>
             <div className="mb-5 font-display text-[clamp(28px,3vw,36px)] font-semibold tracking-[-0.03em] text-white/92">
-              Plataforma de crescimento da marca
+              Escopo inicial de marketing digital
             </div>
-            <h1 className="max-w-[11ch] font-display text-[clamp(42px,6.4vw,76px)] font-extrabold leading-[0.98] tracking-[-0.05em] text-balance">
-              Uma nova era para a Derm'Attive.
+            <h1 className="max-w-[12ch] font-display text-[clamp(42px,6.4vw,76px)] font-extrabold leading-[0.98] tracking-[-0.05em] text-balance">
+              Social media, trafego, inbound e site em uma proposta modular.
             </h1>
             <p className="mt-6 max-w-[620px] text-[17px] leading-[1.8] text-white/80 md:text-[19px]">
-              Quase 30 anos de expertise em dermocosméticos, fábrica própria de 3.000m² em
-              Uberlândia e um portfólio pronto para escalar. A proposta abaixo organiza branding,
-              conteúdo, canais de venda e performance com a linguagem visual da Gamefic.
+              Este material foi reorganizado para a Gamefic com quatro frentes previstas:
+              <strong className="font-semibold text-white"> Social Media (2 canais)</strong>,
+              <strong className="font-semibold text-white"> Trafego Pago</strong>,
+              <strong className="font-semibold text-white"> Inbound com RD Station</strong> e
+              <strong className="font-semibold text-white"> Criacao de site</strong>. O modulo de
+              Social Media ja esta detalhado com base no PDF da proposta anterior.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -57,14 +59,14 @@ export default function Hero() {
                 onClick={() => scrollTo("#servicos")}
                 className="rounded-full bg-accent px-6 py-3 font-display text-[16px] font-extrabold text-primary transition-transform hover:-translate-y-0.5"
               >
-                Ver escopo completo
+                Ver escopo
               </button>
               <button
                 type="button"
                 onClick={() => scrollTo("#investimento")}
                 className="rounded-full border border-white/24 bg-white/10 px-6 py-3 font-display text-[16px] font-extrabold text-white transition-colors hover:bg-white/16"
               >
-                Explorar investimento
+                Ver investimento
               </button>
             </div>
 
@@ -88,10 +90,10 @@ export default function Hero() {
           <div className="reveal relative">
             <div className="gamefic-glow relative overflow-hidden rounded-[34px] border border-white/16 bg-[rgba(255,255,255,0.09)] p-6 backdrop-blur-md">
               <div className="text-[13px] font-semibold uppercase tracking-[0.18em] text-accent">
-                Resumo da proposta
+                Resumo do escopo
               </div>
               <div className="mt-4 font-display text-[30px] font-extrabold leading-[1.05] tracking-[-0.04em] text-white">
-                O que muda com esta nova fase?
+                O que esta proposta cobre agora?
               </div>
 
               <div className="mt-6 space-y-3">
@@ -108,29 +110,17 @@ export default function Hero() {
                 ))}
               </div>
 
-              <div className="mt-7 rounded-[28px] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.05))] p-4">
+              <div className="mt-7 rounded-[28px] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.05))] p-5">
                 <div className="text-[11px] uppercase tracking-[0.18em] text-white/62">
-                  Próximo passo recomendado
+                  Cliente
                 </div>
-                <div className="mt-2 font-display text-[21px] font-extrabold tracking-[-0.03em] text-white">
-                  Validar prioridades, módulos e cronograma.
+                <div className="mt-2 font-display text-[24px] font-extrabold tracking-[-0.03em] text-white">
+                  Gamefic
                 </div>
-                <div className="mt-3 flex items-center justify-between rounded-full bg-accent px-5 py-3">
-                  <span className="font-display text-[15px] font-extrabold text-primary">
-                    Avançar para a próxima etapa
-                  </span>
-                  <span className="font-display text-[22px] font-extrabold text-primary">{">"}</span>
+                <div className="mt-4 text-[14px] leading-[1.7] text-white/76">
+                  Responsavel mencionado no documento base: Rubens Melo. Esta versao do site
+                  consolida o escopo atual e prepara os modulos ainda sem detalhamento final.
                 </div>
-              </div>
-            </div>
-
-            <div className="pointer-events-none relative mx-auto mt-[-22px] max-w-[420px] lg:absolute lg:-bottom-20 lg:-left-10 lg:mt-0 lg:max-w-[360px]">
-              <div className="rounded-[30px] border border-white/20 bg-[#1739e8] p-4 shadow-[0_26px_60px_rgba(0,0,0,0.2)]">
-                <img
-                  src={heroSkinImg}
-                  alt="Produto Derm'Attive"
-                  className="h-[250px] w-full rounded-[24px] object-cover object-center"
-                />
               </div>
             </div>
           </div>

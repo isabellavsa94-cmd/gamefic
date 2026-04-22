@@ -3,18 +3,18 @@ import { useReveal } from "@/hooks/useReveal";
 const steps = [
   {
     num: "01",
-    title: "Reunião de alinhamento",
-    desc: "Encontro de 60 min para alinhar prioridades, ajustar escopo e tirar dúvidas.",
+    title: "Aprovar o modulo de Social Media",
+    desc: "Validar o escopo ja detalhado para Instagram + LinkedIn e confirmar a opcao de LinkedIn escolhida.",
   },
   {
     num: "02",
-    title: "Proposta financeira final",
-    desc: "Fechamento dos módulos escolhidos, investimento e condições de pagamento.",
+    title: "Fechar os escopos complementares",
+    desc: "Definir o detalhamento comercial de Trafego Pago, Inbound com RD Station e Criacao de Site.",
   },
   {
     num: "03",
-    title: "Contrato e kickoff",
-    desc: "Assinatura e início imediato com plano detalhado para os primeiros 60 dias.",
+    title: "Kickoff e inicio da operacao",
+    desc: "Assinatura, briefing e inicio oficial do projeto conforme a frente ou pacote aprovado.",
   },
 ];
 
@@ -31,14 +31,14 @@ export default function NextSteps() {
       <div className="container relative">
         <div className="reveal mx-auto max-w-[760px] text-center">
           <div className="text-[12px] font-semibold uppercase tracking-[0.18em] text-accent">
-            Próximos passos
+            Proximos passos
           </div>
           <h2 className="mt-4 font-display text-[clamp(34px,4vw,56px)] font-extrabold leading-[1.02] tracking-[-0.05em]">
-            Como avançamos a partir daqui.
+            Como avancamos a partir daqui.
           </h2>
           <p className="mt-4 text-[16px] leading-[1.8] text-white/78">
-            A mesma lógica de CTA forte usada na Gamefic foi aplicada aqui para fechar a navegação
-            da proposta com clareza.
+            A proposta ja pode destravar o modulo de Social Media e, em paralelo, receber os
+            detalhamentos dos outros tres escopos.
           </p>
         </div>
 

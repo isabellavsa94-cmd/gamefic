@@ -21,18 +21,18 @@ export default function Footer() {
               </div>
             </div>
             <div className="mt-5 font-display text-[32px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
-              Branding forte, operação clara e execução organizada.
+              Proposta comercial modular para a Gamefic.
             </div>
             <p className="mt-4 text-[15px] leading-[1.8] text-slate-600">
-              A proposta segue hospedada como uma página privada com estética alinhada à linguagem
-              visual da Gamefic.
+              Esta versao do site consolida o modulo de Social Media e prepara os escopos de
+              Trafego Pago, Inbound com RD Station e Criacao de Site.
             </p>
           </div>
 
           <div className="grid gap-4 text-[14px] text-slate-600 md:grid-cols-3">
             {[
-              { label: "Head de Marketing e Conteúdo", value: "Isabella Vieira Souto" },
-              { label: "E-mail", value: "isabellavieirasouto.mkt@gmail.com" },
+              { label: "Responsavel pela proposta", value: "Isabella Vieira Souto" },
+              { label: "E-mail", value: "isabellavsa94@gmail.com" },
               { label: "WhatsApp", value: "+55 21 99767-8292" },
             ].map((item) => (
               <div key={item.label} className="gamefic-surface rounded-[24px] p-5">
@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 text-[12px] uppercase tracking-[0.18em] text-slate-500">
-          Proposta confidencial · Derm'Attive · 2026
+          Proposta confidencial · Gamefic · 2026
         </div>
       </div>
     </footer>
