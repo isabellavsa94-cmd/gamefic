@@ -7,6 +7,7 @@ import ServicesDetail from "@/components/proposal/ServicesDetail";
 import FutureServices from "@/components/proposal/FutureServices";
 import InvestmentSection from "@/components/proposal/InvestmentSection";
 import TimelineSection from "@/components/proposal/TimelineSection";
+import NextSteps from "@/components/proposal/NextSteps";
 
 import Footer from "@/components/proposal/Footer";
 
@@ -22,6 +23,7 @@ export default function Index() {
       <FutureServices />
       <InvestmentSection />
       <TimelineSection />
+      <NextSteps />
       
       <Footer />
     </PasswordGate>

@@ -139,30 +139,30 @@ export default function InvestmentSection() {
       <button
         key={item.id}
         onClick={() => toggle(item.id)}
-        className={`flex justify-between items-center px-6 py-3.5 border-b border-[rgba(255,255,255,0.05)] last:border-b-0 w-full text-left transition-colors duration-300 cursor-pointer hover:bg-[rgba(255,255,255,0.04)] ${isSelected ? "bg-primary/10" : ""}`}
+        className={`flex w-full items-center justify-between border-b border-border px-6 py-4 text-left transition-colors duration-300 last:border-b-0 hover:bg-secondary/60 ${isSelected ? "bg-primary/5" : ""}`}
       >
         <div className="flex items-center gap-3">
           {/* Checkbox */}
           <div
-            className={`w-[18px] h-[18px] rounded border-2 flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
+            className={`flex h-[20px] w-[20px] flex-shrink-0 items-center justify-center rounded border-2 transition-all duration-300 ${
               isSelected
-                ? "bg-gold border-gold"
-                : "border-[rgba(255,255,255,0.25)] hover:border-[rgba(255,255,255,0.4)]"
+                ? "border-accent bg-accent"
+                : "border-slate-300 hover:border-primary/40"
             }`}
           >
             {isSelected && (
               <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
-                <path d="M1 4L3.5 6.5L9 1" stroke="#1C1A27" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M1 4L3.5 6.5L9 1" stroke="#0440F8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             )}
           </div>
-          <span className={`text-[13px] transition-colors duration-300 ${isSelected ? "text-[rgba(242,237,228,0.95)]" : "text-[rgba(242,237,228,0.7)]"}`}>
+          <span className={`text-[14px] transition-colors duration-300 ${isSelected ? "text-slate-900" : "text-slate-600"}`}>
             {item.name}
           </span>
         </div>
         <span
           className={`text-[13px] font-medium whitespace-nowrap ml-4 transition-colors duration-300 ${
-            item.value === null ? "text-destructive/60 italic text-[12px]" : isSelected ? "text-gold" : "text-[rgba(242,237,228,0.5)]"
+            item.value === null ? "text-destructive/70 italic text-[12px]" : isSelected ? "text-primary" : "text-slate-400"
           }`}
         >
           {item.value !== null ? formatCurrency(item.value) + (item.type === "monthly" ? "/mês" : "") : "A DEFINIR"}
@@ -172,14 +172,14 @@ export default function InvestmentSection() {
   };
 
   return (
-    <section id="investimento" ref={ref} className="py-20 bg-dark">
+    <section id="investimento" ref={ref} className="bg-[#eff2f8] py-24">
       <div className="container">
         <div className="reveal">
-          <div className="text-[11px] font-medium tracking-[0.14em] uppercase text-gold mb-4">Investimento</div>
-          <h2 className="font-display text-[clamp(32px,4vw,48px)] font-light leading-[1.15] text-[#F2EDE4] text-balance">
-            Monte seu <em className="italic text-gold">plano ideal</em>
+          <div className="mb-4 text-[12px] font-semibold uppercase tracking-[0.18em] text-primary">Investimento</div>
+          <h2 className="font-display text-[clamp(34px,4vw,54px)] font-extrabold leading-[1.02] tracking-[-0.05em] text-primary text-balance">
+            Monte seu <em className="not-italic text-purple">plano ideal</em>
           </h2>
-          <p className="text-[15px] text-[rgba(242,237,228,0.78)] mt-2 max-w-[560px]">
+          <p className="mt-3 max-w-[620px] text-[16px] leading-[1.8] text-slate-600">
             Selecione os serviços que deseja contratar. Quanto mais serviços, maior o desconto progressivo.
           </p>
 
@@ -192,10 +192,10 @@ export default function InvestmentSection() {
             ].map((tier) => (
               <div
                 key={tier.min}
-                className={`text-[11px] tracking-[0.06em] uppercase px-3 py-1.5 rounded-full border transition-all duration-500 ${
+                className={`rounded-full border px-3 py-1.5 text-[11px] uppercase tracking-[0.06em] transition-all duration-500 ${
                   selectedPricedCount >= tier.min
-                    ? "border-gold/50 bg-gold/10 text-gold"
-                    : "border-[rgba(255,255,255,0.1)] text-[rgba(242,237,228,0.35)]"
+                    ? "border-accent/50 bg-accent/15 text-primary"
+                    : "border-border text-slate-400"
                 }`}
               >
                 {tier.label} → {tier.discount}
@@ -208,7 +208,7 @@ export default function InvestmentSection() {
         <div className="reveal mt-10 mb-4 flex justify-end">
           <button
             onClick={selectAll}
-            className="text-[12px] font-medium tracking-[0.06em] uppercase text-gold/70 hover:text-gold transition-colors duration-300"
+            className="text-[12px] font-semibold uppercase tracking-[0.08em] text-primary/80 transition-colors duration-300 hover:text-primary"
           >
             {selected.size === selectableItems.length ? "Desmarcar todos" : "Selecionar todos"}
           </button>
@@ -216,37 +216,37 @@ export default function InvestmentSection() {
 
         <div className="reveal grid md:grid-cols-2 gap-8">
           {/* Setup */}
-          <div className="bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.08)] rounded-xl overflow-hidden">
-            <div className="px-6 py-4 bg-[rgba(255,255,255,0.06)] border-b border-[rgba(255,255,255,0.08)] text-[11px] font-medium tracking-[0.12em] uppercase text-gold">
+          <div className="gamefic-surface overflow-hidden rounded-[30px] border border-white/80">
+            <div className="border-b border-border bg-white px-6 py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary">
               Entregáveis Únicos (Setup / Projeto)
             </div>
             {setupGroups.map((g) => (
               <div key={g.group}>
-                <div className="px-6 py-3 bg-[rgba(255,255,255,0.02)] border-b border-[rgba(255,255,255,0.05)]">
-                  <span className="text-[11px] font-medium tracking-[0.08em] uppercase text-primary/80">{g.group}</span>
+                <div className="border-b border-border bg-secondary/60 px-6 py-3">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.08em] text-slate-500">{g.group}</span>
                 </div>
                 {g.items.map(renderItem)}
               </div>
             ))}
-            <div className="text-xs text-[rgba(242,237,228,0.68)] italic px-6 py-4 border-t border-[rgba(255,255,255,0.05)]">
+            <div className="border-t border-border px-6 py-4 text-xs italic text-slate-500">
               * Valores de projeto único, pagamento conforme cronograma.
             </div>
           </div>
 
           {/* Monthly */}
-          <div className="bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.08)] rounded-xl overflow-hidden">
-            <div className="px-6 py-4 bg-[rgba(255,255,255,0.06)] border-b border-[rgba(255,255,255,0.08)] text-[11px] font-medium tracking-[0.12em] uppercase text-gold">
+          <div className="gamefic-surface overflow-hidden rounded-[30px] border border-white/80">
+            <div className="border-b border-border bg-white px-6 py-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary">
               Serviços Recorrentes (por mês)
             </div>
             {monthlyGroups.map((g) => (
               <div key={g.group}>
-                <div className="px-6 py-3 bg-[rgba(255,255,255,0.02)] border-b border-[rgba(255,255,255,0.05)]">
-                  <span className="text-[11px] font-medium tracking-[0.08em] uppercase text-primary/80">{g.group}</span>
+                <div className="border-b border-border bg-secondary/60 px-6 py-3">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.08em] text-slate-500">{g.group}</span>
                 </div>
                 {g.items.map(renderItem)}
               </div>
             ))}
-            <div className="text-xs text-[rgba(242,237,228,0.68)] italic px-6 py-4 border-t border-[rgba(255,255,255,0.05)]">
+            <div className="border-t border-border px-6 py-4 text-xs italic text-slate-500">
               * Verba de mídia não inclusa no fee. Definida pelo cliente separadamente. Esse valor está contemplado para até R$ 10.000 de investimento.
             </div>
           </div>
@@ -254,51 +254,51 @@ export default function InvestmentSection() {
 
         {/* Summary */}
         <div
-          className="reveal rounded-xl p-7 mt-8 transition-all duration-500"
+          className="reveal mt-8 rounded-[34px] p-7 transition-all duration-500"
           style={{
             background: selected.size > 0
-              ? "linear-gradient(135deg, hsl(258 30% 20%), hsl(258 30% 16%))"
-              : "rgba(255,255,255,0.04)",
+              ? "linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)"
+              : "rgba(255,255,255,0.92)",
             borderWidth: "1px",
             borderStyle: "solid",
-            borderColor: selected.size > 0 ? "hsl(258 30% 35%)" : "rgba(255,255,255,0.08)",
+            borderColor: selected.size > 0 ? "rgba(255,255,255,0.18)" : "rgba(255,255,255,0.8)",
           }}
         >
           {selected.size === 0 ? (
             <div className="text-center py-4">
-              <div className="text-[15px] text-[rgba(242,237,228,0.5)]">
+              <div className="text-[15px] text-slate-500">
                 Selecione os serviços acima para ver o investimento estimado
               </div>
             </div>
           ) : (
             <div className="flex flex-col items-end gap-4">
                 <div className="text-right">
-                  <div className="text-[11px] font-medium tracking-[0.12em] uppercase text-[rgba(242,237,228,0.5)] mb-1">
+                  <div className="mb-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-white/62">
                     {selected.size} {selected.size === 1 ? "serviço selecionado" : "serviços selecionados"}
                   </div>
 
                   {monthlyTotal > 0 && (
                     <div className="mt-3">
-                      <div className="text-[12px] text-[rgba(242,237,228,0.55)] mb-1">Recorrente mensal</div>
+                      <div className="mb-1 text-[12px] text-white/66">Recorrente mensal</div>
                       <div className="flex items-baseline justify-end gap-3">
                         {monthlyDiscount.percent > 0 && (
-                          <span className="text-[20px] font-display text-[rgba(242,237,228,0.35)] line-through">
+                          <span className="font-display text-[20px] text-white/40 line-through">
                             {formatCurrency(monthlyTotal)}
                           </span>
                         )}
-                        <span className="font-display text-[40px] font-light text-gold leading-tight">
+                        <span className="font-display text-[40px] font-extrabold leading-tight text-accent">
                           {formatCurrency(monthlyDiscount.finalValue)}
                         </span>
-                        <span className="text-[15px] text-[rgba(242,237,228,0.45)]">/mês</span>
+                        <span className="text-[15px] text-white/58">/mês</span>
                       </div>
                     </div>
                   )}
 
                   {setupTotal > 0 && (
                     <div className="mt-3">
-                      <div className="text-[12px] text-[rgba(242,237,228,0.55)] mb-1">Entregáveis únicos</div>
+                      <div className="mb-1 text-[12px] text-white/66">Entregáveis únicos</div>
                       <div className="flex items-baseline justify-end gap-3">
-                        <span className="font-display text-[40px] font-light text-gold leading-tight">
+                        <span className="font-display text-[40px] font-extrabold leading-tight text-accent">
                           {formatCurrency(setupTotal)}
                         </span>
                       </div>
@@ -306,7 +306,7 @@ export default function InvestmentSection() {
                   )}
                   {selectedSetupUndefined > 0 && (
                     <div className="mt-2">
-                      <div className="text-[12px] text-[rgba(242,237,228,0.45)] italic">
+                      <div className="text-[12px] italic text-white/54">
                         + {selectedSetupUndefined} {selectedSetupUndefined === 1 ? "serviço" : "serviços"} sob consulta
                       </div>
                     </div>
@@ -314,14 +314,14 @@ export default function InvestmentSection() {
                 </div>
 
                 {monthlyDiscount.percent > 0 && (
-                  <div className="inline-flex items-center gap-2 bg-gold/15 border border-gold/30 rounded-full px-4 py-2">
-                    <span className="text-[12px] font-medium text-gold">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-white/16 bg-white/12 px-4 py-2">
+                    <span className="text-[12px] font-semibold text-accent">
                       🎉 Desconto {monthlyDiscount.label} aplicado
                     </span>
                   </div>
                 )}
                 {selectedPricedCount > 0 && selectedPricedCount < 3 && monthlyDiscount.percent === 0 && (
-                  <div className="text-[13px] text-[rgba(242,237,228,0.5)] text-right">
+                  <div className="text-right text-[13px] text-white/56">
                     Selecione {3 - selectedPricedCount} {3 - selectedPricedCount === 1 ? "serviço" : "serviços"} a mais para desbloquear 5% de desconto
                   </div>
                 )}

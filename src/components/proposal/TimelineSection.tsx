@@ -2,32 +2,25 @@ import { useReveal } from "@/hooks/useReveal";
 
 const phases = [
   {
-    num: "1", phase: "Mês 1–2 · Fundação", title: "Bases visuais e estratégicas",
+    num: "1",
+    phase: "Mês 1–2 · Fundação",
+    title: "Bases visuais e estratégicas",
     desc: "Rebranding, planejamento de conteúdo estratégico e ensaio fotográfico. Tudo que vem depois depende disso estar pronto.",
-    tags: [
-      { name: "Rebranding", deadline: "30 dias" },
-      { name: "Planejamento de conteúdo", deadline: "20 dias" },
-      { name: "Ensaio fotográfico", deadline: "15 dias" },
-    ],
+    tags: ["Rebranding", "Planejamento", "Ensaio"],
   },
   {
-    num: "2", phase: "Mês 2–3 · Infraestrutura Digital", title: "Site, catálogo e marketplaces no ar",
-    desc: "Desenvolvimento do site com e-commerce, catálogo para representantes e setup completo no Mercado Livre. Redesign dos rótulos inicia em paralelo.",
-    tags: [
-      { name: "Site e-commerce", deadline: "45 dias" },
-      { name: "Catálogo impresso", deadline: "30 dias" },
-      { name: "Mercado Livre", deadline: "15 dias" },
-      { name: "Redesign de rótulos", deadline: "A definir" },
-    ],
+    num: "2",
+    phase: "Mês 2–3 · Infraestrutura Digital",
+    title: "Site, catálogo e marketplaces no ar",
+    desc: "Desenvolvimento do site com e-commerce, catálogo para representantes e setup completo no Mercado Livre.",
+    tags: ["E-commerce", "Catálogo", "Marketplace"],
   },
   {
-    num: "3", phase: "Mês 3 · Ativação", title: "Redes sociais e tráfego pago ativos",
-    desc: "Início da gestão de Instagram, TikTok e canal dedicado do sabonete íntimo. Campanhas de tráfego pago no ar. Primeiros influenciadores ativados.",
-    tags: [
-      { name: "Social media", deadline: "Recorrente" },
-      { name: "Tráfego pago", deadline: "Recorrente" },
-      { name: "Influenciadores", deadline: "Recorrente" },
-    ],
+    num: "3",
+    phase: "Mês 3 · Ativação",
+    title: "Social media e tráfego ativos",
+    desc: "Início da gestão de Instagram, TikTok, canal dedicado e campanhas de mídia com os primeiros influenciadores ativados.",
+    tags: ["Social", "Tráfego", "Influência"],
   },
 ];
 
@@ -35,42 +28,57 @@ export default function TimelineSection() {
   const ref = useReveal();
 
   return (
-    <section id="timeline" ref={ref} className="py-20 bg-background">
+    <section id="timeline" ref={ref} className="relative overflow-hidden bg-white py-24">
       <div className="container">
-        <div className="reveal">
-          <div className="text-[11px] font-medium tracking-[0.14em] uppercase text-secondary-foreground mb-4">Cronograma</div>
-          <h2 className="font-display text-[clamp(32px,4vw,48px)] font-light leading-[1.15] text-foreground text-balance">
-            Como acontece <em className="italic text-primary">na prática</em>
+        <div className="reveal mx-auto max-w-[760px] text-center">
+          <div className="text-[12px] font-semibold uppercase tracking-[0.18em] text-primary">
+            Cronograma
+          </div>
+          <h2 className="mt-4 font-display text-[clamp(34px,4vw,54px)] font-extrabold leading-[1.02] tracking-[-0.05em] text-primary">
+            Como a implementação acontece na prática.
           </h2>
-          <p className="text-muted-foreground mt-2 max-w-[540px]">
-            A implementação é faseada. Começamos pelo que viabiliza todo o resto — e cada fase adiciona uma camada nova ao ecossistema da marca.
+          <p className="mt-4 text-[16px] leading-[1.8] text-slate-600">
+            Assim como no site da Gamefic, a leitura foi organizada em blocos muito claros para
+            facilitar decisão e priorização.
           </p>
         </div>
 
-        <div className="relative mt-12 pl-6 md:pl-0">
-          {/* Vertical line */}
-          <div className="absolute left-[23px] md:left-[23px] top-0 bottom-0 w-0.5 bg-border" />
+        <div className="relative mt-14">
+          <div className="absolute left-[24px] top-8 hidden h-1 w-[calc(100%-48px)] bg-[linear-gradient(90deg,#2447ff,#00ff8d,#8800e3)] md:block" />
 
-          {phases.map((p, i) => (
-            <div key={i} className="reveal flex gap-8 mb-10 relative">
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-card border-2 border-primary flex items-center justify-center text-sm font-medium text-primary relative z-[1]">
-                {p.num}
-              </div>
-              <div>
-                <div className="text-[11px] font-medium tracking-[0.12em] uppercase text-gold-on mb-1">{p.phase}</div>
-                <div className="font-display text-[22px] font-normal text-foreground mb-2">{p.title}</div>
-                <div className="text-sm text-muted-foreground leading-relaxed">{p.desc}</div>
-                <div className="flex flex-wrap gap-2 mt-2.5">
-                  {p.tags.map((t) => (
-                    <span key={t.name} className="inline-flex items-center gap-1.5 text-[11px] text-secondary-foreground bg-purple-light rounded px-2.5 py-1">
-                      {t.name}
-                      <span className="text-[10px] text-muted-foreground opacity-70">· {t.deadline}</span>
+          <div className="grid gap-6 md:grid-cols-3">
+            {phases.map((phase) => (
+              <article
+                key={phase.num}
+                className="reveal gamefic-surface relative rounded-[30px] border border-white/80 p-6"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary font-display text-[20px] font-extrabold text-white">
+                    {phase.num}
+                  </div>
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+                    {phase.phase}
+                  </div>
+                </div>
+
+                <h3 className="mt-5 font-display text-[28px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
+                  {phase.title}
+                </h3>
+                <p className="mt-4 text-[15px] leading-[1.8] text-slate-600">{phase.desc}</p>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {phase.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full bg-secondary px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-primary"
+                    >
+                      {tag}
                     </span>
                   ))}
                 </div>
-              </div>
-            </div>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>

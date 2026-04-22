@@ -1,25 +1,54 @@
+function LogoMark() {
+  return (
+    <div className="relative h-10 w-10 rounded-2xl border-2 border-primary">
+      <div className="absolute inset-[7px] rounded-xl border border-primary/80" />
+      <div className="absolute inset-[13px] rounded-lg border border-primary/60" />
+      <div className="absolute inset-[5px] rotate-45 rounded-xl border border-primary/40" />
+    </div>
+  );
+}
+
 export default function Footer() {
   return (
-    <section className="bg-dark py-16 text-center">
+    <footer className="border-t border-border bg-white py-16">
       <div className="container">
-        <div className="text-[11px] font-medium tracking-[0.18em] uppercase text-gold mb-6">Isabella Vieira Souto</div>
-        <div className="font-display text-4xl font-light italic text-[rgba(242,237,228,0.85)] mb-8">
-          "Marketing, tecnologia e resultado — juntos."
-        </div>
-        <div className="flex justify-center gap-10 flex-wrap">
-          {[
-            { label: "Head de Marketing e Conteúdo", value: "Isabella Vieira Souto" },
-            { label: "E-mail", value: "isabellavieirasouto.mkt@gmail.com" },
-            { label: "WhatsApp", value: "+55 21 99767-8292" },
-          ].map((c) => (
-            <div key={c.label} className="text-[13px] text-[rgba(242,237,228,0.75)]">
-              <strong className="text-[rgba(242,237,228,0.85)] block mb-0.5">{c.value}</strong>
-              {c.label}
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-[440px]">
+            <div className="flex items-center gap-3">
+              <LogoMark />
+              <div className="font-display text-[34px] font-extrabold tracking-[-0.06em] text-primary">
+                gamefic
+              </div>
             </div>
-          ))}
+            <div className="mt-5 font-display text-[32px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
+              Branding forte, operação clara e execução organizada.
+            </div>
+            <p className="mt-4 text-[15px] leading-[1.8] text-slate-600">
+              A proposta segue hospedada como uma página privada com estética alinhada à linguagem
+              visual da Gamefic.
+            </p>
+          </div>
+
+          <div className="grid gap-4 text-[14px] text-slate-600 md:grid-cols-3">
+            {[
+              { label: "Head de Marketing e Conteúdo", value: "Isabella Vieira Souto" },
+              { label: "E-mail", value: "isabellavieirasouto.mkt@gmail.com" },
+              { label: "WhatsApp", value: "+55 21 99767-8292" },
+            ].map((item) => (
+              <div key={item.label} className="gamefic-surface rounded-[24px] p-5">
+                <div className="font-display text-[18px] font-extrabold text-primary">{item.value}</div>
+                <div className="mt-1 text-[12px] uppercase tracking-[0.16em] text-slate-500">
+                  {item.label}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="mt-10 text-xs text-[rgba(242,237,228,0.5)]">Proposta confidencial · Derm'Attive · 2026</div>
+
+        <div className="mt-10 text-[12px] uppercase tracking-[0.18em] text-slate-500">
+          Proposta confidencial · Derm'Attive · 2026
+        </div>
       </div>
-    </section>
+    </footer>
   );
 }

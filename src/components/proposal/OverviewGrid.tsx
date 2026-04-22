@@ -1,219 +1,123 @@
 import { useReveal } from "@/hooks/useReveal";
-import { useState, useRef, useCallback } from "react";
 import producaoVisualImg from "@/assets/producao-visual-card.png";
 import brandingPackagingImg from "@/assets/branding-packaging.jpg";
 
 const groups = [
   {
     num: "01",
-    title: "Produção Visual",
-    tag: "& Ferramentas",
+    title: "Produção Visual & Ferramentas",
+    subtitle: "A base visual de toda a comunicação da marca.",
     href: "#g1",
     image: producaoVisualImg,
-    items: ["Ensaio Fotográfico — 60 produtos", "Catálogo Impresso"],
+    items: ["Ensaio fotográfico", "Catálogo impresso"],
   },
   {
     num: "02",
-    title: "Plataformas",
-    tag: "de Venda",
+    title: "Plataformas de Venda",
+    subtitle: "Os canais onde a marca passa a vender com consistência.",
     href: "#g2",
-    image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop",
-    items: ["Site E-commerce", "Setup Mercado Livre"],
+    image: "https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
+    items: ["E-commerce", "Mercado Livre"],
   },
   {
     num: "03",
-    title: "Conteúdo",
-    tag: "& Social Media",
+    title: "Conteúdo & Social Media",
+    subtitle: "Presença social com estratégia, frequência e linguagem.",
     href: "#g3",
-    image: "https://images.pexels.com/photos/5081930/pexels-photo-5081930.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop",
-    items: ["Planejamento de Conteúdo", "Instagram + TikTok", "Canal Sabonete Íntimo", "Influenciadores"],
+    image: "https://images.pexels.com/photos/5081930/pexels-photo-5081930.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
+    items: ["Planejamento", "Instagram + TikTok", "Influenciadores"],
   },
   {
     num: "04",
-    title: "Aquisição",
-    tag: "& Performance",
+    title: "Aquisição & Performance",
+    subtitle: "Crescimento em tráfego e demanda qualificada.",
     href: "#g4",
-    image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop",
-    items: ["Tráfego Pago (2 plataformas)"],
+    image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
+    items: ["Meta Ads", "Google Ads"],
   },
   {
     num: "05",
-    title: "Branding",
-    tag: "& Embalagem",
+    title: "Branding & Embalagem",
+    subtitle: "A identidade que sustenta toda a percepção de valor.",
     href: "#g5",
     image: brandingPackagingImg,
-    items: ["Rebranding Completo", "Redesign de Rótulos (60 Produtos)"],
+    items: ["Rebranding", "Redesign de rótulos"],
   },
 ];
 
 const scrollTo = (href: string) => {
   const el = document.querySelector(href);
   if (el) {
-    const top = el.getBoundingClientRect().top + window.scrollY - 64;
+    const top = el.getBoundingClientRect().top + window.scrollY - 88;
     window.scrollTo({ top, behavior: "smooth" });
   }
 };
 
 export default function OverviewGrid() {
   const ref = useReveal();
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [parallaxOffsets, setParallaxOffsets] = useState<number[]>(groups.map(() => 0));
-
-  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    if (!containerRef.current) return;
-    const rect = containerRef.current.getBoundingClientRect();
-    const mouseX = e.clientX - rect.left;
-    const containerWidth = rect.width;
-    const normalizedX = (mouseX / containerWidth - 0.5) * 2; // -1 to 1
-
-    setParallaxOffsets(groups.map((_, i) => {
-      const cardCenter = (i + 0.5) / groups.length;
-      const distance = (cardCenter - 0.5) * 2 - normalizedX;
-      return distance * -15;
-    }));
-  }, []);
 
   return (
-    <section ref={ref} className="relative py-24 bg-dark overflow-hidden" id="servicos">
-      {/* Decorative spot lights */}
-      <div className="absolute -top-[20%] -right-[10%] w-[700px] h-[700px] rounded-full bg-[radial-gradient(circle,rgba(126,109,168,0.3)_0%,transparent_70%)] pointer-events-none" />
-      <div className="absolute -bottom-[15%] -left-[5%] w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,rgba(184,137,42,0.14)_0%,transparent_70%)] pointer-events-none" />
-      <div className="container">
-        <div className="reveal text-center max-w-[640px] mx-auto mb-16">
-          <div className="text-[11px] font-medium tracking-[0.14em] uppercase text-gold mb-4">Escopo Completo</div>
-          <h2 className="font-display text-[clamp(32px,4vw,48px)] font-light leading-[1.15] text-[#F2EDE4] text-balance">
-            5 frentes, <em className="italic text-gold">uma estratégia</em>
+    <section ref={ref} className="relative overflow-hidden bg-white py-24" id="servicos">
+      <div className="absolute inset-x-0 top-0 h-32 bg-[linear-gradient(180deg,rgba(4,64,248,0.03),transparent)]" />
+      <div className="container relative">
+        <div className="reveal mx-auto max-w-[720px] text-center">
+          <div className="text-[12px] font-semibold uppercase tracking-[0.18em] text-primary">
+            Escopo completo
+          </div>
+          <h2 className="mt-4 font-display text-[clamp(34px,4vw,56px)] font-extrabold leading-[1.02] tracking-[-0.05em] text-primary">
+            5 frentes, uma estratégia integrada.
           </h2>
-          <p className="text-[15px] text-[rgba(242,237,228,0.65)] mt-4">
-            Cada grupo de serviços funciona em conjunto. Não entregamos peças soltas — entregamos um ecossistema.
+          <p className="mt-4 text-[16px] leading-[1.8] text-slate-600">
+            Em vez de peças isoladas, a proposta conecta branding, venda, conteúdo e performance
+            num sistema visual inspirado no site da Gamefic.
           </p>
         </div>
 
-        <div
-          ref={containerRef}
-          className="reveal flex gap-3 lg:gap-4 justify-center items-center"
-          onMouseMove={handleMouseMove}
-          onMouseLeave={() => {
-            setHoveredIndex(null);
-            setParallaxOffsets(groups.map(() => 0));
-          }}
-          style={{ minHeight: "480px" }}
-        >
-          {groups.map((g, i) => {
-            const isHovered = hoveredIndex === i;
-            const hasHover = hoveredIndex !== null;
-
-            return (
-              <button
-                key={g.num}
-                onClick={() => scrollTo(g.href)}
-                onMouseEnter={() => setHoveredIndex(i)}
-                className="relative overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex-shrink-0"
-                style={{
-                  width: isHovered ? "320px" : hasHover ? "120px" : "180px",
-                  height: isHovered ? "480px" : hasHover ? "420px" : "440px",
-                  borderRadius: "32px",
-                }}
-              >
-                {/* Image with parallax */}
-                <div
-                  className="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                  style={{
-                    transform: `translateY(${parallaxOffsets[i]}px) scale(${isHovered ? 1.05 : 1.12})`,
-                  }}
-                >
-                  <img
-                    src={g.image}
-                    alt={g.title}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-
-                {/* Overlay gradient */}
-                <div
-                  className="absolute inset-0 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                  style={{
-                    background: isHovered
-                      ? "rgba(0,0,0,0.88)"
-                      : "linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.25) 100%)",
-                  }}
+        <div className="reveal-stagger mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {groups.map((g) => (
+            <button
+              key={g.num}
+              type="button"
+              onClick={() => scrollTo(g.href)}
+              className="reveal group gamefic-surface overflow-hidden rounded-[32px] border border-white/80 text-left transition-all duration-300 hover:-translate-y-1"
+            >
+              <div className="relative h-[220px] overflow-hidden">
+                <img
+                  src={g.image}
+                  alt={g.title}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
                 />
-
-                {/* Content */}
-                <div className="absolute inset-0 z-10 p-6 flex flex-col">
-
-                  <div className="relative flex-1 min-h-0">
-                    {/* Default state */}
-                    <div
-                      className="absolute inset-x-0 bottom-0 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                      style={{
-                        opacity: isHovered ? 0 : 1,
-                        transform: isHovered ? "translateY(24px)" : "translateY(0)",
-                        pointerEvents: isHovered ? "none" : "auto",
-                      }}
-                    >
-                      <h3
-                        className="font-display leading-[1.1] text-white tracking-[-0.01em]"
-                        style={{ fontSize: "18px" }}
-                      >
-                        {g.title}
-                        <br />
-                        <span className="text-gold/80">{g.tag}</span>
-                      </h3>
-                    </div>
-
-                    {/* Hover state */}
-                    <div
-                      className="absolute inset-0 flex flex-col justify-center items-center transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                      style={{
-                        opacity: isHovered ? 1 : 0,
-                        transform: isHovered ? "translateY(0) scale(1)" : "translateY(12px) scale(0.98)",
-                        pointerEvents: isHovered ? "auto" : "none",
-                      }}
-                    >
-                      <h3
-                        className="font-display leading-[1.1] text-white tracking-[-0.01em] text-center"
-                        style={{ fontSize: "28px" }}
-                      >
-                        {g.title}
-                        <br />
-                        <span className="text-gold/80">{g.tag}</span>
-                      </h3>
-
-                      <div className="mt-4">
-                        <ul className="flex flex-col gap-2 items-center">
-                          {g.items.map((item) => (
-                            <li
-                              key={item}
-                              className="flex items-start gap-2 text-[13px] leading-snug text-white/70"
-                            >
-                              <span className="flex-shrink-0 w-1 h-1 rounded-full bg-gold/50 mt-[7px]" />
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Ver detalhes - fixed at bottom */}
-                  <div
-                    className="transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                    style={{
-                      opacity: isHovered ? 1 : 0,
-                      transform: isHovered ? "translateY(0)" : "translateY(8px)",
-                    }}
-                  >
-                    <div className="text-[11px] font-medium uppercase tracking-[0.12em] text-gold/60 text-center">
-                      Ver detalhes ↓
-                    </div>
-                  </div>
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,64,248,0.08),rgba(0,0,0,0.35))]" />
+                <div className="absolute left-5 top-5 rounded-full bg-accent px-3 py-1 text-[12px] font-display font-extrabold text-primary">
+                  Frente {g.num}
                 </div>
-              </button>
-            );
-          })}
+              </div>
+
+              <div className="p-6">
+                <h3 className="font-display text-[28px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
+                  {g.title}
+                </h3>
+                <p className="mt-3 text-[15px] leading-[1.8] text-slate-600">{g.subtitle}</p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {g.items.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full bg-secondary px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-primary"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 font-display text-[14px] font-extrabold text-white">
+                  Ver detalhes
+                  <span>{">"}</span>
+                </div>
+              </div>
+            </button>
+          ))}
         </div>
       </div>
     </section>

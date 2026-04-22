@@ -244,18 +244,18 @@ export default function ServicesDetail() {
   const [selectedService, setSelectedService] = useState<SubService | null>(null);
 
   return (
-    <section ref={ref} className="py-20 bg-card">
+    <section ref={ref} className="bg-white py-24">
       <div className="container">
         <div className="flex flex-col gap-16">
           {groups.map((group) => (
             <div key={group.id} id={group.id} className="reveal">
               {/* Group header */}
-              <div className="bg-dark rounded-2xl px-8 py-8 mb-6">
+              <div className="mb-6 rounded-[32px] bg-[linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)] px-8 py-8 text-white shadow-[0_24px_60px_rgba(25,48,130,0.16)]">
                 <div className="flex items-center gap-5">
-                  <span className="font-numbers text-[clamp(36px,4vw,48px)] font-light text-gold leading-none">{group.num}</span>
+                  <span className="font-numbers text-[clamp(36px,4vw,48px)] font-extrabold leading-none text-accent">{group.num}</span>
                   <div>
-                    <h3 className="font-display text-[clamp(20px,2.5vw,28px)] font-light text-[#F2EDE4] leading-[1.2]">{group.title}</h3>
-                    <p className="text-[13px] text-[rgba(242,237,228,0.55)] mt-0.5">{group.subtitle}</p>
+                    <h3 className="font-display text-[clamp(24px,2.8vw,34px)] font-extrabold leading-[1.05] tracking-[-0.04em]">{group.title}</h3>
+                    <p className="mt-1 text-[14px] text-white/72">{group.subtitle}</p>
                   </div>
                 </div>
               </div>
@@ -266,24 +266,24 @@ export default function ServicesDetail() {
                   <button
                     key={service.id}
                     onClick={() => setSelectedService(service)}
-                    className="group relative bg-background border border-border rounded-xl p-5 text-left transition-all duration-300 ease-out hover:border-gold/40 hover:shadow-[0_4px_24px_rgba(184,137,42,0.08)] active:scale-[0.98]"
+                    className="group gamefic-surface relative rounded-[30px] border border-white/80 p-6 text-left transition-all duration-300 ease-out hover:-translate-y-1 active:scale-[0.99]"
                   >
                     <div className="flex items-start gap-4">
                       <div
-                        className="flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center font-numbers text-[13px] font-medium text-primary-foreground"
+                        className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-2xl font-numbers text-[13px] font-extrabold text-white"
                         style={{ background: group.badgeColor }}
                       >
                         {service.num}
                       </div>
                       <div className="min-w-0 flex-1">
-                        <div className="text-[10px] font-medium tracking-[0.12em] uppercase text-muted-foreground mb-1">{service.category}</div>
-                        <h4 className="font-display text-[17px] font-normal text-foreground leading-[1.3] mb-2">{service.title}</h4>
-                        <p className="text-[13px] text-muted-foreground leading-[1.6] line-clamp-2">{service.descriptions[0]}</p>
+                        <div className="mb-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-slate-500">{service.category}</div>
+                        <h4 className="mb-2 font-display text-[24px] font-extrabold leading-[1.08] tracking-[-0.04em] text-primary">{service.title}</h4>
+                        <p className="line-clamp-3 text-[14px] leading-[1.7] text-slate-600">{service.descriptions[0]}</p>
                       </div>
                     </div>
-                    <div className="mt-3 flex items-center gap-1.5 text-[11px] font-medium tracking-[0.08em] uppercase text-gold/70 group-hover:text-gold transition-colors duration-300">
+                    <div className="mt-4 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-primary transition-colors duration-300 group-hover:text-purple">
                       <span>{service.deliverables.length} entregas</span>
-                      <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                      <span className="rounded-full bg-accent px-2 py-0.5 text-primary transition-transform duration-300 group-hover:translate-x-1">{">"}</span>
                     </div>
                   </button>
                 ))}
@@ -295,40 +295,40 @@ export default function ServicesDetail() {
 
       {/* Detail drawer */}
       <Sheet open={!!selectedService} onOpenChange={(open) => !open && setSelectedService(null)}>
-        <SheetContent className="w-full sm:max-w-[520px] overflow-y-auto bg-background border-l border-border">
+        <SheetContent className="w-full overflow-y-auto border-l border-border bg-white sm:max-w-[560px]">
           {selectedService && (
             <>
-              <SheetHeader className="pb-6 border-b border-border">
-                <div className="text-[10px] font-medium tracking-[0.14em] uppercase text-muted-foreground mb-1">{selectedService.category}</div>
-                <SheetTitle className="font-display text-[clamp(22px,3vw,28px)] font-normal text-foreground leading-[1.2]">
+              <SheetHeader className="border-b border-border pb-6">
+                <div className="mb-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500">{selectedService.category}</div>
+                <SheetTitle className="font-display text-[clamp(28px,3vw,34px)] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
                   {selectedService.title}
                 </SheetTitle>
               </SheetHeader>
 
               <div className="pt-6 flex flex-col gap-6">
                 {/* Descriptions */}
-                <div className="text-[14px] text-muted-foreground leading-[1.8] space-y-3">
+                <div className="space-y-3 text-[15px] leading-[1.85] text-slate-600">
                   {selectedService.descriptions.map((d, i) => (
-                    <p key={i} dangerouslySetInnerHTML={{ __html: d }} className="[&_strong]:text-foreground [&_strong]:font-medium" />
+                    <p key={i} dangerouslySetInnerHTML={{ __html: d }} className="[&_strong]:font-semibold [&_strong]:text-slate-900" />
                   ))}
                 </div>
 
                 {selectedService.highlight && (
-                  <div className="bg-gold-light border border-gold/20 rounded-lg p-4">
-                    <p className="text-[13px] text-muted-foreground leading-relaxed [&_strong]:text-foreground" dangerouslySetInnerHTML={{ __html: selectedService.highlight }} />
+                  <div className="rounded-[24px] border border-accent/30 bg-accent/10 p-5">
+                    <p className="text-[14px] leading-relaxed text-slate-700 [&_strong]:font-semibold [&_strong]:text-slate-900" dangerouslySetInnerHTML={{ __html: selectedService.highlight }} />
                   </div>
                 )}
 
                 {/* Deliverables */}
-                <div className="bg-card border border-border rounded-xl p-5">
-                  <h4 className="text-[11px] font-medium tracking-[0.12em] uppercase text-secondary-foreground mb-4">
+                <div className="rounded-[28px] border border-border bg-secondary/50 p-5">
+                  <h4 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary">
                     {selectedService.deliverablesTitle || "Entregas"}
                   </h4>
                   <ul className="flex flex-col gap-2.5">
                     {selectedService.deliverables.map((d, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-[13px] text-muted-foreground leading-snug">
-                        <span className="flex-shrink-0 w-1.5 h-1.5 rounded-full bg-gold mt-[6px]" />
-                        <span dangerouslySetInnerHTML={{ __html: d }} className="[&_strong]:text-foreground" />
+                      <li key={i} className="flex items-start gap-2.5 text-[14px] leading-snug text-slate-600">
+                        <span className="mt-[6px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+                        <span dangerouslySetInnerHTML={{ __html: d }} className="[&_strong]:font-semibold [&_strong]:text-slate-900" />
                       </li>
                     ))}
                   </ul>

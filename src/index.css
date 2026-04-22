@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=Playfair+Display:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -6,51 +6,50 @@
 
 @layer base {
   :root {
-    --background: 260 20% 97%;
-    --foreground: 252 25% 14%;
+    --background: 220 33% 98%;
+    --foreground: 229 22% 16%;
 
     --card: 0 0% 100%;
-    --card-foreground: 252 25% 14%;
+    --card-foreground: 229 22% 16%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 252 25% 14%;
+    --popover-foreground: 229 22% 16%;
 
-    --primary: 258 30% 48%;
+    --primary: 224 96% 49%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 258 30% 95%;
-    --secondary-foreground: 258 30% 32%;
+    --secondary: 221 100% 97%;
+    --secondary-foreground: 224 70% 42%;
 
-    --muted: 258 30% 95%;
-    --muted-foreground: 255 8% 40%;
+    --muted: 220 30% 95%;
+    --muted-foreground: 228 13% 42%;
 
-    --accent: 38 73% 44%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 154 100% 50%;
+    --accent-foreground: 224 96% 32%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 258 25% 88%;
-    --input: 258 25% 88%;
-    --ring: 258 30% 48%;
+    --border: 220 24% 89%;
+    --input: 220 24% 89%;
+    --ring: 224 96% 49%;
 
-    --radius: 0.5rem;
+    --radius: 1.25rem;
 
-    /* Custom tokens */
-    --dark: 252 25% 14%;
-    --dark-muted: 260 10% 25%;
-    --purple: 258 30% 48%;
-    --purple-light: 258 30% 95%;
-    --purple-mid: 258 25% 65%;
-    --gold: 38 73% 44%;
-    --gold-light: 40 50% 93%;
-    --gold-on-light: 38 67% 29%;
-    --rose: 18 42% 46%;
-    --rose-light: 18 50% 95%;
+    --dark: 234 85% 52%;
+    --dark-muted: 269 100% 44%;
+    --purple: 269 100% 44%;
+    --purple-light: 263 100% 97%;
+    --purple-mid: 262 88% 69%;
+    --gold: 154 100% 50%;
+    --gold-light: 154 100% 96%;
+    --gold-on-light: 224 86% 34%;
+    --rose: 269 100% 44%;
+    --rose-light: 263 100% 97%;
 
-    --font-display: 'Cormorant Garamond', Georgia, serif;
-    --font-body: 'DM Sans', system-ui, sans-serif;
-    --font-numbers: 'Playfair Display', Georgia, serif;
+    --font-display: "Nunito", system-ui, sans-serif;
+    --font-body: "Roboto", system-ui, sans-serif;
+    --font-numbers: "Nunito", system-ui, sans-serif;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -61,17 +60,29 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(0, 255, 141, 0.1), transparent 22%),
+      radial-gradient(circle at top right, rgba(136, 0, 227, 0.08), transparent 30%),
+      linear-gradient(180deg, #ffffff 0%, #f6f8ff 100%);
     font-family: var(--font-body);
     font-size: 15px;
     line-height: 1.7;
+  }
+
+  ::selection {
+    background: rgba(4, 64, 248, 0.18);
+    color: #112;
   }
 }
 
@@ -79,33 +90,65 @@
   .font-display {
     font-family: var(--font-display);
   }
+
   .font-body {
     font-family: var(--font-body);
   }
+
   .font-numbers {
     font-family: var(--font-numbers);
   }
+
   .text-balance {
     text-wrap: balance;
   }
+
+  .gamefic-pattern {
+    background-image:
+      repeating-linear-gradient(
+        135deg,
+        rgba(4, 64, 248, 0.08) 0 2px,
+        transparent 2px 26px
+      ),
+      repeating-linear-gradient(
+        135deg,
+        rgba(0, 255, 141, 0.08) 0 2px,
+        transparent 2px 40px
+      );
+    background-position: 0 0, 28px 12px;
+    background-size: 140px 140px;
+  }
+
+  .gamefic-surface {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow:
+      0 24px 60px rgba(25, 48, 130, 0.08),
+      0 6px 18px rgba(25, 48, 130, 0.06);
+  }
+
+  .gamefic-glow {
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.16) inset,
+      0 24px 60px rgba(0, 0, 0, 0.16);
+  }
 }
 
-/* Scroll reveal animation */
 .reveal {
   opacity: 0;
   transform: translateY(20px);
   filter: blur(4px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
   filter: blur(0);
 }
 
-/* Stagger children */
 .reveal-stagger > .reveal:nth-child(1) { transition-delay: 0ms; }
 .reveal-stagger > .reveal:nth-child(2) { transition-delay: 80ms; }
 .reveal-stagger > .reveal:nth-child(3) { transition-delay: 160ms; }
@@ -115,10 +158,10 @@
 .reveal-stagger > .reveal:nth-child(7) { transition-delay: 480ms; }
 .reveal-stagger > .reveal:nth-child(8) { transition-delay: 560ms; }
 
-/* Photo hover */
 .photo-zoom img {
   transition: transform 0.6s ease;
 }
+
 .photo-zoom:hover img {
   transform: scale(1.04);
 }
