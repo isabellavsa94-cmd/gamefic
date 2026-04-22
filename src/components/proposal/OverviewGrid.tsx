@@ -13,29 +13,29 @@ const groups = [
   {
     num: "02",
     title: "Trafego Pago",
-    subtitle: "Frente prevista para aquisicao e performance, ainda em detalhamento complementar.",
+    subtitle: "Google Ads e Meta Ads com foco em geracao de leads e otimizacao continua.",
     href: "#g2",
     image:
       "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
-    items: ["Meta / Google", "KPIs", "Escopo a definir"],
+    items: ["Google Ads", "Meta Ads", "Leads"],
   },
   {
     num: "03",
     title: "Inbound (RD Station)",
-    subtitle: "Estrutura para nutricao, automacoes e relacionamento com base em funil.",
+    subtitle: "Integracao com CRM, captacao e operacao de e-mail marketing recorrente.",
     href: "#g3",
     image:
       "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
-    items: ["Automacoes", "Fluxos", "Escopo a definir"],
+    items: ["RD Station", "Integracao", "4 e-mails/mes"],
   },
   {
     num: "04",
     title: "Criacao de Site",
-    subtitle: "Modulo previsto para apresentar a marca e apoiar conversao e captacao.",
+    subtitle: "Landing page principal de conversao integrada ao ecossistema de campanhas.",
     href: "#g4",
     image:
       "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
-    items: ["Institucional", "Conversao", "Escopo a definir"],
+    items: ["Landing page", "Conversao", "Tracking"],
   },
 ];
 
@@ -62,8 +62,8 @@ export default function OverviewGrid() {
             4 frentes para a proposta da Gamefic.
           </h2>
           <p className="mt-4 text-[16px] leading-[1.8] text-slate-600">
-            O site agora organiza o material em quatro modulos. O primeiro ja esta fechado com o
-            documento de Social Media. Os outros tres entram preparados para evolucao comercial.
+            O site agora organiza o material em quatro frentes, mas com um segundo pacote ja
+            consolidado comercialmente para performance e automacao.
           </p>
         </div>
 

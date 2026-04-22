@@ -1,15 +1,15 @@
 import { useReveal } from "@/hooks/useReveal";
 
 const stats = [
-  { num: "4", label: "frentes previstas no escopo" },
-  { num: "2", label: "canais de social media" },
-  { num: "6", label: "meses minimos de projeto social" },
+  { num: "2", label: "pacotes comerciais ja estruturados" },
+  { num: "R$ 5,9k", label: "novo pacote mensal de performance" },
+  { num: "R$ 10k", label: "verba de midia sugerida" },
 ];
 
 const summaryItems = [
-  "Social Media ja detalhado com base na proposta existente",
-  "Trafego Pago, Inbound e Site previstos como modulos complementares",
-  "Estrutura modular para a proposta crescer sem retrabalho",
+  "Social Media continua como modulo fechado de entrada",
+  "Performance e automacao agora viram um segundo pacote fechado",
+  "Trafego, landing page, tracking, RD e email entram no mesmo bloco comercial",
 ];
 
 const scrollTo = (href: string) => {
@@ -49,8 +49,10 @@ export default function Hero() {
               <strong className="font-semibold text-white"> Social Media (2 canais)</strong>,
               <strong className="font-semibold text-white"> Trafego Pago</strong>,
               <strong className="font-semibold text-white"> Inbound com RD Station</strong> e
-              <strong className="font-semibold text-white"> Criacao de site</strong>. O modulo de
-              Social Media ja esta detalhado com base no PDF da proposta anterior.
+              <strong className="font-semibold text-white"> Criacao de site</strong>. Agora, alem
+              do modulo de Social Media, o site tambem passa a trazer um
+              <strong className="font-semibold text-white"> pacote mensal de performance e automacao comercial</strong>
+              com valor sugerido de <strong className="font-semibold text-white">R$ 5.900/mes</strong>.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -118,8 +120,8 @@ export default function Hero() {
                   Gamefic
                 </div>
                 <div className="mt-4 text-[14px] leading-[1.7] text-white/76">
-                  Responsavel mencionado no documento base: Rubens Melo. Esta versao do site
-                  consolida o escopo atual e prepara os modulos ainda sem detalhamento final.
+                  Responsavel mencionado no documento base: Rubens Melo. Esta versao agora possui
+                  dois blocos comerciais reais: Social Media e Performance + Automacao.
                 </div>
               </div>
             </div>

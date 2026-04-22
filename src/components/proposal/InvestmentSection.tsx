@@ -9,25 +9,11 @@ const modules = [
     status: "definido",
   },
   {
-    title: "Trafego Pago",
-    type: "complementar",
-    value: "A definir",
-    note: "Escopo ainda sera consolidado em documento complementar.",
-    status: "pendente",
-  },
-  {
-    title: "Inbound (RD Station)",
-    type: "complementar",
-    value: "A definir",
-    note: "Escopo ainda sera consolidado em documento complementar.",
-    status: "pendente",
-  },
-  {
-    title: "Criacao de Site",
-    type: "complementar",
-    value: "A definir",
-    note: "Escopo ainda sera consolidado em documento complementar.",
-    status: "pendente",
+    title: "Pacote de performance e automacao comercial",
+    type: "recorrente",
+    value: "R$ 5.900 / mes",
+    note: "Inclui trafego pago, e-mail marketing, landing page, tracking avancado server side e integracao com RD Station.",
+    status: "sugerido",
   },
 ];
 
@@ -45,9 +31,8 @@ export default function InvestmentSection() {
             Status financeiro do escopo atual.
           </h2>
           <p className="mt-3 max-w-[700px] text-[16px] leading-[1.8] text-slate-600">
-            Neste momento, apenas o modulo de Social Media ja possui investimento definido no
-            material base. Os demais entram no site como frentes previstas, aguardando escopo
-            final e precificacao.
+            Agora a proposta passa a ter dois blocos comerciais com valor definido: o modulo de
+            Social Media e um segundo pacote mensal de performance e automacao comercial.
           </p>
         </div>
 
@@ -77,7 +62,7 @@ export default function InvestmentSection() {
                           : "bg-secondary text-primary"
                       }`}
                     >
-                      {module.status === "definido" ? "valor definido" : "em definicao"}
+                      {module.status === "definido" ? "valor definido" : "pacote sugerido"}
                     </div>
                     <div className="mt-3 font-display text-[32px] font-extrabold tracking-[-0.04em] text-primary">
                       {module.value}
@@ -93,24 +78,44 @@ export default function InvestmentSection() {
               Recorte atual
             </div>
             <h3 className="mt-4 font-display text-[34px] font-extrabold leading-[1.02] tracking-[-0.04em]">
-              O modulo de Social Media ja pode ser aprovado isoladamente.
+              Agora existem dois caminhos de aprovacao comercial.
             </h3>
             <p className="mt-4 text-[15px] leading-[1.8] text-white/80">
-              Isso permite iniciar a operacao de conteudo enquanto os demais modulos sao refinados
-              comercialmente sem travar a proposta.
+              A Gamefic pode aprovar apenas Social Media, apenas o pacote de performance e
+              automacao, ou combinar os dois blocos conforme a necessidade comercial.
             </p>
 
-            <div className="mt-7 rounded-[28px] bg-white/12 p-5">
-              <div className="text-[11px] uppercase tracking-[0.18em] text-white/60">
-                Base do valor atual
+            <div className="mt-7 space-y-4">
+              <div className="rounded-[28px] bg-white/12 p-5">
+                <div className="text-[11px] uppercase tracking-[0.18em] text-white/60">
+                  Pacote 1
+                </div>
+                <div className="mt-2 font-display text-[22px] font-extrabold tracking-[-0.03em] text-white">
+                  Gestao de Redes Sociais (2 redes)
+                </div>
+                <div className="mt-4 font-display text-[42px] font-extrabold tracking-[-0.05em] text-accent">
+                  R$ 3.000
+                </div>
+                <div className="text-[14px] text-white/72">por mes · minimo de 6 meses</div>
               </div>
-              <div className="mt-2 font-display text-[22px] font-extrabold tracking-[-0.03em] text-white">
-                Gestao de Redes Sociais (2 redes)
+
+              <div className="rounded-[28px] bg-white/12 p-5">
+                <div className="text-[11px] uppercase tracking-[0.18em] text-white/60">
+                  Pacote 2
+                </div>
+                <div className="mt-2 font-display text-[22px] font-extrabold tracking-[-0.03em] text-white">
+                  Performance e automacao comercial
+                </div>
+                <div className="mt-4 font-display text-[42px] font-extrabold tracking-[-0.05em] text-accent">
+                  R$ 5.900
+                </div>
+                <div className="text-[14px] text-white/72">
+                  por mes · minimo recomendado de 6 meses
+                </div>
+                <div className="mt-3 text-[13px] text-white/72">
+                  Verba de midia: ate R$ 10.000/mes, paga diretamente pelo cliente as plataformas.
+                </div>
               </div>
-              <div className="mt-4 font-display text-[42px] font-extrabold tracking-[-0.05em] text-accent">
-                R$ 3.000
-              </div>
-              <div className="text-[14px] text-white/72">por mes · minimo de 6 meses</div>
             </div>
           </div>
         </div>
