@@ -29,11 +29,20 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
       <div className="absolute left-[-8%] top-[18%] h-[320px] w-[320px] rounded-full bg-[radial-gradient(circle,rgba(0,255,141,0.2),transparent_72%)]" />
       <div className="absolute bottom-[-80px] right-[-80px] h-[360px] w-[360px] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.16),transparent_72%)]" />
 
-      <div className="relative flex min-h-screen items-center justify-center px-6">
+      <div className="relative flex min-h-screen items-center justify-center px-6 py-10">
         <form
           onSubmit={handleSubmit}
           className="w-full max-w-[430px] rounded-[34px] border border-white/15 bg-white/10 p-8 text-white shadow-[0_30px_70px_rgba(0,0,0,0.2)] backdrop-blur-xl"
         >
+          <div className="mb-7 text-center">
+            <div className="press-start-lines mx-auto max-w-[290px] px-4 py-2">
+              <div className="press-start-title">
+                <span>PRESS</span>
+                <span>START</span>
+              </div>
+            </div>
+          </div>
+
           <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-3xl bg-accent text-primary">
             <Lock size={28} />
           </div>
