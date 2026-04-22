@@ -31,13 +31,11 @@ export default function Hero() {
               A estratégia para colocar a Gamefic no próximo level.
             </h1>
             <p className="mt-6 max-w-[620px] text-[17px] leading-[1.8] text-white/80 md:text-[19px]">
-              Esta proposta combina
-              <strong className="font-semibold text-white"> Social Media</strong>,
+              <strong className="font-semibold text-white">Social Media</strong>,
               <strong className="font-semibold text-white"> Tráfego Pago</strong>,
-              <strong className="font-semibold text-white"> Inbound com RD Station</strong> e
-              <strong className="font-semibold text-white"> página de conversão</strong> em uma
-              estrutura pensada para atrair demanda, capturar oportunidades e apoiar o comercial da
-              Gamefic com mais previsibilidade.
+              <strong className="font-semibold text-white"> Inbound</strong> e
+              <strong className="font-semibold text-white"> conversão</strong> em uma operação
+              para atrair demanda e apoiar o comercial com mais previsibilidade.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">

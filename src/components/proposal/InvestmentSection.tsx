@@ -4,18 +4,22 @@ const coinIcon = `${import.meta.env.BASE_URL}coin-icon.svg`;
 
 const modules = [
   {
+    eyebrow: "Pacote 1",
     title: "Social Media (Instagram + LinkedIn)",
     type: "recorrente",
     value: "R$ 3.000 / mês",
     note: "Operação recorrente para fortalecer presença, constância e autoridade em dois canais. Prazo mínimo de 6 meses.",
     status: "definido",
+    highlights: ["Instagram + LinkedIn", "Conteúdo recorrente", "Prazo mínimo de 6 meses"],
   },
   {
+    eyebrow: "Pacote 2",
     title: "Pacote de performance e automação comercial",
     type: "recorrente",
     value: "R$ 5.900 / mês",
     note: "Inclui tráfego pago, e-mail marketing, landing page, tracking avançado server side e integração com RD Station.",
     status: "sugerido",
+    highlights: ["Google + Meta Ads", "Landing page", "RD Station + tracking"],
   },
 ];
 
@@ -38,44 +42,72 @@ export default function InvestmentSection() {
           </p>
         </div>
 
-        <div className="reveal mt-12 grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="grid gap-4">
+        <div className="reveal mt-12 grid gap-6 xl:grid-cols-[1.08fr_0.92fr]">
+          <div className="grid gap-5">
             {modules.map((module) => (
               <article
                 key={module.title}
-                className="gamefic-surface rounded-[30px] border border-white/80 p-6"
+                className="gamefic-surface rounded-[32px] border border-white/80 p-6 md:p-7"
               >
-                <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                  <div>
-                    <div className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">
-                      {module.type}
+                <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-start">
+                  <div className="min-w-0">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="rounded-full bg-secondary px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-primary">
+                        {module.eyebrow}
+                      </span>
+                      <span className="rounded-full border border-border bg-white px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500">
+                        {module.type}
+                      </span>
+                      <span
+                        className={`rounded-full px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] ${
+                          module.status === "definido"
+                            ? "bg-accent text-primary"
+                            : "bg-secondary text-primary"
+                        }`}
+                      >
+                        {module.status === "definido" ? "valor definido" : "pacote sugerido"}
+                      </span>
                     </div>
-                    <h3 className="mt-2 font-display text-[26px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
+
+                    <h3 className="mt-4 max-w-[18ch] font-display text-[26px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary text-balance">
                       {module.title}
                     </h3>
-                    <p className="mt-2 text-[14px] leading-[1.7] text-slate-600">{module.note}</p>
+
+                    <p className="mt-3 max-w-[56ch] text-[15px] leading-[1.8] text-slate-600">
+                      {module.note}
+                    </p>
+
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {module.highlights.map((highlight) => (
+                        <span
+                          key={highlight}
+                          className="rounded-full bg-secondary px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-primary"
+                        >
+                          {highlight}
+                        </span>
+                      ))}
+                    </div>
                   </div>
 
-                  <div className="md:text-right">
-                    <div
-                      className={`inline-flex rounded-full px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] ${
-                        module.status === "definido"
-                          ? "bg-accent text-primary"
-                          : "bg-secondary text-primary"
-                      }`}
-                    >
-                      {module.status === "definido" ? "valor definido" : "pacote sugerido"}
+                  <div className="rounded-[28px] border border-border bg-white px-5 py-5 shadow-[0_12px_30px_rgba(25,48,130,0.04)] lg:min-w-[232px]">
+                    <div className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">
+                      Investimento mensal
                     </div>
-                    <div className="mt-3 flex items-center gap-3 md:justify-end">
+                    <div className="mt-4 flex items-center gap-3">
                       <img
                         src={coinIcon}
                         alt=""
                         aria-hidden="true"
                         className="h-10 w-10 flex-shrink-0"
                       />
-                      <div className="font-display text-[32px] font-extrabold tracking-[-0.04em] text-primary">
+                      <div className="min-w-0 font-display text-[32px] font-extrabold tracking-[-0.04em] text-primary">
                         {module.value}
                       </div>
+                    </div>
+                    <div className="mt-3 text-[13px] leading-[1.7] text-slate-500">
+                      {module.status === "definido"
+                        ? "Escopo já estruturado para entrada imediata."
+                        : "Leitura sugerida para acelerar performance e operação."}
                     </div>
                   </div>
                 </div>
@@ -83,63 +115,78 @@ export default function InvestmentSection() {
             ))}
           </div>
 
-          <div className="reveal rounded-[34px] border border-white/16 bg-[linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)] p-7 text-white shadow-[0_24px_60px_rgba(25,48,130,0.16)]">
+          <div className="reveal rounded-[36px] border border-white/16 bg-[linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)] p-7 text-white shadow-[0_24px_60px_rgba(25,48,130,0.16)] md:p-8">
             <div className="text-[12px] font-semibold uppercase tracking-[0.16em] text-accent">
-              Escolha de entrada
+              Leitura rápida
             </div>
-            <h3 className="mt-4 font-display text-[34px] font-extrabold leading-[1.02] tracking-[-0.04em]">
-              Dois formatos para acelerar a operação comercial.
+            <h3 className="mt-4 max-w-[12ch] font-display text-[34px] font-extrabold leading-[1.02] tracking-[-0.04em] text-balance">
+              Dois caminhos claros para começar.
             </h3>
-            <p className="mt-4 text-[15px] leading-[1.8] text-white/80">
-              A Gamefic pode começar pela construção de presença, partir direto para performance ou
-              combinar os dois blocos para ganhar tração e estrutura ao mesmo tempo.
+            <p className="mt-4 max-w-[48ch] text-[15px] leading-[1.85] text-white/82">
+              A Gamefic pode contratar um bloco específico ou combinar os dois para ganhar presença,
+              geração de demanda e estrutura comercial ao mesmo tempo.
             </p>
 
-            <div className="mt-7 space-y-4">
-              <div className="rounded-[28px] bg-white/12 p-5">
-                <div className="text-[11px] uppercase tracking-[0.18em] text-white/60">
-                  Pacote 1
+            <div className="mt-7 grid gap-4">
+              <div className="rounded-[28px] border border-white/14 bg-white/12 p-5 backdrop-blur-sm">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <div className="text-[11px] uppercase tracking-[0.18em] text-white/60">
+                      Pacote 1
+                    </div>
+                    <div className="mt-2 font-display text-[22px] font-extrabold tracking-[-0.03em] text-white">
+                      Gestão de Redes Sociais
+                    </div>
+                  </div>
+                  <div className="rounded-full bg-white/14 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-white">
+                    2 redes
+                  </div>
                 </div>
-                <div className="mt-2 font-display text-[22px] font-extrabold tracking-[-0.03em] text-white">
-                  Gestão de Redes Sociais (2 redes)
-                </div>
-                <div className="mt-4 flex items-center gap-3">
-                  <img
-                    src={coinIcon}
-                    alt=""
-                    aria-hidden="true"
-                    className="h-11 w-11 flex-shrink-0"
-                  />
-                  <div className="font-display text-[42px] font-extrabold tracking-[-0.05em] text-accent">
+
+                <div className="mt-5 flex items-center gap-3">
+                  <img src={coinIcon} alt="" aria-hidden="true" className="h-11 w-11 flex-shrink-0" />
+                  <div className="font-display text-[40px] font-extrabold tracking-[-0.05em] text-accent">
                     R$ 3.000
                   </div>
                 </div>
-                <div className="text-[14px] text-white/72">por mês · mínimo de 6 meses</div>
+                <div className="mt-2 text-[14px] text-white/72">por mês · mínimo de 6 meses</div>
               </div>
 
-              <div className="rounded-[28px] bg-white/12 p-5">
-                <div className="text-[11px] uppercase tracking-[0.18em] text-white/60">
-                  Pacote 2
+              <div className="rounded-[28px] border border-white/14 bg-white/12 p-5 backdrop-blur-sm">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <div className="text-[11px] uppercase tracking-[0.18em] text-white/60">
+                      Pacote 2
+                    </div>
+                    <div className="mt-2 max-w-[16ch] font-display text-[22px] font-extrabold tracking-[-0.03em] text-white text-balance">
+                      Performance e automação comercial
+                    </div>
+                  </div>
+                  <div className="rounded-full bg-white/14 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-white">
+                    tráfego + inbound
+                  </div>
                 </div>
-                <div className="mt-2 font-display text-[22px] font-extrabold tracking-[-0.03em] text-white">
-                  Performance e automação comercial
-                </div>
-                <div className="mt-4 flex items-center gap-3">
-                  <img
-                    src={coinIcon}
-                    alt=""
-                    aria-hidden="true"
-                    className="h-11 w-11 flex-shrink-0"
-                  />
-                  <div className="font-display text-[42px] font-extrabold tracking-[-0.05em] text-accent">
+
+                <div className="mt-5 flex items-center gap-3">
+                  <img src={coinIcon} alt="" aria-hidden="true" className="h-11 w-11 flex-shrink-0" />
+                  <div className="font-display text-[40px] font-extrabold tracking-[-0.05em] text-accent">
                     R$ 5.900
                   </div>
                 </div>
-                <div className="text-[14px] text-white/72">
+                <div className="mt-2 text-[14px] text-white/72">
                   por mês · mínimo recomendado de 6 meses
                 </div>
-                <div className="mt-3 text-[13px] text-white/72">
-                  Verba de mídia: até R$ 10.000/mês, paga diretamente pelo cliente às plataformas.
+              </div>
+
+              <div className="rounded-[26px] bg-[rgba(3,10,60,0.24)] p-5">
+                <div className="text-[11px] uppercase tracking-[0.18em] text-accent">
+                  Verba de mídia
+                </div>
+                <div className="mt-2 font-display text-[28px] font-extrabold tracking-[-0.04em] text-white">
+                  Até R$ 10.000/mês
+                </div>
+                <div className="mt-2 text-[14px] leading-[1.8] text-white/72">
+                  Valor pago diretamente pelo cliente às plataformas, separado da operação.
                 </div>
               </div>
             </div>
