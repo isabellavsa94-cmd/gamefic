@@ -1,15 +1,10 @@
 import { useReveal } from "@/hooks/useReveal";
+import GameCar from "@/components/proposal/GameCar";
 
 const stats = [
   { num: "4", label: "frentes integradas para gerar demanda" },
   { num: "R$ 5,9k", label: "pacote mensal de performance" },
   { num: "R$ 10k", label: "verba de mídia recomendada" },
-];
-
-const summaryItems = [
-  "Presença digital mais forte para sustentar marca e autoridade",
-  "Operação de performance para transformar tráfego em leads",
-  "Estrutura de conversão com landing page, RD Station e tracking",
 ];
 
 const scrollTo = (href: string) => {
@@ -85,42 +80,8 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="reveal relative">
-            <div className="gamefic-glow relative overflow-hidden rounded-[34px] border border-white/16 bg-[rgba(255,255,255,0.09)] p-6 backdrop-blur-md">
-              <div className="text-[13px] font-semibold uppercase tracking-[0.18em] text-accent">
-                Direção estratégica
-              </div>
-              <div className="mt-4 font-display text-[30px] font-extrabold leading-[1.05] tracking-[-0.04em] text-white">
-                O que esta proposta entrega para a Gamefic?
-              </div>
-
-              <div className="mt-6 space-y-3">
-                {summaryItems.map((item, index) => (
-                  <div
-                    key={item}
-                    className="flex items-center gap-3 rounded-full bg-white px-4 py-3 text-[14px] text-slate-700"
-                  >
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary font-display text-[12px] font-extrabold text-white">
-                      {index + 1}
-                    </span>
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-7 rounded-[28px] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.14),rgba(255,255,255,0.05))] p-5">
-                <div className="text-[11px] uppercase tracking-[0.18em] text-white/62">
-                  Foco inicial
-                </div>
-                <div className="mt-2 font-display text-[24px] font-extrabold tracking-[-0.03em] text-white">
-                  Gamefic
-                </div>
-                <div className="mt-4 text-[14px] leading-[1.7] text-white/76">
-                  Construir uma operação capaz de atrair, capturar e nutrir oportunidades com mais
-                  clareza comercial e melhor capacidade de mensuração.
-                </div>
-              </div>
-            </div>
+          <div className="reveal relative flex items-center justify-center">
+            <GameCar />
           </div>
         </div>
       </div>
