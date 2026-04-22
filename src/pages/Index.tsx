@@ -4,7 +4,6 @@ import PasswordGate from "@/components/proposal/PasswordGate";
 import ContextSection from "@/components/proposal/ContextSection";
 import OverviewGrid from "@/components/proposal/OverviewGrid";
 import ServicesDetail from "@/components/proposal/ServicesDetail";
-import FutureServices from "@/components/proposal/FutureServices";
 import InvestmentSection from "@/components/proposal/InvestmentSection";
 import TimelineSection from "@/components/proposal/TimelineSection";
 import NextSteps from "@/components/proposal/NextSteps";
@@ -20,7 +19,6 @@ export default function Index() {
       <ContextSection />
       <OverviewGrid />
       <ServicesDetail />
-      <FutureServices />
       <InvestmentSection />
       <TimelineSection />
       <NextSteps />
