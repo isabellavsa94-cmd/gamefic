@@ -38,11 +38,8 @@ export default function Hero() {
             <div className="mb-5 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-[12px] font-semibold uppercase tracking-[0.18em] text-accent">
               Proposta Comercial · Gamefic
             </div>
-            <div className="mb-5 font-display text-[clamp(28px,3vw,36px)] font-semibold tracking-[-0.03em] text-white/92">
-              Marketing digital com foco em crescimento
-            </div>
             <h1 className="max-w-[12ch] font-display text-[clamp(42px,6.4vw,76px)] font-extrabold leading-[0.98] tracking-[-0.05em] text-balance">
-              Uma operação digital para fazer a Gamefic crescer com consistência.
+              A estratégia para colocar a Gamefic no próximo level.
             </h1>
             <p className="mt-6 max-w-[620px] text-[17px] leading-[1.8] text-white/80 md:text-[19px]">
               Esta proposta combina
