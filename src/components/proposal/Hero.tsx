@@ -1,12 +1,6 @@
 import { useReveal } from "@/hooks/useReveal";
 import GameCar from "@/components/proposal/GameCar";
 
-const stats = [
-  { num: "4", label: "frentes integradas para gerar demanda" },
-  { num: "R$ 5,9k", label: "pacote mensal de performance" },
-  { num: "R$ 10k", label: "verba de mídia recomendada" },
-];
-
 const scrollTo = (href: string) => {
   const el = document.querySelector(href);
   if (el) {
@@ -21,19 +15,19 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-[linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)] pt-32 text-white"
+      className="relative overflow-hidden bg-[linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)] pt-28 text-white"
     >
       <div className="absolute inset-0 opacity-20 gamefic-pattern" />
       <div className="absolute left-[-10%] top-[10%] h-[360px] w-[360px] rounded-full bg-[radial-gradient(circle,rgba(0,255,141,0.22)_0%,transparent_72%)]" />
       <div className="absolute bottom-[-80px] right-[-60px] h-[340px] w-[340px] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.18)_0%,transparent_72%)]" />
 
-      <div className="container relative z-10 pb-24">
-        <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="container relative z-10 pb-14 md:pb-16">
+        <div className="grid items-center gap-10 lg:grid-cols-[1fr_0.95fr]">
           <div className="reveal">
             <div className="mb-5 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-[12px] font-semibold uppercase tracking-[0.18em] text-accent">
               Proposta Comercial · Gamefic
             </div>
-            <h1 className="max-w-[12ch] font-display text-[clamp(42px,6.4vw,76px)] font-extrabold leading-[0.98] tracking-[-0.05em] text-balance">
+            <h1 className="max-w-[12ch] font-display text-[clamp(38px,5.8vw,68px)] font-extrabold leading-[0.98] tracking-[-0.05em] text-balance">
               A estratégia para colocar a Gamefic no próximo level.
             </h1>
             <p className="mt-6 max-w-[620px] text-[17px] leading-[1.8] text-white/80 md:text-[19px]">
@@ -61,22 +55,6 @@ export default function Hero() {
               >
                 Analisar investimento
               </button>
-            </div>
-
-            <div className="mt-10 grid gap-3 sm:grid-cols-3">
-              {stats.map((s) => (
-                <div
-                  key={s.label}
-                  className="rounded-[24px] border border-white/14 bg-white/10 px-4 py-4 backdrop-blur-sm"
-                >
-                  <div className="font-display text-[34px] font-extrabold tracking-[-0.05em] text-accent">
-                    {s.num}
-                  </div>
-                  <div className="text-[12px] uppercase tracking-[0.12em] text-white/72">
-                    {s.label}
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
 
