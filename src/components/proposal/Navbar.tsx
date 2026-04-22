@@ -1,3 +1,5 @@
+import BrandLogo from "@/components/proposal/BrandLogo";
+
 const navLinks = [
   { href: "#diagnostico", label: "Diagnóstico" },
   { href: "#servicos", label: "Escopo" },
@@ -13,16 +15,6 @@ const scrollTo = (href: string) => {
   }
 };
 
-function LogoMark() {
-  return (
-    <div className="relative h-11 w-11 rounded-2xl border-2 border-primary">
-      <div className="absolute inset-[7px] rounded-xl border border-primary/80" />
-      <div className="absolute inset-[13px] rounded-lg border border-primary/60" />
-      <div className="absolute inset-[5px] rotate-45 rounded-xl border border-primary/40" />
-    </div>
-  );
-}
-
 export default function Navbar() {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 px-3 pt-3 md:px-6">
@@ -30,12 +22,9 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="flex items-center gap-3 bg-transparent"
+          className="flex items-center bg-transparent"
         >
-          <LogoMark />
-          <div className="font-display text-[34px] font-extrabold leading-none tracking-[-0.06em] text-primary">
-            gamefic
-          </div>
+          <BrandLogo className="h-11 w-auto md:h-12" />
         </button>
 
         <ul className="hidden items-center gap-7 md:flex">

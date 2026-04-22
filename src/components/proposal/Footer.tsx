@@ -1,12 +1,4 @@
-function LogoMark() {
-  return (
-    <div className="relative h-10 w-10 rounded-2xl border-2 border-primary">
-      <div className="absolute inset-[7px] rounded-xl border border-primary/80" />
-      <div className="absolute inset-[13px] rounded-lg border border-primary/60" />
-      <div className="absolute inset-[5px] rotate-45 rounded-xl border border-primary/40" />
-    </div>
-  );
-}
+import BrandLogo from "@/components/proposal/BrandLogo";
 
 export default function Footer() {
   return (
@@ -14,11 +6,8 @@ export default function Footer() {
       <div className="container">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-[440px]">
-            <div className="flex items-center gap-3">
-              <LogoMark />
-              <div className="font-display text-[34px] font-extrabold tracking-[-0.06em] text-primary">
-                gamefic
-              </div>
+            <div className="flex items-center">
+              <BrandLogo className="h-10 w-auto md:h-11" />
             </div>
             <div className="mt-5 font-display text-[32px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
               Proposta comercial modular para a Gamefic.
