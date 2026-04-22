@@ -1,5 +1,7 @@
 import { useReveal } from "@/hooks/useReveal";
 
+const coinIcon = `${import.meta.env.BASE_URL}coin-icon.svg`;
+
 const modules = [
   {
     title: "Social Media (Instagram + LinkedIn)",
@@ -64,8 +66,16 @@ export default function InvestmentSection() {
                     >
                       {module.status === "definido" ? "valor definido" : "pacote sugerido"}
                     </div>
-                    <div className="mt-3 font-display text-[32px] font-extrabold tracking-[-0.04em] text-primary">
-                      {module.value}
+                    <div className="mt-3 flex items-center gap-3 md:justify-end">
+                      <img
+                        src={coinIcon}
+                        alt=""
+                        aria-hidden="true"
+                        className="h-10 w-10 flex-shrink-0"
+                      />
+                      <div className="font-display text-[32px] font-extrabold tracking-[-0.04em] text-primary">
+                        {module.value}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -93,8 +103,16 @@ export default function InvestmentSection() {
                 <div className="mt-2 font-display text-[22px] font-extrabold tracking-[-0.03em] text-white">
                   Gestão de Redes Sociais (2 redes)
                 </div>
-                <div className="mt-4 font-display text-[42px] font-extrabold tracking-[-0.05em] text-accent">
-                  R$ 3.000
+                <div className="mt-4 flex items-center gap-3">
+                  <img
+                    src={coinIcon}
+                    alt=""
+                    aria-hidden="true"
+                    className="h-11 w-11 flex-shrink-0"
+                  />
+                  <div className="font-display text-[42px] font-extrabold tracking-[-0.05em] text-accent">
+                    R$ 3.000
+                  </div>
                 </div>
                 <div className="text-[14px] text-white/72">por mês · mínimo de 6 meses</div>
               </div>
@@ -106,8 +124,16 @@ export default function InvestmentSection() {
                 <div className="mt-2 font-display text-[22px] font-extrabold tracking-[-0.03em] text-white">
                   Performance e automação comercial
                 </div>
-                <div className="mt-4 font-display text-[42px] font-extrabold tracking-[-0.05em] text-accent">
-                  R$ 5.900
+                <div className="mt-4 flex items-center gap-3">
+                  <img
+                    src={coinIcon}
+                    alt=""
+                    aria-hidden="true"
+                    className="h-11 w-11 flex-shrink-0"
+                  />
+                  <div className="font-display text-[42px] font-extrabold tracking-[-0.05em] text-accent">
+                    R$ 5.900
+                  </div>
                 </div>
                 <div className="text-[14px] text-white/72">
                   por mês · mínimo recomendado de 6 meses
