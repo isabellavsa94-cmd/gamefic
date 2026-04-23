@@ -19,18 +19,20 @@ const getOpenedAt = () => {
 
 const formatRemaining = (remainingMs: number) => {
   if (remainingMs <= 0) {
-    return { days: "00", hours: "00", minutes: "00" };
+    return { days: "00", hours: "00", minutes: "00", seconds: "00" };
   }
 
-  const totalMinutes = Math.floor(remainingMs / (1000 * 60));
-  const days = Math.floor(totalMinutes / (60 * 24));
-  const hours = Math.floor((totalMinutes % (60 * 24)) / 60);
-  const minutes = totalMinutes % 60;
+  const totalSeconds = Math.floor(remainingMs / 1000);
+  const days = Math.floor(totalSeconds / (60 * 60 * 24));
+  const hours = Math.floor((totalSeconds % (60 * 60 * 24)) / (60 * 60));
+  const minutes = Math.floor((totalSeconds % (60 * 60)) / 60);
+  const seconds = totalSeconds % 60;
 
   return {
     days: String(days).padStart(2, "0"),
     hours: String(hours).padStart(2, "0"),
     minutes: String(minutes).padStart(2, "0"),
+    seconds: String(seconds).padStart(2, "0"),
   };
 };
 
@@ -49,7 +51,7 @@ export default function ProposalValidityBadge() {
     };
 
     update();
-    const interval = window.setInterval(update, 1000 * 30);
+    const interval = window.setInterval(update, 1000);
 
     return () => window.clearInterval(interval);
   }, []);
@@ -69,7 +71,7 @@ export default function ProposalValidityBadge() {
           <div className="mt-1 font-display text-[18px] font-extrabold leading-none tracking-[-0.04em] text-white md:text-[20px]">
             {isExpired
               ? "Encerrada"
-              : `${formatted.days}d ${formatted.hours}h ${formatted.minutes}m`}
+              : `${formatted.days}d ${formatted.hours}h ${formatted.minutes}m ${formatted.seconds}s`}
           </div>
         </div>
       </div>
