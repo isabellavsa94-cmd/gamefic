@@ -32,10 +32,10 @@ const modules = [
     eyebrow: "Pacote 3",
     title: "Criação de Site",
     titleNote: "Site completo com blog",
-    value: "Sob consulta",
-    cadence: "pontual",
-    note: "Projeto para estruturar um site completo com blog, base de SEO, GEO, AEO e LLMO. Prazo ainda indefinido, a depender da profundidade final do escopo.",
-    highlights: ["Site completo + blog", "SEO / GEO / AEO / LLMO", "Prazo ainda indefinido"],
+    value: "R$ 6.000",
+    cadence: "/projeto",
+    note: "Projeto pontual para estruturar um site completo com blog, base de SEO, GEO, AEO e LLMO, com prazo estimado de 3 semanas.",
+    highlights: ["Site completo + blog", "SEO / GEO / AEO / LLMO", "Prazo estimado: 3 semanas"],
   },
 ];
 

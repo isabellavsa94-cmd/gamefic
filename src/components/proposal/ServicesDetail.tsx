@@ -212,7 +212,7 @@ const groups: ServiceGroupData[] = [
           "Direcionamento da estrutura do blog com foco em crescimento orgânico e autoridade temática",
         ],
         highlight:
-          "<strong>Prazo:</strong> ainda indefinido, pois depende da profundidade final do escopo, da quantidade de páginas e do nível de conteúdo a ser desenvolvido.",
+          "<strong>Prazo estimado:</strong> 3 semanas para estruturação e publicação inicial do projeto dentro deste escopo proposto.",
       },
       {
         id: "site-2",
