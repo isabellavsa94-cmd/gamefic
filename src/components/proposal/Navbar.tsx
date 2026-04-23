@@ -38,9 +38,9 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 px-3 pt-3 md:px-6">
+    <nav className="fixed left-0 right-0 top-0 z-50 px-3 pt-2 md:px-6 md:pt-3">
       <div
-        className={`mx-auto flex h-[64px] max-w-[1240px] items-center justify-between rounded-[24px] px-3 shadow-[0_20px_60px_rgba(25,48,130,0.08)] backdrop-blur-xl transition-all duration-300 md:h-[72px] md:max-w-[1120px] md:rounded-[28px] md:px-5 ${
+        className={`mx-auto flex h-[56px] max-w-[1240px] items-center justify-center rounded-[20px] px-3 shadow-[0_20px_60px_rgba(25,48,130,0.08)] backdrop-blur-xl transition-all duration-300 md:h-[72px] md:max-w-[1120px] md:justify-between md:rounded-[28px] md:px-5 ${
           pastHero ? "border border-white/50 bg-white/80" : "border border-white/70 bg-white/90"
         }`}
       >
@@ -49,7 +49,7 @@ export default function Navbar() {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="flex items-center bg-transparent"
         >
-          <BrandLogo className="h-9 w-auto md:h-10" />
+          <BrandLogo className="h-8 w-auto md:h-10" />
         </button>
 
         <ul className="hidden items-center gap-5 md:flex lg:gap-6">
@@ -69,10 +69,9 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => scrollTo("#proximos-passos")}
-          className="rounded-full bg-accent px-4 py-2.5 font-display text-[13px] font-extrabold text-primary shadow-[0_10px_24px_rgba(0,255,141,0.28)] transition-transform hover:-translate-y-0.5 md:px-4 md:py-2.5 md:text-[14px]"
+          className="hidden rounded-full bg-accent px-4 py-2.5 font-display text-[13px] font-extrabold text-primary shadow-[0_10px_24px_rgba(0,255,141,0.28)] transition-transform hover:-translate-y-0.5 md:inline-flex md:px-4 md:py-2.5 md:text-[14px]"
         >
-          <span className="md:hidden">Avançar</span>
-          <span className="hidden md:inline">Quero avançar</span>
+          <span>Quero avançar</span>
         </button>
       </div>
     </nav>
