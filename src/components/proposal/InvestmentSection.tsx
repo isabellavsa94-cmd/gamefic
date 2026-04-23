@@ -6,8 +6,8 @@ const modules = [
   {
     eyebrow: "Pacote 1",
     title: "Social Media (Instagram + LinkedIn)",
-    type: "recorrente",
-    value: "R$ 3.000 / mês",
+    value: "R$ 3.000",
+    cadence: "/ mês",
     note: "Operação recorrente para fortalecer presença, constância e autoridade em dois canais. Prazo mínimo de 6 meses.",
     status: "definido",
     highlights: ["Instagram + LinkedIn", "Conteúdo recorrente", "Prazo mínimo de 6 meses"],
@@ -15,8 +15,8 @@ const modules = [
   {
     eyebrow: "Pacote 2",
     title: "Pacote de performance e automação comercial",
-    type: "recorrente",
-    value: "R$ 5.900 / mês",
+    value: "R$ 5.900",
+    cadence: "/ mês",
     note: "Inclui tráfego pago, e-mail marketing, landing page, tracking avançado server side e integração com RD Station.",
     status: "sugerido",
     highlights: ["Google + Meta Ads", "Landing page", "RD Station + tracking"],
@@ -49,14 +49,11 @@ export default function InvestmentSection() {
                 key={module.title}
                 className="gamefic-surface rounded-[32px] border border-white/80 p-6 md:p-7"
               >
-                <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-start">
+                <div className="grid gap-6">
                   <div className="min-w-0">
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="rounded-full bg-secondary px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-primary">
                         {module.eyebrow}
-                      </span>
-                      <span className="rounded-full border border-border bg-white px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-slate-500">
-                        {module.type}
                       </span>
                       <span
                         className={`rounded-full px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] ${
@@ -69,45 +66,40 @@ export default function InvestmentSection() {
                       </span>
                     </div>
 
-                    <h3 className="mt-4 max-w-[18ch] font-display text-[26px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary text-balance">
+                    <h3 className="mt-4 max-w-[20ch] font-display text-[clamp(28px,4vw,34px)] font-extrabold leading-[1.04] tracking-[-0.04em] text-primary">
                       {module.title}
                     </h3>
 
-                    <p className="mt-3 max-w-[56ch] text-[15px] leading-[1.8] text-slate-600">
-                      {module.note}
-                    </p>
-
-                    <div className="mt-5 flex flex-wrap gap-2">
-                      {module.highlights.map((highlight) => (
-                        <span
-                          key={highlight}
-                          className="rounded-full bg-secondary px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-primary"
-                        >
-                          {highlight}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="rounded-[28px] border border-border bg-white px-5 py-5 shadow-[0_12px_30px_rgba(25,48,130,0.04)] lg:min-w-[232px]">
-                    <div className="text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">
-                      Investimento mensal
-                    </div>
-                    <div className="mt-4 flex items-center gap-3">
+                    <div className="mt-5 flex items-end gap-3">
                       <img
                         src={coinIcon}
                         alt=""
                         aria-hidden="true"
-                        className="h-10 w-10 flex-shrink-0"
+                        className="mb-1 h-10 w-10 flex-shrink-0"
                       />
-                      <div className="min-w-0 font-display text-[32px] font-extrabold tracking-[-0.04em] text-primary">
-                        {module.value}
+                      <div className="min-w-0">
+                        <div className="font-display text-[clamp(36px,6vw,48px)] font-extrabold leading-none tracking-[-0.05em] text-primary">
+                          {module.value}
+                        </div>
+                        <div className="mt-1 text-[14px] font-medium text-slate-500">
+                          {module.cadence}
+                        </div>
                       </div>
                     </div>
-                    <div className="mt-3 text-[13px] leading-[1.7] text-slate-500">
-                      {module.status === "definido"
-                        ? "Escopo já estruturado para entrada imediata."
-                        : "Leitura sugerida para acelerar performance e operação."}
+
+                    <p className="mt-4 max-w-[58ch] text-[15px] leading-[1.8] text-slate-600">
+                      {module.note}
+                    </p>
+
+                    <div className="mt-6 grid gap-2 sm:grid-cols-3">
+                      {module.highlights.map((highlight) => (
+                        <div
+                          key={highlight}
+                          className="rounded-[18px] bg-secondary px-4 py-3 text-[13px] font-semibold text-primary"
+                        >
+                          {highlight}
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -129,7 +121,7 @@ export default function InvestmentSection() {
 
             <div className="mt-7 grid gap-4">
               <div className="rounded-[28px] border border-white/14 bg-white/12 p-5 backdrop-blur-sm">
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex flex-wrap items-start justify-between gap-4">
                   <div>
                     <div className="text-[11px] uppercase tracking-[0.18em] text-white/60">
                       Pacote 1
@@ -153,12 +145,12 @@ export default function InvestmentSection() {
               </div>
 
               <div className="rounded-[28px] border border-white/14 bg-white/12 p-5 backdrop-blur-sm">
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex flex-wrap items-start justify-between gap-4">
                   <div>
                     <div className="text-[11px] uppercase tracking-[0.18em] text-white/60">
                       Pacote 2
                     </div>
-                    <div className="mt-2 max-w-[16ch] font-display text-[22px] font-extrabold tracking-[-0.03em] text-white text-balance">
+                    <div className="mt-2 max-w-[18ch] font-display text-[22px] font-extrabold tracking-[-0.03em] text-white">
                       Performance e automação comercial
                     </div>
                   </div>
