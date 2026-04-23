@@ -23,8 +23,8 @@ export default function Hero() {
       <div className="absolute bottom-[-80px] right-[-60px] h-[340px] w-[340px] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.18)_0%,transparent_72%)]" />
 
       <div className="container relative z-10 pb-0">
-        <div className="grid items-center gap-8 lg:grid-cols-[0.94fr_1.06fr] lg:items-end">
-          <div className="reveal relative z-10 pb-14 md:pb-16">
+        <div className="grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="reveal relative z-10 pb-14 md:pb-16 lg:pt-2">
             <div className="mb-5 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-[12px] font-semibold uppercase tracking-[0.18em] text-accent">
               Proposta Comercial · Gamefic
             </div>
@@ -57,7 +57,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="reveal relative z-0 flex min-h-[340px] items-end justify-center overflow-visible sm:min-h-[420px] lg:min-h-[720px] lg:justify-end lg:self-end">
+          <div className="reveal relative z-0 flex min-h-[340px] items-end justify-center overflow-visible sm:min-h-[420px] lg:min-h-[780px] lg:justify-end lg:self-start">
             <HeroMascot />
           </div>
         </div>
