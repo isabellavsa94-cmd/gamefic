@@ -116,7 +116,7 @@ export default function InvestmentSection() {
               </div>
 
               {"breakdown" in module && module.breakdown && (
-                <InvestmentBreakdown items={module.breakdown} note={module.breakdownNote} />
+                <InvestmentBreakdown items={module.breakdown} />
               )}
             </article>
           ))}
