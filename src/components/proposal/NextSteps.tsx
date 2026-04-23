@@ -25,18 +25,18 @@ export default function NextSteps() {
     <section
       id="proximos-passos"
       ref={ref}
-      className="relative overflow-hidden bg-[linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)] py-16 text-white md:py-24"
+      className="relative overflow-hidden bg-white py-16 md:py-24"
     >
-      <div className="absolute inset-0 opacity-20 gamefic-pattern" />
+      <div className="absolute inset-y-0 left-0 hidden w-[28%] gamefic-pattern opacity-55 lg:block" />
       <div className="container relative">
         <div className="reveal mx-auto max-w-[760px] text-center">
-          <div className="text-[12px] font-semibold uppercase tracking-[0.18em] text-accent">
+          <div className="text-[12px] font-semibold uppercase tracking-[0.18em] text-primary">
             Próximo passo
           </div>
-          <h2 className="mt-4 font-display text-[clamp(34px,4vw,56px)] font-extrabold leading-[1.02] tracking-[-0.05em]">
+          <h2 className="mt-4 font-display text-[clamp(34px,4vw,56px)] font-extrabold leading-[1.02] tracking-[-0.05em] text-primary">
             Se fizer sentido para a Gamefic, o próximo movimento é começar.
           </h2>
-          <p className="mt-4 text-[15px] leading-[1.58] text-white/78 md:text-[16px] md:leading-[1.64]">
+          <p className="mt-4 text-[15px] leading-[1.58] text-slate-600 md:text-[16px] md:leading-[1.64]">
             A aprovação destrava uma operação pensada para dar consistência à presença digital e
             mais estrutura para geração de oportunidades.
           </p>
@@ -46,19 +46,19 @@ export default function NextSteps() {
           {steps.map((step, index) => (
             <article
               key={step.num}
-              className="reveal rounded-[24px] border border-white/14 bg-white/10 p-5 backdrop-blur-sm md:rounded-[32px] md:p-7"
+              className="reveal gamefic-surface rounded-[24px] border border-white/80 p-5 md:rounded-[32px] md:p-7"
             >
               <div
                 className={`inline-flex rounded-full px-4 py-2 font-display text-[13px] font-extrabold md:text-[14px] ${
-                  index === 1 ? "bg-accent text-primary" : "bg-white/16 text-white"
+                  index === 1 ? "bg-accent text-primary" : "bg-secondary text-primary"
                 }`}
               >
                 {step.num}
               </div>
-              <h3 className="mt-4 font-display text-[24px] font-extrabold leading-[1.05] tracking-[-0.04em] md:mt-5 md:text-[28px]">
+              <h3 className="mt-4 font-display text-[24px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary md:mt-5 md:text-[28px]">
                 {step.title}
               </h3>
-              <p className="mt-3 text-[14px] leading-[1.56] text-white/78 md:mt-4 md:text-[15px] md:leading-[1.62]">
+              <p className="mt-3 text-[14px] leading-[1.56] text-slate-600 md:mt-4 md:text-[15px] md:leading-[1.62]">
                 {step.desc}
               </p>
             </article>
