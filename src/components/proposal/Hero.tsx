@@ -23,7 +23,7 @@ export default function Hero() {
       <div className="absolute bottom-[-80px] right-[-60px] h-[340px] w-[340px] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.18)_0%,transparent_72%)]" />
 
       <div className="container relative z-10 pb-0">
-        <div className="grid items-start gap-5 pt-8 md:gap-8 md:pt-10 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:items-start xl:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)]">
+        <div className="grid items-start gap-5 pt-8 md:gap-8 md:pt-10 lg:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] lg:items-start xl:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
           <div className="reveal relative z-10 mr-[-6.75rem] w-[calc(100%+6.75rem)] pb-4 pr-20 md:mr-0 md:w-auto md:pb-12 md:pr-0">
             <div className="w-full max-w-[378px] flex-col items-start md:max-w-[52rem]">
             <div className="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent md:mb-5 md:px-4 md:text-[12px] md:tracking-[0.18em]">
@@ -71,7 +71,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="reveal relative z-0 flex min-h-[220px] items-start justify-center overflow-visible sm:min-h-[320px] lg:min-h-[620px] lg:justify-end lg:self-start lg:pt-4">
+          <div className="reveal relative z-0 flex min-h-[220px] items-start justify-center overflow-visible sm:min-h-[320px] lg:min-h-[620px] lg:justify-end lg:self-start lg:pt-0">
             <HeroMascot />
           </div>
         </div>
