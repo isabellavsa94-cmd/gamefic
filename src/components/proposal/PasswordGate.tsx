@@ -64,11 +64,10 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
             />
           </div>
 
-          <button
-            type="submit"
-            className="mt-4 w-full rounded-full bg-accent px-5 py-3.5 font-display text-[16px] font-extrabold text-primary transition-transform hover:-translate-y-0.5 sm:mt-5 sm:py-4 sm:text-[17px]"
-          >
-            Entrar
+          <button type="submit" className="login-3d-button mt-4 w-full sm:mt-5">
+            <span className="login-3d-button__top" data-border="true">
+              <span className="login-3d-button__label">Entrar</span>
+            </span>
           </button>
 
           {error && <p className="mt-4 text-center text-sm text-red-200">Senha incorreta</p>}
