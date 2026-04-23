@@ -166,61 +166,6 @@
   transform: scale(1.04);
 }
 
-.press-start-lines {
-  position: relative;
-}
-
-.press-start-lines::before,
-.press-start-lines::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  width: calc(100% + 80px);
-  height: 8px;
-  border-radius: 999px;
-  transform: translateX(-50%);
-  background:
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.96) 14%,
-      rgba(255, 255, 255, 0.96) 86%,
-      rgba(255, 255, 255, 0) 100%
-    );
-}
-
-.press-start-lines::before {
-  top: 26px;
-}
-
-.press-start-lines::after {
-  bottom: 18px;
-}
-
-.press-start-title {
-  position: relative;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  font-family: var(--font-display);
-  font-weight: 900;
-  font-size: clamp(40px, 7vw, 58px);
-  line-height: 0.86;
-  letter-spacing: -0.06em;
-  color: #ffd22f;
-  -webkit-text-stroke: 6px #ffffff;
-  text-shadow:
-    0 0 0 #1b1758,
-    6px 6px 0 #1b1758,
-    12px 12px 0 rgba(27, 23, 88, 0.28);
-}
-
-.press-start-title span {
-  position: relative;
-  z-index: 1;
-}
-
 .login-3d-button {
   position: relative;
   display: block;
@@ -241,11 +186,11 @@
   width: 100%;
   overflow: hidden;
   border-radius: 999px;
-  background: linear-gradient(180deg, #7d5bff 0%, #7142ff 100%);
+  background: linear-gradient(180deg, #22ff9d 0%, #00e884 100%);
   box-shadow:
     inset 0 -2px 2px rgba(0, 0, 0, 0.12),
-    0 10px 0 rgba(0, 0, 0, 0.2),
-    0 4px 2px rgba(0, 0, 0, 0.25);
+    0 10px 0 rgba(0, 84, 48, 0.45),
+    0 4px 2px rgba(0, 0, 0, 0.2);
   transition:
     transform 0.18s ease,
     background-color 0.18s ease,
@@ -271,43 +216,21 @@
   font-size: 16px;
   font-weight: 900;
   line-height: 1;
-  color: #fff;
+  color: #0b2f77;
 }
 
 .login-3d-button:hover .login-3d-button__top {
-  background: linear-gradient(180deg, #744cf7 0%, #6433f5 100%);
+  background: linear-gradient(180deg, #19f094 0%, #00d978 100%);
 }
 
 .login-3d-button:active .login-3d-button__top {
   transform: translateY(7px);
   box-shadow:
     inset 0 -2px 2px rgba(0, 0, 0, 0.12),
-    0 1px 0 rgba(0, 0, 0, 0.2);
+    0 1px 0 rgba(0, 84, 48, 0.45);
 }
 
 @media (max-width: 640px) {
-  .press-start-lines::before,
-  .press-start-lines::after {
-    width: calc(100% + 28px);
-    height: 6px;
-  }
-
-  .press-start-lines::before {
-    top: 18px;
-  }
-
-  .press-start-lines::after {
-    bottom: 12px;
-  }
-
-  .press-start-title {
-    -webkit-text-stroke: 4px #ffffff;
-    text-shadow:
-      0 0 0 #1b1758,
-      4px 4px 0 #1b1758,
-      8px 8px 0 rgba(27, 23, 88, 0.24);
-  }
-
   .login-3d-button__top {
     min-height: 54px;
   }
