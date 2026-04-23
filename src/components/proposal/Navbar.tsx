@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import BrandLogo from "@/components/proposal/BrandLogo";
 
 const navLinks = [
-  { href: "#diagnostico", label: "Diagnóstico" },
   { href: "#servicos", label: "Escopo" },
   { href: "#investimento", label: "Investimento" },
   { href: "#timeline", label: "Cronograma" },

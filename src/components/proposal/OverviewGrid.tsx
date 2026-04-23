@@ -33,6 +33,7 @@ const groups = [
     title: "Criação de Site",
     subtitle: "Landing page e tracking para converter melhor e mensurar com mais precisão.",
     href: "#g4",
+    disclaimer: "Sugestão da especialista",
     image:
       "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
     items: ["Landing page", "Conversão", "Tracking"],
@@ -86,6 +87,11 @@ export default function OverviewGrid() {
                 <div className="absolute left-5 top-5 rounded-full bg-accent px-3 py-1 text-[12px] font-display font-extrabold text-primary">
                   Frente {g.num}
                 </div>
+                {g.disclaimer && (
+                  <div className="absolute right-5 top-5 rounded-full border border-white/20 bg-[rgba(10,16,64,0.72)] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white">
+                    {g.disclaimer}
+                  </div>
+                )}
               </div>
 
               <div className="p-6">
