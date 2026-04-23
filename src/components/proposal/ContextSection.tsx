@@ -51,6 +51,11 @@ export default function ContextSection() {
               Este escopo foi desenhado para atacar os pontos que mais impactam resultado:
               posicionamento, tráfego qualificado, conversão e organização do funil.
             </p>
+            <p className="mt-4 text-[15px] leading-[1.58] text-slate-600 md:text-[16px] md:leading-[1.66]">
+              Todos os serviços seguem a mesma lógica de entrada: <strong>1 mês de onboarding</strong> para
+              estratégia, estruturação e alinhamentos iniciais. Depois disso, a operação entra em
+              modelo <strong>ongoing</strong>, com execução e otimização contínuas.
+            </p>
           </div>
 
           <div className="reveal grid gap-3 md:gap-4">

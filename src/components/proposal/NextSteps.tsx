@@ -13,8 +13,8 @@ const steps = [
   },
   {
     num: "03",
-    title: "Colocar a operação no ar",
-    desc: "Iniciar a execução com cronograma, campanhas, captação e acompanhamento contínuo das entregas aprovadas.",
+    title: "Entrar em onboarding e operação",
+    desc: "Começar com 1 mês de onboarding para estratégia, estruturação e alinhamentos. Depois disso, a operação segue em formato ongoing.",
   },
 ];
 
