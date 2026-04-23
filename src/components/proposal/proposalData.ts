@@ -118,8 +118,7 @@ export const proposalGroups: ProposalGroupData[] = [
     title: "Tráfego Pago",
     subtitle: "Google Ads e Meta Ads para acelerar geração de leads com foco em performance.",
     badgeColor: "hsl(var(--primary))",
-    image:
-      "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
+    image: `${import.meta.env.BASE_URL}paid-media-card.jpg`,
     items: ["Google Ads", "Meta Ads", "Leads"],
     services: [
       {
