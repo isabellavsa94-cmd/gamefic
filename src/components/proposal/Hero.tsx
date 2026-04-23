@@ -24,7 +24,7 @@ export default function Hero() {
 
       <div className="container relative z-10 pb-0">
         <div className="grid items-start gap-5 pt-8 md:gap-8 md:pt-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div className="reveal relative z-10 mr-[-2.5rem] pb-4 pr-10 md:mr-0 md:pb-12 md:pr-0">
+          <div className="reveal relative z-10 mr-[-5.5rem] pb-4 pr-16 md:mr-0 md:pb-12 md:pr-0">
             <div className="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent md:mb-5 md:px-4 md:text-[12px] md:tracking-[0.18em]">
               Proposta Comercial · Gamefic
             </div>
