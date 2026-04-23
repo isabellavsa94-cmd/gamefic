@@ -6,7 +6,7 @@ export default function HeroMascot() {
       <img
         src={mascotImage}
         alt="Mascote 3D da Gamefic"
-        className="relative z-0 h-auto w-full max-w-[320px] origin-top-center select-none drop-shadow-[0_28px_60px_rgba(8,14,70,0.42)] md:max-w-[640px] md:origin-top-right lg:max-w-[680px] xl:max-w-[740px]"
+        className="relative z-0 h-auto w-full max-w-[480px] origin-top-center select-none drop-shadow-[0_28px_60px_rgba(8,14,70,0.42)] md:max-w-[960px] md:origin-top-right lg:max-w-[1020px] xl:max-w-[1110px]"
       />
     </div>
   );
