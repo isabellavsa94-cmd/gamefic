@@ -7,7 +7,8 @@ const coinIcon = `${import.meta.env.BASE_URL}coin-icon.svg`;
 const modules = [
   {
     eyebrow: "Pacote 1",
-    title: "Social Media (Instagram + LinkedIn)",
+    title: "Social Media",
+    titleNote: "Instagram e LinkedIn",
     value: "R$ 3.000",
     cadence: "/mês",
     note: "Operação recorrente para fortalecer presença, constância e autoridade em dois canais. Prazo mínimo de 6 meses.",
@@ -67,6 +68,11 @@ export default function InvestmentSection() {
               <h3 className="mt-4 max-w-[18ch] font-display text-[clamp(28px,4vw,34px)] font-extrabold leading-[1.04] tracking-[-0.04em]">
                 {module.title}
               </h3>
+              {"titleNote" in module && module.titleNote && (
+                <div className="mt-2 text-[15px] font-medium leading-[1.3] text-white/68">
+                  {module.titleNote}
+                </div>
+              )}
 
               <div className="mt-5 flex items-center gap-3">
                 <img
@@ -93,7 +99,7 @@ export default function InvestmentSection() {
                 {module.highlights.map((highlight) => (
                   <div
                     key={highlight}
-                    className="rounded-[18px] bg-white/12 px-4 py-3 text-[13px] font-semibold text-white"
+                    className="rounded-[18px] border border-white/10 bg-[rgba(3,10,60,0.18)] px-4 py-3 text-center text-[12px] font-medium leading-[1.45] text-white/82"
                   >
                     {highlight}
                   </div>
