@@ -20,6 +20,12 @@ const modules = [
     note: "Inclui tráfego pago, e-mail marketing, landing page, tracking avançado server side e integração com RD Station.",
     status: "sugerido",
     highlights: ["Google + Meta Ads", "Landing page", "RD Station + tracking"],
+    breakdown: [
+      { label: "Tráfego pago", value: "R$ 2.500" },
+      { label: "E-mail marketing", value: "R$ 1.800" },
+    ],
+    breakdownNote:
+      "Landing page, tracking avançado e integração com RD Station seguem incluídos na composição do pacote.",
   },
 ];
 
@@ -102,6 +108,40 @@ export default function InvestmentSection() {
                   </div>
                 ))}
               </div>
+
+              {"breakdown" in module && module.breakdown && (
+                <div className="mt-6 rounded-[24px] border border-white/14 bg-[rgba(3,10,60,0.18)] p-4">
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
+                    Desdobramento do escopo proposto
+                  </div>
+                  <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                    {module.breakdown.map((item) => (
+                      <div
+                        key={item.label}
+                        className="rounded-[18px] border border-white/12 bg-white/8 px-4 py-4"
+                      >
+                        <div className="text-[12px] font-semibold uppercase tracking-[0.12em] text-white/70">
+                          {item.label}
+                        </div>
+                        <div className="mt-2 flex items-center gap-2">
+                          <img
+                            src={coinIcon}
+                            alt=""
+                            aria-hidden="true"
+                            className="h-6 w-6 flex-shrink-0"
+                          />
+                          <div className="font-display text-[24px] font-extrabold leading-none tracking-[-0.04em] text-white">
+                            {item.value}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <p className="mt-4 text-[13px] leading-[1.7] text-white/72">
+                    {module.breakdownNote}
+                  </p>
+                </div>
+              )}
             </article>
           ))}
         </div>
