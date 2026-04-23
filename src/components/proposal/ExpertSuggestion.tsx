@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useReveal } from "@/hooks/useReveal";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
+import LevelUpBadge from "@/components/proposal/LevelUpBadge";
 
 const diagnostics = [
   {
@@ -185,6 +186,18 @@ export default function ExpertSuggestion() {
 
               {finished && (
                 <div className="mt-6 space-y-5">
+                  <div className="rounded-[30px] border border-white/80 bg-[linear-gradient(135deg,#2b1453_0%,#45107a_100%)] px-5 py-8">
+                    <LevelUpBadge />
+                    <div className="mt-5 text-center">
+                      <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
+                        Resultado desbloqueado
+                      </div>
+                      <div className="mt-3 font-display text-[26px] font-extrabold leading-[1.08] tracking-[-0.04em] text-white">
+                        O site da Gamefic tem espaço real para subir de nível.
+                      </div>
+                    </div>
+                  </div>
+
                   <div className="grid gap-4 md:grid-cols-2">
                     {results.map((item, index) => (
                       <article
