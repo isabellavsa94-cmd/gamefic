@@ -76,7 +76,7 @@ export default function OverviewGrid() {
               onClick={() => scrollTo(g.href)}
               className={`reveal group flex h-full flex-col overflow-hidden rounded-[32px] text-left transition-all duration-300 hover:-translate-y-1 ${
                 g.suggested
-                  ? "border border-[#f0d39b] bg-[linear-gradient(180deg,#fffaf0_0%,#fff4df_100%)] shadow-[0_24px_60px_rgba(120,84,18,0.12)]"
+                  ? "border border-[#f6c624] bg-[linear-gradient(180deg,#fff8e6_0%,#ffedb9_100%)] shadow-[0_24px_60px_rgba(232,182,5,0.14)]"
                   : "gamefic-surface border border-white/80"
               }`}
             >
@@ -92,7 +92,7 @@ export default function OverviewGrid() {
                   Frente {g.num}
                 </div>
                 {g.disclaimer && (
-                  <div className="absolute bottom-5 right-5 z-10 rounded-full border border-[#f6d89d] bg-[rgba(139,90,24,0.88)] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#fff8ec] shadow-[0_10px_24px_rgba(120,84,18,0.22)]">
+                  <div className="absolute bottom-5 right-5 z-10 rounded-full border border-[#edbe19] bg-[rgba(255,212,57,0.94)] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#7a5a00] shadow-[0_10px_24px_rgba(232,182,5,0.2)]">
                     {g.disclaimer}
                   </div>
                 )}
@@ -101,7 +101,7 @@ export default function OverviewGrid() {
               <div className="flex flex-1 flex-col p-6">
                 <h3
                   className={`min-h-[2.2em] font-display text-[26px] font-extrabold leading-[1.05] tracking-[-0.04em] ${
-                    g.suggested ? "text-[#8b5a18]" : "text-primary"
+                    g.suggested ? "text-[#8e6505]" : "text-primary"
                   }`}
                 >
                   {g.title}
@@ -114,7 +114,7 @@ export default function OverviewGrid() {
                       key={item}
                       className={`rounded-full px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] ${
                         g.suggested
-                          ? "bg-[#fff1d6] text-[#8b5a18]"
+                          ? "bg-[#ffe8a0] text-[#8e6505]"
                           : "bg-secondary text-primary"
                       }`}
                     >
@@ -125,7 +125,7 @@ export default function OverviewGrid() {
 
                 <div
                   className={`mt-6 inline-flex items-center gap-2 rounded-full px-4 py-2 font-display text-[14px] font-extrabold ${
-                    g.suggested ? "bg-[#8b5a18] text-[#fff8ec]" : "bg-primary text-white"
+                    g.suggested ? "bg-[#edbe19] text-[#6e5200]" : "bg-primary text-white"
                   }`}
                 >
                   Explorar frente
