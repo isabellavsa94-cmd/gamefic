@@ -71,13 +71,13 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="reveal relative z-0 flex min-h-[180px] items-start justify-center overflow-visible sm:min-h-[260px] lg:min-h-[500px] lg:justify-end lg:self-start lg:pt-0">
+          <div className="reveal relative z-0 flex min-h-[140px] items-start justify-center overflow-visible sm:min-h-[210px] lg:min-h-[360px] lg:justify-end lg:self-start lg:pt-0">
             <HeroMascot />
           </div>
         </div>
       </div>
 
-      <div className="relative z-20 -mt-3 h-12 overflow-hidden leading-none text-background md:-mt-3 md:h-16">
+      <div className="relative z-20 -mt-5 h-10 overflow-hidden leading-none text-background md:-mt-6 md:h-12">
         <svg
           className="absolute bottom-0 left-0 h-full w-full"
           viewBox="0 0 1440 120"
