@@ -28,12 +28,10 @@ export default function Hero() {
             <div className="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent md:mb-5 md:px-4 md:text-[12px] md:tracking-[0.18em]">
               Proposta Comercial · Gamefic
             </div>
-            <h1 className="max-w-none font-display text-[clamp(31px,6.8vw,64px)] font-extrabold leading-[0.98] tracking-[-0.045em]">
-              A estratégia para
-              <br />
-              levar a Gamefic
-              <br />
-              ao próximo level
+            <h1 className="max-w-none font-display text-[clamp(26px,5.9vw,64px)] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-[clamp(31px,6.8vw,64px)]">
+              <span className="block whitespace-nowrap">A estratégia para</span>
+              <span className="block whitespace-nowrap">levar a Gamefic</span>
+              <span className="block whitespace-nowrap">ao próximo level</span>
             </h1>
             <p className="mt-4 max-w-[620px] text-[15px] leading-[1.54] text-white/80 md:mt-6 md:text-[19px] md:leading-[1.62]">
               <strong className="font-semibold text-white">Social Media</strong>,
