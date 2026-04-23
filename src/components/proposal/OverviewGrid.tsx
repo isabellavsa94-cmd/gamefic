@@ -1,5 +1,6 @@
 import { useReveal } from "@/hooks/useReveal";
 import { proposalGroups } from "@/components/proposal/proposalData";
+import ServicesDetail from "@/components/proposal/ServicesDetail";
 
 interface OverviewGridProps {
   activeId: string | null;
@@ -105,6 +106,8 @@ export default function OverviewGrid({ activeId, onSelect }: OverviewGridProps) 
             );
           })}
         </div>
+
+        <ServicesDetail activeId={activeId} />
       </div>
     </section>
   );
