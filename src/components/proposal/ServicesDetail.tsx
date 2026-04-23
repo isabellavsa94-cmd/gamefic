@@ -244,21 +244,23 @@ export default function ServicesDetail() {
   const ref = useReveal();
 
   return (
-    <section ref={ref} className="bg-white py-24">
+    <section ref={ref} className="bg-white py-16 md:py-24">
       <div className="container">
-        <div className="flex flex-col gap-16">
+        <div className="flex flex-col gap-12 md:gap-16">
           {groups.map((group) => (
             <div key={group.id} id={group.id} className="reveal">
-              <div className="mb-6 rounded-[32px] bg-[linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)] px-8 py-8 text-white shadow-[0_24px_60px_rgba(25,48,130,0.16)]">
-                <div className="flex items-center gap-5">
-                  <span className="font-numbers text-[clamp(36px,4vw,48px)] font-extrabold leading-none text-accent">
+              <div className="mb-5 rounded-[26px] bg-[linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)] px-5 py-5 text-white shadow-[0_24px_60px_rgba(25,48,130,0.16)] md:mb-6 md:rounded-[32px] md:px-8 md:py-8">
+                <div className="flex flex-col items-start gap-3 md:flex-row md:items-center md:gap-5">
+                  <span className="font-numbers text-[34px] font-extrabold leading-none text-accent md:text-[clamp(36px,4vw,48px)]">
                     {group.num}
                   </span>
                   <div>
-                    <h3 className="font-display text-[clamp(24px,2.8vw,34px)] font-extrabold leading-[1.05] tracking-[-0.04em]">
+                    <h3 className="font-display text-[26px] font-extrabold leading-[1.05] tracking-[-0.04em] md:text-[clamp(24px,2.8vw,34px)]">
                       {group.title}
                     </h3>
-                    <p className="mt-1 text-[14px] text-white/72">{group.subtitle}</p>
+                    <p className="mt-1 text-[13px] leading-[1.5] text-white/72 md:text-[14px]">
+                      {group.subtitle}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -276,22 +278,22 @@ export default function ServicesDetail() {
                 {group.services.map((service) => (
                   <article
                     key={service.id}
-                    className="group relative overflow-hidden rounded-[30px] border border-[#d7defa] bg-[linear-gradient(180deg,#ffffff_0%,#f7f9ff_100%)] p-6 shadow-[0_18px_40px_rgba(28,54,126,0.08)] transition-all duration-300 hover:-translate-y-1"
+                    className="group relative overflow-hidden rounded-[24px] border border-[#d7defa] bg-[linear-gradient(180deg,#ffffff_0%,#f7f9ff_100%)] p-4 shadow-[0_18px_40px_rgba(28,54,126,0.08)] transition-all duration-300 hover:-translate-y-1 md:rounded-[30px] md:p-6"
                   >
                     <div className="absolute inset-x-0 top-0 h-1" style={{ background: group.badgeColor }} />
 
                     <div className="relative flex items-start gap-4">
-                      <div className="relative z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-[20px] font-numbers text-[14px] font-extrabold text-white shadow-[0_14px_28px_rgba(36,71,255,0.22)]" style={{ background: group.badgeColor }}>
+                      <div className="relative z-10 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-[16px] font-numbers text-[12px] font-extrabold text-white shadow-[0_14px_28px_rgba(36,71,255,0.22)] md:h-14 md:w-14 md:rounded-[20px] md:text-[14px]" style={{ background: group.badgeColor }}>
                         {service.num}
                       </div>
                       <div className="min-w-0 flex-1">
-                        <span className="inline-flex rounded-full bg-secondary px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-primary">
+                        <span className="inline-flex rounded-full bg-secondary px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-primary md:text-[10px]">
                           {service.category}
                         </span>
-                        <h4 className="mt-3 font-display text-[24px] font-extrabold leading-[1.08] tracking-[-0.04em] text-primary">
+                        <h4 className="mt-3 font-display text-[22px] font-extrabold leading-[1.08] tracking-[-0.04em] text-primary md:text-[24px]">
                           {service.title}
                         </h4>
-                        <div className="mt-3 space-y-3 text-[14px] leading-[1.6] text-slate-600">
+                        <div className="mt-3 space-y-3 text-[13px] leading-[1.56] text-slate-600 md:text-[14px] md:leading-[1.6]">
                           {service.descriptions.map((description, index) => (
                             <p
                               key={index}
@@ -304,23 +306,23 @@ export default function ServicesDetail() {
                     </div>
 
                     {service.highlight && (
-                      <div className="mt-5 rounded-[24px] border border-primary/10 bg-[linear-gradient(135deg,rgba(35,71,255,0.06),rgba(136,0,227,0.08))] p-4">
+                      <div className="mt-5 rounded-[20px] border border-primary/10 bg-[linear-gradient(135deg,rgba(35,71,255,0.06),rgba(136,0,227,0.08))] p-3.5 md:rounded-[24px] md:p-4">
                         <p
-                          className="text-[13px] leading-[1.55] text-slate-700 [&_strong]:font-semibold [&_strong]:text-primary"
+                          className="text-[12px] leading-[1.5] text-slate-700 [&_strong]:font-semibold [&_strong]:text-primary md:text-[13px] md:leading-[1.55]"
                           dangerouslySetInnerHTML={{ __html: service.highlight }}
                         />
                       </div>
                     )}
 
                     <div className="mt-5">
-                      <div className="mb-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-slate-500">
+                      <div className="mb-3 text-[10px] font-semibold uppercase tracking-[0.14em] text-slate-500 md:text-[11px]">
                         {service.deliverablesTitle || "O que entra nessa frente"}
                       </div>
                       <div className="grid gap-2 sm:grid-cols-2">
                         {service.deliverables.map((deliverable, index) => (
                           <div
                             key={index}
-                            className="flex items-start gap-2 rounded-[18px] border border-[#e5eafe] bg-white px-4 py-3 text-[13px] leading-[1.55] text-slate-700"
+                            className="flex items-start gap-2 rounded-[16px] border border-[#e5eafe] bg-white px-3 py-3 text-[12px] leading-[1.5] text-slate-700 md:rounded-[18px] md:px-4 md:text-[13px] md:leading-[1.55]"
                           >
                             <span
                               className="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full"

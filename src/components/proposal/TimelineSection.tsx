@@ -42,7 +42,7 @@ export default function TimelineSection() {
   const ref = useReveal();
 
   return (
-    <section id="timeline" ref={ref} className="relative overflow-hidden bg-white py-24">
+    <section id="timeline" ref={ref} className="relative overflow-hidden bg-white py-16 md:py-24">
       <div className="container">
         <div className="reveal mx-auto max-w-[760px] text-center">
           <div className="text-[12px] font-semibold uppercase tracking-[0.18em] text-primary">
@@ -51,23 +51,23 @@ export default function TimelineSection() {
           <h2 className="mt-4 font-display text-[clamp(34px,4vw,54px)] font-extrabold leading-[1.02] tracking-[-0.05em] text-primary">
             Como colocamos a operação em prática.
           </h2>
-          <p className="mt-4 text-[16px] leading-[1.64] text-slate-600">
+          <p className="mt-4 text-[15px] leading-[1.58] text-slate-600 md:text-[16px] md:leading-[1.64]">
             Um fluxo claro de execução reduz ruído, acelera alinhamento e ajuda a Gamefic a ganhar
             consistência logo nos primeiros meses.
           </p>
         </div>
 
-        <div className="relative mt-14">
+        <div className="relative mt-10 md:mt-14">
           <div className="absolute left-[24px] top-8 hidden h-1 w-[calc(100%-48px)] bg-[linear-gradient(90deg,#2447ff,#00ff8d,#8800e3)] md:block" />
 
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
+          <div className="grid gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-5">
             {phases.map((phase) => (
               <article
                 key={phase.num}
-                className="reveal gamefic-surface relative rounded-[30px] border border-white/80 p-6"
+                className="reveal gamefic-surface relative rounded-[24px] border border-white/80 p-5 md:rounded-[30px] md:p-6"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary font-display text-[20px] font-extrabold text-white">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary font-display text-[18px] font-extrabold text-white md:h-12 md:w-12 md:text-[20px]">
                     {phase.num}
                   </div>
                   <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
@@ -75,10 +75,12 @@ export default function TimelineSection() {
                   </div>
                 </div>
 
-                <h3 className="mt-5 font-display text-[26px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
+                <h3 className="mt-4 font-display text-[22px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary md:mt-5 md:text-[26px]">
                   {phase.title}
                 </h3>
-                <p className="mt-4 text-[15px] leading-[1.62] text-slate-600">{phase.desc}</p>
+                <p className="mt-3 text-[14px] leading-[1.56] text-slate-600 md:mt-4 md:text-[15px] md:leading-[1.62]">
+                  {phase.desc}
+                </p>
 
                 <div className="mt-6 flex flex-wrap gap-2">
                   {phase.tags.map((tag) => (

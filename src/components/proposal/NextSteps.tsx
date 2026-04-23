@@ -25,7 +25,7 @@ export default function NextSteps() {
     <section
       id="proximos-passos"
       ref={ref}
-      className="relative overflow-hidden bg-[linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)] py-24 text-white"
+      className="relative overflow-hidden bg-[linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)] py-16 text-white md:py-24"
     >
       <div className="absolute inset-0 opacity-20 gamefic-pattern" />
       <div className="container relative">
@@ -36,29 +36,31 @@ export default function NextSteps() {
           <h2 className="mt-4 font-display text-[clamp(34px,4vw,56px)] font-extrabold leading-[1.02] tracking-[-0.05em]">
             Se fizer sentido para a Gamefic, o próximo movimento é começar.
           </h2>
-          <p className="mt-4 text-[16px] leading-[1.64] text-white/78">
+          <p className="mt-4 text-[15px] leading-[1.58] text-white/78 md:text-[16px] md:leading-[1.64]">
             A aprovação destrava uma operação pensada para dar consistência à presença digital e
             mais estrutura para geração de oportunidades.
           </p>
         </div>
 
-        <div className="reveal-stagger mt-14 grid gap-5 md:grid-cols-3">
+        <div className="reveal-stagger mt-10 grid gap-4 md:mt-14 md:gap-5 md:grid-cols-3">
           {steps.map((step, index) => (
             <article
               key={step.num}
-              className="reveal rounded-[32px] border border-white/14 bg-white/10 p-7 backdrop-blur-sm"
+              className="reveal rounded-[24px] border border-white/14 bg-white/10 p-5 backdrop-blur-sm md:rounded-[32px] md:p-7"
             >
               <div
-                className={`inline-flex rounded-full px-4 py-2 font-display text-[14px] font-extrabold ${
+                className={`inline-flex rounded-full px-4 py-2 font-display text-[13px] font-extrabold md:text-[14px] ${
                   index === 1 ? "bg-accent text-primary" : "bg-white/16 text-white"
                 }`}
               >
                 {step.num}
               </div>
-              <h3 className="mt-5 font-display text-[28px] font-extrabold leading-[1.05] tracking-[-0.04em]">
+              <h3 className="mt-4 font-display text-[24px] font-extrabold leading-[1.05] tracking-[-0.04em] md:mt-5 md:text-[28px]">
                 {step.title}
               </h3>
-              <p className="mt-4 text-[15px] leading-[1.62] text-white/78">{step.desc}</p>
+              <p className="mt-3 text-[14px] leading-[1.56] text-white/78 md:mt-4 md:text-[15px] md:leading-[1.62]">
+                {step.desc}
+              </p>
             </article>
           ))}
         </div>

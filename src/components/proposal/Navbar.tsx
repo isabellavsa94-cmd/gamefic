@@ -40,7 +40,7 @@ export default function Navbar() {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 px-3 pt-3 md:px-6">
       <div
-        className={`mx-auto flex h-[74px] max-w-[1240px] items-center justify-between rounded-[28px] px-4 shadow-[0_20px_60px_rgba(25,48,130,0.08)] backdrop-blur-xl transition-all duration-300 md:px-7 ${
+        className={`mx-auto flex h-[64px] max-w-[1240px] items-center justify-between rounded-[24px] px-3 shadow-[0_20px_60px_rgba(25,48,130,0.08)] backdrop-blur-xl transition-all duration-300 md:h-[74px] md:rounded-[28px] md:px-7 ${
           pastHero ? "border border-white/50 bg-white/80" : "border border-white/70 bg-white/90"
         }`}
       >
@@ -49,7 +49,7 @@ export default function Navbar() {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="flex items-center bg-transparent"
         >
-          <BrandLogo className="h-11 w-auto md:h-12" />
+          <BrandLogo className="h-9 w-auto md:h-12" />
         </button>
 
         <ul className="hidden items-center gap-7 md:flex">
@@ -69,9 +69,10 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => scrollTo("#proximos-passos")}
-          className="rounded-full bg-accent px-5 py-3 font-display text-[15px] font-extrabold text-primary shadow-[0_10px_24px_rgba(0,255,141,0.28)] transition-transform hover:-translate-y-0.5"
+          className="rounded-full bg-accent px-4 py-2.5 font-display text-[13px] font-extrabold text-primary shadow-[0_10px_24px_rgba(0,255,141,0.28)] transition-transform hover:-translate-y-0.5 md:px-5 md:py-3 md:text-[15px]"
         >
-          Quero avançar
+          <span className="md:hidden">Avançar</span>
+          <span className="hidden md:inline">Quero avançar</span>
         </button>
       </div>
     </nav>

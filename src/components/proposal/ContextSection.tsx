@@ -31,10 +31,10 @@ export default function ContextSection() {
   const ref = useReveal();
 
   return (
-    <section id="diagnostico" ref={ref} className="relative overflow-hidden py-24">
+    <section id="diagnostico" ref={ref} className="relative overflow-hidden py-16 md:py-24">
       <div className="absolute inset-y-0 right-0 hidden w-[28%] gamefic-pattern opacity-60 lg:block" />
       <div className="container relative">
-        <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr]">
+        <div className="grid gap-8 md:gap-10 lg:grid-cols-[0.92fr_1.08fr]">
           <div className="reveal lg:sticky lg:top-28 lg:self-start">
             <div className="text-[12px] font-semibold uppercase tracking-[0.18em] text-primary">
               Oportunidade
@@ -42,26 +42,26 @@ export default function ContextSection() {
             <h2 className="mt-4 font-display text-[clamp(34px,4vw,54px)] font-extrabold leading-[1.02] tracking-[-0.05em] text-balance text-primary">
               Por que este escopo faz sentido agora.
             </h2>
-            <p className="mt-5 text-[16px] leading-[1.66] text-slate-600">
+            <p className="mt-4 text-[15px] leading-[1.58] text-slate-600 md:mt-5 md:text-[16px] md:leading-[1.66]">
               A Gamefic já tem espaço para crescer com mais força no digital. O ponto aqui não é
               apenas publicar ou anunciar, mas criar uma operação que conecte presença, geração de
               demanda, captação e relacionamento em uma lógica comercial mais madura.
             </p>
-            <p className="mt-4 text-[16px] leading-[1.66] text-slate-600">
+            <p className="mt-4 text-[15px] leading-[1.58] text-slate-600 md:text-[16px] md:leading-[1.66]">
               Este escopo foi desenhado para atacar os pontos que mais impactam resultado:
               posicionamento, tráfego qualificado, conversão e organização do funil.
             </p>
           </div>
 
-          <div className="reveal grid gap-4">
+          <div className="reveal grid gap-3 md:gap-4">
             {insights.map((item, index) => (
               <article
                 key={item.icon}
-                className="gamefic-surface rounded-[28px] border border-white/70 p-5 md:p-6"
+                className="gamefic-surface rounded-[24px] border border-white/70 p-4 md:rounded-[28px] md:p-6"
               >
                 <div className="flex items-start gap-4">
                   <div
-                    className={`flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-2xl font-display text-[14px] font-extrabold ${
+                    className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-[16px] font-display text-[13px] font-extrabold md:h-12 md:w-12 md:rounded-2xl md:text-[14px] ${
                       index < 3
                         ? "bg-accent text-primary"
                         : "bg-[linear-gradient(135deg,#2246ff,#8800e3)] text-white"
@@ -70,7 +70,7 @@ export default function ContextSection() {
                     {item.icon}
                   </div>
                   <div
-                    className="text-[15px] leading-[1.64] text-slate-600 [&_strong]:font-semibold [&_strong]:text-slate-900"
+                    className="text-[14px] leading-[1.56] text-slate-600 [&_strong]:font-semibold [&_strong]:text-slate-900 md:text-[15px] md:leading-[1.64]"
                     dangerouslySetInnerHTML={{ __html: item.text }}
                   />
                 </div>

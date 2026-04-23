@@ -29,13 +29,13 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
       <div className="absolute left-[-8%] top-[18%] h-[320px] w-[320px] rounded-full bg-[radial-gradient(circle,rgba(0,255,141,0.2),transparent_72%)]" />
       <div className="absolute bottom-[-80px] right-[-80px] h-[360px] w-[360px] rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.16),transparent_72%)]" />
 
-      <div className="relative flex min-h-screen items-center justify-center px-6 py-10">
+      <div className="relative flex min-h-screen items-center justify-center px-4 py-8 sm:px-6 sm:py-10">
         <form
           onSubmit={handleSubmit}
-          className="w-full max-w-[430px] rounded-[34px] border border-white/15 bg-white/10 p-8 text-white shadow-[0_30px_70px_rgba(0,0,0,0.2)] backdrop-blur-xl"
+          className="w-full max-w-[430px] rounded-[28px] border border-white/15 bg-white/10 p-6 text-white shadow-[0_30px_70px_rgba(0,0,0,0.2)] backdrop-blur-xl sm:rounded-[34px] sm:p-8"
         >
-          <div className="mb-7 text-center">
-            <div className="press-start-lines mx-auto max-w-[290px] px-4 py-2">
+          <div className="mb-6 text-center sm:mb-7">
+            <div className="press-start-lines mx-auto max-w-[250px] px-2 py-1 sm:max-w-[290px] sm:px-4 sm:py-2">
               <div className="press-start-title">
                 <span>PRESS</span>
                 <span>START</span>
@@ -43,17 +43,17 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
             </div>
           </div>
 
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-3xl bg-accent text-primary">
-            <Lock size={28} />
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-[22px] bg-accent text-primary sm:h-16 sm:w-16 sm:rounded-3xl">
+            <Lock size={24} className="sm:h-7 sm:w-7" />
           </div>
-          <h1 className="mt-6 text-center font-display text-[34px] font-extrabold tracking-[-0.04em]">
+          <h1 className="mt-5 text-center font-display text-[30px] font-extrabold tracking-[-0.04em] sm:mt-6 sm:text-[34px]">
             Acesso restrito
           </h1>
-          <p className="mt-3 text-center text-[15px] leading-[1.62] text-white/76">
+          <p className="mt-3 text-center text-[14px] leading-[1.58] text-white/76 sm:text-[15px] sm:leading-[1.62]">
             Digite a senha para visualizar a proposta comercial da Gamefic.
           </p>
 
-          <div className="mt-7 rounded-full bg-white px-5 py-3">
+          <div className="mt-6 rounded-full bg-white px-4 py-3 sm:mt-7 sm:px-5">
             <input
               type="password"
               value={password}
@@ -66,7 +66,7 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
 
           <button
             type="submit"
-            className="mt-5 w-full rounded-full bg-accent px-5 py-4 font-display text-[17px] font-extrabold text-primary transition-transform hover:-translate-y-0.5"
+            className="mt-4 w-full rounded-full bg-accent px-5 py-3.5 font-display text-[16px] font-extrabold text-primary transition-transform hover:-translate-y-0.5 sm:mt-5 sm:py-4 sm:text-[17px]"
           >
             Entrar
           </button>

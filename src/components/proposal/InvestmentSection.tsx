@@ -46,7 +46,7 @@ export default function InvestmentSection() {
     <section
       id="investimento"
       ref={ref}
-      className="bg-[linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)] py-24 text-white"
+      className="bg-[linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)] py-16 text-white md:py-24"
     >
       <div className="container">
         <div className="reveal">
@@ -56,17 +56,17 @@ export default function InvestmentSection() {
           <h2 className="font-display text-[clamp(34px,4vw,54px)] font-extrabold leading-[1.02] tracking-[-0.05em] text-balance">
             Investimento para colocar a operação em movimento.
           </h2>
-          <p className="mt-3 max-w-[700px] text-[16px] leading-[1.64] text-white/80">
+          <p className="mt-3 max-w-[700px] text-[15px] leading-[1.56] text-white/80 md:text-[16px] md:leading-[1.64]">
             A proposta foi organizada em dois blocos comerciais que podem ser contratados de forma
             independente ou combinada, conforme a prioridade da Gamefic.
           </p>
         </div>
 
-        <div className="reveal mt-12 grid gap-4 lg:grid-cols-3">
+        <div className="reveal mt-10 grid gap-3 md:mt-12 md:gap-4 lg:grid-cols-3">
           {modules.map((module) => (
             <article
               key={module.title}
-              className="rounded-[30px] border border-white/16 bg-white/10 p-5 text-white shadow-[0_24px_60px_rgba(10,18,90,0.16)] backdrop-blur-sm md:p-6"
+              className="rounded-[24px] border border-white/16 bg-white/10 p-4 text-white shadow-[0_24px_60px_rgba(10,18,90,0.16)] backdrop-blur-sm md:rounded-[30px] md:p-6"
             >
               <div className="flex flex-wrap items-center gap-2">
                 <span className="rounded-full bg-accent px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-primary">
@@ -74,11 +74,11 @@ export default function InvestmentSection() {
                 </span>
               </div>
 
-              <h3 className="mt-4 max-w-[16ch] font-display text-[clamp(24px,3.2vw,31px)] font-extrabold leading-[1.04] tracking-[-0.04em]">
+              <h3 className="mt-4 max-w-[16ch] font-display text-[24px] font-extrabold leading-[1.04] tracking-[-0.04em] md:text-[clamp(24px,3.2vw,31px)]">
                 {module.title}
               </h3>
               {"titleNote" in module && module.titleNote && (
-                <div className="mt-2 text-[14px] font-medium leading-[1.28] text-white/68">
+                <div className="mt-2 text-[13px] font-medium leading-[1.28] text-white/68 md:text-[14px]">
                   {module.titleNote}
                 </div>
               )}
@@ -88,27 +88,27 @@ export default function InvestmentSection() {
                   src={coinIcon}
                   alt=""
                   aria-hidden="true"
-                  className="h-9 w-9 flex-shrink-0"
+                  className="h-8 w-8 flex-shrink-0 md:h-9 md:w-9"
                 />
                 <div className="flex items-end gap-2">
-                  <div className="font-display text-[clamp(28px,4.2vw,42px)] font-extrabold leading-none tracking-[-0.05em] text-accent">
+                  <div className="font-display text-[30px] font-extrabold leading-none tracking-[-0.05em] text-accent md:text-[clamp(28px,4.2vw,42px)]">
                     {module.value}
                   </div>
-                  <div className="whitespace-nowrap pb-1 text-[14px] font-medium uppercase tracking-[0.04em] text-white/76">
+                  <div className="whitespace-nowrap pb-1 text-[13px] font-medium uppercase tracking-[0.04em] text-white/76 md:text-[14px]">
                     {module.cadence}
                   </div>
                 </div>
               </div>
 
-              <p className="mt-4 max-w-[42ch] text-[14px] leading-[1.58] text-white/80">
+              <p className="mt-4 max-w-[42ch] text-[13px] leading-[1.5] text-white/80 md:text-[14px] md:leading-[1.58]">
                 {module.note}
               </p>
 
-              <div className="mt-6 grid gap-2 sm:grid-cols-3">
+              <div className="mt-5 grid gap-2 sm:grid-cols-3 md:mt-6">
                 {module.highlights.map((highlight) => (
                   <div
                     key={highlight}
-                    className="rounded-[16px] border border-white/10 bg-[rgba(3,10,60,0.18)] px-3 py-2.5 text-center text-[11px] font-medium leading-[1.4] text-white/82"
+                    className="rounded-[14px] border border-white/10 bg-[rgba(3,10,60,0.18)] px-3 py-2.5 text-center text-[11px] font-medium leading-[1.4] text-white/82 md:rounded-[16px]"
                   >
                     {highlight}
                   </div>

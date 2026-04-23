@@ -58,15 +58,15 @@ export default function ProposalValidityBadge() {
 
   return (
     <div className="mt-6 flex w-full justify-center">
-      <div className="flex min-w-[240px] max-w-[320px] items-center justify-center gap-3 rounded-[20px] border border-white/16 bg-[rgba(3,10,60,0.24)] px-4 py-3 text-center">
-        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#ffbe17] text-[28px] font-black leading-none text-white shadow-[0_8px_20px_rgba(255,190,23,0.24)]">
+      <div className="flex min-w-[220px] max-w-[300px] items-center justify-center gap-3 rounded-[18px] border border-white/16 bg-[rgba(3,10,60,0.24)] px-4 py-3 text-center md:min-w-[240px] md:max-w-[320px] md:rounded-[20px]">
+        <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-[#ffbe17] text-[24px] font-black leading-none text-white shadow-[0_8px_20px_rgba(255,190,23,0.24)] md:h-10 md:w-10 md:text-[28px]">
           !
         </div>
         <div>
           <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/62">
             Validade da proposta
           </div>
-          <div className="mt-1 font-display text-[20px] font-extrabold leading-none tracking-[-0.04em] text-white">
+          <div className="mt-1 font-display text-[18px] font-extrabold leading-none tracking-[-0.04em] text-white md:text-[20px]">
             {isExpired
               ? "Encerrada"
               : `${formatted.days}d ${formatted.hours}h ${formatted.minutes}m`}
