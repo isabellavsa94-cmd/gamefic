@@ -14,17 +14,7 @@ export default function Index() {
   const [activeServiceId, setActiveServiceId] = useState<string | null>(null);
 
   const handleSelectService = (id: string) => {
-    const nextId = activeServiceId === id ? null : id;
-    setActiveServiceId(nextId);
-
-    if (nextId) {
-      window.setTimeout(() => {
-        const el = document.getElementById("services-detail");
-        if (!el) return;
-        const top = el.getBoundingClientRect().top + window.scrollY - 108;
-        window.scrollTo({ top, behavior: "smooth" });
-      }, 80);
-    }
+    setActiveServiceId((current) => (current === id ? null : id));
   };
 
   return (
