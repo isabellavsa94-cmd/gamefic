@@ -35,8 +35,7 @@ const groups = [
     href: "#g4",
     suggested: true,
     disclaimer: "Sugestão da especialista",
-    image:
-      "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
+    image: `${import.meta.env.BASE_URL}site-card-photo.jpg`,
     items: ["Landing page", "Conversão", "Tracking"],
   },
 ];
