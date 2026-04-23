@@ -25,14 +25,11 @@ export default function Hero() {
       <div className="container relative z-10 pb-0">
         <div className="grid items-start gap-5 pt-8 md:gap-8 md:pt-10 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:items-start xl:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)]">
           <div className="reveal relative z-10 mr-[-6.75rem] w-[calc(100%+6.75rem)] pb-4 pr-20 md:mr-0 md:w-auto md:pb-12 md:pr-0">
-            <div className="inline-flex max-w-full flex-col items-start">
-            <span className="invisible block h-0 overflow-hidden whitespace-nowrap text-[15px] font-semibold md:text-[19px]">
-              Social Media, Tráfego Pago, Inbound e conversão
-            </span>
+            <div className="w-full max-w-[378px] flex-col items-start md:max-w-[52rem]">
             <div className="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent md:mb-5 md:px-4 md:text-[12px] md:tracking-[0.18em]">
               Proposta Comercial · Gamefic
             </div>
-            <h1 className="w-full max-w-full font-display text-[clamp(26px,5.9vw,64px)] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-[clamp(31px,6.8vw,64px)]">
+            <h1 className="w-full max-w-full font-display text-[clamp(26px,5.9vw,64px)] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-[clamp(31px,5.8vw,58px)]">
               <span className="block whitespace-nowrap">Vamos levar a</span>
               <span className="block whitespace-nowrap">Gamefic ao</span>
               <span className="block whitespace-nowrap">próximo level?</span>
