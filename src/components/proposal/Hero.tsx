@@ -26,15 +26,18 @@ export default function Hero() {
         <div className="grid items-start gap-5 pt-8 md:gap-8 md:pt-10 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)] lg:items-start xl:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)]">
           <div className="reveal relative z-10 mr-[-6.75rem] w-[calc(100%+6.75rem)] pb-4 pr-20 md:mr-0 md:w-auto md:pb-12 md:pr-0">
             <div className="inline-flex max-w-full flex-col items-start">
+            <span className="invisible block h-0 overflow-hidden whitespace-nowrap text-[15px] font-semibold md:text-[19px]">
+              Social Media, Tráfego Pago, Inbound e conversão
+            </span>
             <div className="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent md:mb-5 md:px-4 md:text-[12px] md:tracking-[0.18em]">
               Proposta Comercial · Gamefic
             </div>
-            <h1 className="max-w-none font-display text-[clamp(26px,5.9vw,64px)] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-[clamp(31px,6.8vw,64px)]">
+            <h1 className="w-full max-w-full font-display text-[clamp(26px,5.9vw,64px)] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-[clamp(31px,6.8vw,64px)]">
               <span className="block whitespace-nowrap">Vamos levar a</span>
               <span className="block whitespace-nowrap">Gamefic ao</span>
               <span className="block whitespace-nowrap">próximo level?</span>
             </h1>
-            <p className="mt-4 max-w-none text-[15px] leading-[1.54] text-white/80 md:mt-6 md:text-[19px] md:leading-[1.62]">
+            <p className="mt-4 w-full max-w-full text-[15px] leading-[1.54] text-white/80 md:mt-6 md:text-[19px] md:leading-[1.62]">
               <span className="block whitespace-nowrap">
                 <strong className="font-semibold text-white">Social Media</strong>,
                 <strong className="font-semibold text-white"> Tráfego Pago</strong>,
@@ -44,18 +47,18 @@ export default function Hero() {
               <span className="block">em uma operação para atrair demanda e apoiar o comercial com mais previsibilidade.</span>
             </p>
 
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row md:mt-8">
+            <div className="mt-6 grid w-full grid-cols-2 gap-3 md:mt-8">
               <button
                 type="button"
                 onClick={() => scrollTo("#servicos")}
-                className="w-full rounded-full bg-accent px-6 py-3 font-display text-[16px] font-extrabold text-primary transition-transform hover:-translate-y-0.5 sm:w-auto"
+                className="w-full rounded-full bg-accent px-6 py-3 font-display text-[16px] font-extrabold text-primary transition-transform hover:-translate-y-0.5"
               >
                 Ver proposta
               </button>
               <button
                 type="button"
                 onClick={() => scrollTo("#investimento")}
-                className="hero-slide-button w-full sm:w-auto"
+                className="hero-slide-button w-full"
               >
                 <span className="hero-slide-button__track" />
                 <span className="hero-slide-button__label-wrap">
