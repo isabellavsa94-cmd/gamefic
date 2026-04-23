@@ -322,15 +322,15 @@
   }
 
   .hero-slide-button {
-    min-height: 52px;
+    min-height: 46px;
   }
 
   .hero-slide-button__label-wrap {
     min-width: 100%;
-    padding: 0 24px;
+    padding: 0 18px;
   }
 
   .hero-slide-button__label {
-    font-size: 15px;
+    font-size: 14px;
   }
 }

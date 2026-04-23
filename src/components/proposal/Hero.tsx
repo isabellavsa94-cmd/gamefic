@@ -29,7 +29,7 @@ export default function Hero() {
             <div className="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent md:mb-5 md:px-4 md:text-[12px] md:tracking-[0.18em]">
               Proposta Comercial · Gamefic
             </div>
-            <h1 className="w-full max-w-full font-display text-[clamp(34px,8.8vw,64px)] font-extrabold leading-[0.96] tracking-[-0.05em] md:text-[clamp(31px,5.8vw,58px)]">
+            <h1 className="w-full max-w-full font-display text-[clamp(40px,10.8vw,64px)] font-extrabold leading-[0.94] tracking-[-0.055em] md:text-[clamp(31px,5.8vw,58px)]">
               <span className="block whitespace-nowrap">Vamos levar a</span>
               <span className="block whitespace-nowrap">Gamefic ao</span>
               <span className="block whitespace-nowrap">próximo level?</span>
@@ -48,7 +48,7 @@ export default function Hero() {
               <button
                 type="button"
                 onClick={() => scrollTo("#servicos")}
-                className="w-full rounded-full bg-accent px-6 py-3 font-display text-[16px] font-extrabold text-primary transition-transform hover:-translate-y-0.5"
+                className="w-full rounded-full bg-accent px-5 py-2.5 font-display text-[15px] font-extrabold text-primary transition-transform hover:-translate-y-0.5 md:px-6 md:py-3 md:text-[16px]"
               >
                 Ver proposta
               </button>
