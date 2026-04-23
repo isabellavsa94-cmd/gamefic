@@ -24,12 +24,12 @@ export default function Hero() {
 
       <div className="container relative z-10 pb-0">
         <div className="grid items-start gap-5 pt-8 md:gap-8 md:pt-10 lg:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] lg:items-start xl:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
-          <div className="reveal relative z-10 mr-[-6.75rem] w-[calc(100%+6.75rem)] pb-4 pr-20 md:mr-0 md:w-auto md:pb-12 md:pr-0">
+          <div className="reveal relative z-10 pb-4 md:mr-0 md:w-auto md:pb-12 md:pr-0 lg:mr-[-6.75rem] lg:w-[calc(100%+6.75rem)] lg:pr-20">
             <div className="w-full max-w-[378px] flex-col items-start md:max-w-[52rem]">
             <div className="mb-4 inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent md:mb-5 md:px-4 md:text-[12px] md:tracking-[0.18em]">
               Proposta Comercial · Gamefic
             </div>
-            <h1 className="w-full max-w-full font-display text-[clamp(26px,5.9vw,64px)] font-extrabold leading-[0.98] tracking-[-0.045em] md:text-[clamp(31px,5.8vw,58px)]">
+            <h1 className="w-full max-w-full font-display text-[clamp(34px,8.8vw,64px)] font-extrabold leading-[0.96] tracking-[-0.05em] md:text-[clamp(31px,5.8vw,58px)]">
               <span className="block whitespace-nowrap">Vamos levar a</span>
               <span className="block whitespace-nowrap">Gamefic ao</span>
               <span className="block whitespace-nowrap">próximo level?</span>
@@ -44,7 +44,7 @@ export default function Hero() {
               <span className="block">em uma operação para atrair demanda e apoiar o comercial com mais previsibilidade.</span>
             </p>
 
-            <div className="mt-6 grid w-full grid-cols-2 gap-3 md:mt-8">
+            <div className="mt-6 flex w-full flex-col gap-3 sm:grid sm:grid-cols-2 md:mt-8">
               <button
                 type="button"
                 onClick={() => scrollTo("#servicos")}

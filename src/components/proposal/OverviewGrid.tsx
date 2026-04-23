@@ -32,82 +32,88 @@ export default function OverviewGrid({ activeId, onSelect }: OverviewGridProps) 
             const isActive = activeId === g.id;
 
             return (
-              <button
-                key={g.num}
-                type="button"
-                onClick={() => onSelect(g.id)}
-                className={`group flex h-full flex-col overflow-hidden rounded-[26px] text-left transition-all duration-300 hover:-translate-y-1 md:rounded-[32px] ${
-                  g.suggested
-                    ? "border border-[#f6c624] bg-[linear-gradient(180deg,#fff8e6_0%,#ffedb9_100%)] shadow-[0_24px_60px_rgba(232,182,5,0.14)]"
-                    : "gamefic-surface border border-white/80"
-                } ${isActive ? "ring-2 ring-primary/30" : ""}`}
-                aria-expanded={isActive}
-                aria-controls="services-detail"
-              >
-                <div className="relative h-[220px] overflow-hidden md:h-[260px]">
-                  <img
-                    src={g.image}
-                    alt={g.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,64,248,0.08),rgba(0,0,0,0.35))]" />
-                  <div className="absolute left-4 top-4 rounded-full bg-accent px-3 py-1 text-[11px] font-display font-extrabold text-primary md:left-5 md:top-5 md:text-[12px]">
-                    Frente {g.num}
-                  </div>
-                  {g.disclaimer && (
-                    <div className="absolute bottom-4 right-4 z-10 rounded-full border border-[#edbe19] bg-[rgba(255,212,57,0.94)] px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.12em] text-[#7a5a00] shadow-[0_10px_24px_rgba(232,182,5,0.2)] md:bottom-5 md:right-5 md:text-[10px]">
-                      {g.disclaimer}
+              <>
+                <button
+                  key={g.num}
+                  type="button"
+                  onClick={() => onSelect(g.id)}
+                  className={`group flex h-full flex-col overflow-hidden rounded-[26px] text-left transition-all duration-300 hover:-translate-y-1 md:rounded-[32px] ${
+                    g.suggested
+                      ? "border border-[#f6c624] bg-[linear-gradient(180deg,#fff8e6_0%,#ffedb9_100%)] shadow-[0_24px_60px_rgba(232,182,5,0.14)]"
+                      : "gamefic-surface border border-white/80"
+                  } ${isActive ? "ring-2 ring-primary/30" : ""}`}
+                  aria-expanded={isActive}
+                  aria-controls="services-detail"
+                >
+                  <div className="relative h-[220px] overflow-hidden md:h-[260px]">
+                    <img
+                      src={g.image}
+                      alt={g.title}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,64,248,0.08),rgba(0,0,0,0.35))]" />
+                    <div className="absolute left-4 top-4 rounded-full bg-accent px-3 py-1 text-[11px] font-display font-extrabold text-primary md:left-5 md:top-5 md:text-[12px]">
+                      Frente {g.num}
                     </div>
-                  )}
-                </div>
-
-                <div className="flex flex-1 flex-col p-5 md:p-6">
-                  <h3
-                    className={`min-h-0 font-display text-[24px] font-extrabold leading-[1.05] tracking-[-0.04em] md:min-h-[2.2em] md:text-[26px] ${
-                      g.suggested ? "text-[#8e6505]" : "text-primary"
-                    }`}
-                  >
-                    {g.title}
-                  </h3>
-                  <p className="mt-3 text-[14px] leading-[1.56] text-slate-600 md:text-[15px] md:leading-[1.62]">
-                    {g.subtitle}
-                  </p>
-
-                  <div className="mt-5 flex flex-wrap gap-2">
-                    {g.items.map((item) => (
-                      <span
-                        key={item}
-                        className={`rounded-full px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] ${
-                          g.suggested
-                            ? "bg-[#ffe8a0] text-[#8e6505]"
-                            : "bg-secondary text-primary"
-                        }`}
-                      >
-                        {item}
-                      </span>
-                    ))}
+                    {g.disclaimer && (
+                      <div className="absolute bottom-4 right-4 z-10 rounded-full border border-[#edbe19] bg-[rgba(255,212,57,0.94)] px-3 py-1 text-[9px] font-semibold uppercase tracking-[0.12em] text-[#7a5a00] shadow-[0_10px_24px_rgba(232,182,5,0.2)] md:bottom-5 md:right-5 md:text-[10px]">
+                        {g.disclaimer}
+                      </div>
+                    )}
                   </div>
+                  <div className="flex flex-1 flex-col p-5 md:p-6">
+                    <h3
+                      className={`min-h-0 font-display text-[24px] font-extrabold leading-[1.05] tracking-[-0.04em] md:min-h-[2.2em] md:text-[26px] ${
+                        g.suggested ? "text-[#8e6505]" : "text-primary"
+                      }`}
+                    >
+                      {g.title}
+                    </h3>
+                    <p className="mt-3 text-[14px] leading-[1.56] text-slate-600 md:text-[15px] md:leading-[1.62]">
+                      {g.subtitle}
+                    </p>
 
-                  <div
-                    className={`mt-5 inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 font-display text-[14px] font-extrabold md:mt-6 ${
-                      isActive
-                        ? "bg-primary text-white"
-                        : g.suggested
-                          ? "bg-[#edbe19] text-[#6e5200]"
-                          : "bg-primary text-white"
-                    }`}
-                  >
-                    {isActive ? "Recolher escopo" : "Abrir escopo"}
-                    <span>{isActive ? "−" : ">"}</span>
+                    <div className="mt-5 flex flex-wrap gap-2">
+                      {g.items.map((item) => (
+                        <span
+                          key={item}
+                          className={`rounded-full px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] ${
+                            g.suggested
+                              ? "bg-[#ffe8a0] text-[#8e6505]"
+                              : "bg-secondary text-primary"
+                          }`}
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div
+                      className={`mt-5 inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 font-display text-[14px] font-extrabold md:mt-6 ${
+                        isActive
+                          ? "bg-primary text-white"
+                          : g.suggested
+                            ? "bg-[#edbe19] text-[#6e5200]"
+                            : "bg-primary text-white"
+                      }`}
+                    >
+                      {isActive ? "Recolher escopo" : "Abrir escopo"}
+                      <span>{isActive ? "−" : ">"}</span>
+                    </div>
                   </div>
-                </div>
-              </button>
+                </button>
+
+                {isActive && (
+                  <ServicesDetail
+                    activeId={activeId}
+                    className="mt-2 md:col-span-2 md:mt-0 xl:col-span-4"
+                  />
+                )}
+              </>
             );
           })}
         </div>
-
-        <ServicesDetail activeId={activeId} />
       </div>
     </section>
   );
