@@ -3,16 +3,19 @@ import BrandLogo from "@/components/proposal/BrandLogo";
 export default function Footer() {
   const contactItems = [
     {
+      kind: "name",
       label: "Proposta conduzida por",
       value: "Isabella Vieira Souto",
       href: null,
     },
     {
+      kind: "email",
       label: "E-mail para contato",
       value: "isabellavsa94@gmail.com",
       href: "mailto:isabellavsa94@gmail.com",
     },
     {
+      kind: "phone",
       label: "WhatsApp",
       value: "(21) 99767-8292",
       href: "https://wa.me/5521997678292",
@@ -36,10 +39,13 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="grid gap-4 text-[14px] text-slate-600 md:grid-cols-3">
+          <div className="grid gap-4 text-[14px] text-slate-600 lg:grid-cols-3">
             {contactItems.map((item) => (
-              <div key={item.label} className="gamefic-surface rounded-[24px] p-5">
-                <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
+              <div
+                key={item.label}
+                className="gamefic-surface flex min-h-[168px] flex-col justify-between rounded-[28px] p-6"
+              >
+                <div className="max-w-[16ch] text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
                   {item.label}
                 </div>
                 {item.href ? (
@@ -47,12 +53,18 @@ export default function Footer() {
                     href={item.href}
                     target={item.href.startsWith("http") ? "_blank" : undefined}
                     rel={item.href.startsWith("http") ? "noreferrer" : undefined}
-                    className="mt-2 block font-display text-[18px] font-extrabold text-primary transition-colors hover:text-purple"
+                    className={`mt-5 block text-primary transition-colors hover:text-purple ${
+                      item.kind === "email"
+                        ? "font-body break-all text-[clamp(17px,1.55vw,21px)] font-semibold leading-[1.28]"
+                        : item.kind === "phone"
+                          ? "font-display text-[clamp(22px,2vw,28px)] font-extrabold leading-[1.06] tracking-[-0.04em]"
+                          : "font-display text-[clamp(24px,2.2vw,31px)] font-extrabold leading-[1.04] tracking-[-0.04em]"
+                    }`}
                   >
                     {item.value}
                   </a>
                 ) : (
-                  <div className="mt-2 font-display text-[18px] font-extrabold text-primary">
+                  <div className="mt-5 font-display text-[clamp(24px,2.2vw,31px)] font-extrabold leading-[1.04] tracking-[-0.04em] text-primary">
                     {item.value}
                   </div>
                 )}
