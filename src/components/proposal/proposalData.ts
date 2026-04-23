@@ -148,6 +148,28 @@ export const proposalGroups: ProposalGroupData[] = [
       {
         id: "trafego-2",
         num: "02.2",
+        category: "Landing Page",
+        title: "Criação de landing page",
+        descriptions: [
+          "Dentro da frente de <strong>Tráfego Pago</strong>, a proposta também pode incluir a criação de uma <strong>landing page principal</strong> com foco em conversão.",
+          "A ideia é estruturar uma página objetiva, responsiva e alinhada à campanha, com blocos pensados para capturar leads com mais clareza e eficiência.",
+        ],
+        deliverables: [
+          "Planejamento da estrutura da página com foco em conversão",
+          "Construção de 1 landing page principal",
+          "Desenvolvimento da copy estrutural da página em parceria com os direcionamentos da campanha",
+          "Organização de blocos estratégicos, como proposta de valor, benefícios, prova social, formulário e CTA",
+          "Versão responsiva para desktop e mobile",
+          "Inserção dos formulários e elementos de captura",
+          "Publicação da página no ambiente definido para o projeto",
+          "Ajustes iniciais para entrada em operação",
+        ],
+        highlight:
+          "<strong>Observação:</strong> a landing page entra como entrega de implantação e pode receber ajustes pontuais ao longo do contrato, dentro do escopo operacional normal.",
+      },
+      {
+        id: "trafego-3",
+        num: "02.3",
         category: "Tracking Avançado",
         title: "Tracking avançado com apoio server side",
         descriptions: [
