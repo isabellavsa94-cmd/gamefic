@@ -145,6 +145,26 @@ export const proposalGroups: ProposalGroupData[] = [
         highlight:
           "<strong>Não inclui:</strong> verba de mídia, grande volume de criativos avulsos fora da rotina acordada e produção externa não prevista.",
       },
+      {
+        id: "trafego-2",
+        num: "02.2",
+        category: "Tracking Avançado",
+        title: "Tracking avançado com apoio server side",
+        descriptions: [
+          "A frente de tráfego também pode contar com uma estrutura de <strong>tracking avançado com apoio server side</strong> para melhorar a leitura da jornada e dar mais confiabilidade à mensuração das conversões.",
+        ],
+        deliverables: [
+          "Planejamento da mensuração da landing page e campanhas",
+          "Configuração de eventos principais de conversão",
+          "Implementação de estrutura de tracking avançado com apoio server side",
+          "Configuração de tags e parâmetros necessários para leitura correta da jornada",
+          "Integração dos eventos com Google Ads e Meta Ads",
+          "Validação básica do recebimento dos eventos e conversões",
+          "Apoio técnico na melhoria da qualidade de mensuração dos leads",
+        ],
+        highlight:
+          "<strong>Objetivo:</strong> garantir uma leitura mais confiável da origem das conversões e melhorar a capacidade de otimização das campanhas.",
+      },
     ],
   },
   {
