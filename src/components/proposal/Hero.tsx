@@ -1,5 +1,5 @@
 import { useReveal } from "@/hooks/useReveal";
-import GameCar from "@/components/proposal/GameCar";
+import HeroMascot from "@/components/proposal/HeroMascot";
 
 const scrollTo = (href: string) => {
   const el = document.querySelector(href);
@@ -57,7 +57,7 @@ export default function Hero() {
           </div>
 
           <div className="reveal relative flex items-center justify-center overflow-visible">
-            <GameCar />
+            <HeroMascot />
           </div>
         </div>
       </div>
