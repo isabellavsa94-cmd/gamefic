@@ -54,7 +54,7 @@ export default function InvestmentBreakdown({ items }: InvestmentBreakdownProps)
                   src={coinIcon}
                   alt=""
                   aria-hidden="true"
-                  className="absolute right-2 top-[-14px] h-8 w-8 flex-shrink-0 md:right-3 md:h-9 md:w-9"
+                  className="absolute right-[-2px] top-[-16px] h-8 w-8 flex-shrink-0 md:right-0 md:top-[-18px] md:h-9 md:w-9"
                 />
                 <div className="mt-3 flex items-baseline justify-start gap-1.5 whitespace-nowrap">
                   <span className="font-display text-[13px] font-extrabold leading-none tracking-[-0.02em] text-white/92 md:text-[14px]">
