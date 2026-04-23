@@ -16,7 +16,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={ref}
-      className="relative overflow-hidden bg-[linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)] pt-28 text-white"
+      className="relative overflow-hidden bg-[linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)] pt-24 text-white"
     >
       <div className="absolute inset-0 opacity-20 gamefic-pattern" />
       <div className="absolute left-[-10%] top-[10%] h-[360px] w-[360px] rounded-full bg-[radial-gradient(circle,rgba(0,255,141,0.22)_0%,transparent_72%)]" />
@@ -24,7 +24,7 @@ export default function Hero() {
 
       <div className="container relative z-10 pb-0">
         <div className="grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div className="reveal relative z-10 pb-14 md:pb-16">
+          <div className="reveal relative z-10 pb-10 md:pb-12">
             <div className="mb-5 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-[12px] font-semibold uppercase tracking-[0.18em] text-accent">
               Proposta Comercial · Gamefic
             </div>
@@ -57,13 +57,13 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="reveal relative z-0 flex min-h-[340px] items-start justify-center overflow-visible sm:min-h-[420px] lg:min-h-[760px] lg:justify-end lg:self-start lg:pt-6">
+          <div className="reveal relative z-0 flex min-h-[300px] items-start justify-center overflow-visible sm:min-h-[360px] lg:min-h-[620px] lg:justify-end lg:self-start lg:pt-4">
             <HeroMascot />
           </div>
         </div>
       </div>
 
-      <div className="relative z-20 -mt-4 h-16 overflow-hidden leading-none text-background md:h-20">
+      <div className="relative z-20 -mt-3 h-14 overflow-hidden leading-none text-background md:h-16">
         <svg
           className="absolute bottom-0 left-0 h-full w-full"
           viewBox="0 0 1440 120"
