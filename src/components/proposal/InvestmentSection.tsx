@@ -16,7 +16,7 @@ const modules = [
   },
   {
     eyebrow: "Pacote 2",
-    title: "Pacote de performance e automação comercial",
+    title: "Performance e automação comercial",
     value: "R$ 5.900",
     cadence: "/mês",
     note: "Inclui tráfego pago, e-mail marketing, landing page, tracking avançado server side e integração com RD Station.",
