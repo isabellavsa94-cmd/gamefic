@@ -88,7 +88,7 @@ export default function OverviewGrid() {
                   Frente {g.num}
                 </div>
                 {g.disclaimer && (
-                  <div className="absolute right-5 top-5 rounded-full border border-white/20 bg-[rgba(10,16,64,0.72)] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white">
+                  <div className="absolute bottom-5 right-5 z-10 rounded-full border border-white/16 bg-[rgba(10,16,64,0.78)] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white shadow-[0_10px_24px_rgba(8,12,50,0.18)]">
                     {g.disclaimer}
                   </div>
                 )}
