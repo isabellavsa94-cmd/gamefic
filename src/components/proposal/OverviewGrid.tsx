@@ -33,6 +33,7 @@ const groups = [
     title: "Criação de Site",
     subtitle: "Landing page e tracking para converter melhor e mensurar com mais precisão.",
     href: "#g4",
+    suggested: true,
     disclaimer: "Sugestão da especialista",
     image:
       "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=900&h=700&fit=crop",
@@ -74,7 +75,11 @@ export default function OverviewGrid() {
               key={g.num}
               type="button"
               onClick={() => scrollTo(g.href)}
-              className="reveal group gamefic-surface flex h-full flex-col overflow-hidden rounded-[32px] border border-white/80 text-left transition-all duration-300 hover:-translate-y-1"
+              className={`reveal group flex h-full flex-col overflow-hidden rounded-[32px] text-left transition-all duration-300 hover:-translate-y-1 ${
+                g.suggested
+                  ? "border border-[#f0d39b] bg-[linear-gradient(180deg,#fffaf0_0%,#fff4df_100%)] shadow-[0_24px_60px_rgba(120,84,18,0.12)]"
+                  : "gamefic-surface border border-white/80"
+              }`}
             >
               <div className="relative h-[260px] overflow-hidden">
                 <img
@@ -88,14 +93,18 @@ export default function OverviewGrid() {
                   Frente {g.num}
                 </div>
                 {g.disclaimer && (
-                  <div className="absolute bottom-5 right-5 z-10 rounded-full border border-white/16 bg-[rgba(10,16,64,0.78)] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white shadow-[0_10px_24px_rgba(8,12,50,0.18)]">
+                  <div className="absolute bottom-5 right-5 z-10 rounded-full border border-[#f6d89d] bg-[rgba(139,90,24,0.88)] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-[#fff8ec] shadow-[0_10px_24px_rgba(120,84,18,0.22)]">
                     {g.disclaimer}
                   </div>
                 )}
               </div>
 
               <div className="flex flex-1 flex-col p-6">
-                <h3 className="min-h-[2.2em] font-display text-[26px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
+                <h3
+                  className={`min-h-[2.2em] font-display text-[26px] font-extrabold leading-[1.05] tracking-[-0.04em] ${
+                    g.suggested ? "text-[#8b5a18]" : "text-primary"
+                  }`}
+                >
                   {g.title}
                 </h3>
                 <p className="mt-3 text-[15px] leading-[1.62] text-slate-600">{g.subtitle}</p>
@@ -104,14 +113,22 @@ export default function OverviewGrid() {
                   {g.items.map((item) => (
                     <span
                       key={item}
-                      className="rounded-full bg-secondary px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-primary"
+                      className={`rounded-full px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] ${
+                        g.suggested
+                          ? "bg-[#fff1d6] text-[#8b5a18]"
+                          : "bg-secondary text-primary"
+                      }`}
                     >
                       {item}
                     </span>
                   ))}
                 </div>
 
-                <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2 font-display text-[14px] font-extrabold text-white">
+                <div
+                  className={`mt-6 inline-flex items-center gap-2 rounded-full px-4 py-2 font-display text-[14px] font-extrabold ${
+                    g.suggested ? "bg-[#8b5a18] text-[#fff8ec]" : "bg-primary text-white"
+                  }`}
+                >
                   Explorar frente
                   <span>{">"}</span>
                 </div>
