@@ -36,7 +36,7 @@ export default function NextSteps() {
           <h2 className="mt-4 font-display text-[clamp(34px,4vw,56px)] font-extrabold leading-[1.02] tracking-[-0.05em]">
             Se fizer sentido para a Gamefic, o próximo movimento é começar.
           </h2>
-          <p className="mt-4 text-[16px] leading-[1.8] text-white/78">
+          <p className="mt-4 text-[16px] leading-[1.64] text-white/78">
             A aprovação destrava uma operação pensada para dar consistência à presença digital e
             mais estrutura para geração de oportunidades.
           </p>
@@ -58,7 +58,7 @@ export default function NextSteps() {
               <h3 className="mt-5 font-display text-[28px] font-extrabold leading-[1.05] tracking-[-0.04em]">
                 {step.title}
               </h3>
-              <p className="mt-4 text-[15px] leading-[1.8] text-white/78">{step.desc}</p>
+              <p className="mt-4 text-[15px] leading-[1.62] text-white/78">{step.desc}</p>
             </article>
           ))}
         </div>

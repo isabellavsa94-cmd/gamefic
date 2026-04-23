@@ -116,7 +116,7 @@ export default function ExpertSuggestion() {
               <h3 className="mt-3 font-display text-[clamp(28px,3vw,40px)] font-extrabold leading-[1.04] tracking-[-0.04em] text-primary">
                 Clique para simular a leitura do site e visualizar os principais achados.
               </h3>
-              <p className="mt-4 text-[16px] leading-[1.85] text-slate-600">
+              <p className="mt-4 text-[16px] leading-[1.66] text-slate-600">
                 O objetivo não é transformar isso em problema. É só mostrar, de forma clara, onde
                 existem oportunidades reais de melhoria em SEO, performance e confiança digital.
               </p>
@@ -143,7 +143,7 @@ export default function ExpertSuggestion() {
                 <div className="text-[12px] font-semibold uppercase tracking-[0.16em] text-accent">
                   Leitura consultiva
                 </div>
-                <p className="mt-4 text-[16px] leading-[1.85] text-white/82">
+                <p className="mt-4 text-[16px] leading-[1.66] text-white/82">
                   Esse diagnóstico serve para orientar a conversa. Ele mostra com mais objetividade
                   se a prioridade deveria ser otimizar o site atual, reforçar páginas estratégicas
                   ou pensar, mais adiante, em uma landing page dedicada.
@@ -177,7 +177,7 @@ export default function ExpertSuggestion() {
                 <div className="mt-2 font-display text-[22px] font-extrabold tracking-[-0.03em] text-primary">
                   {started ? currentStep.title : "Pronto para iniciar"}
                 </div>
-                <p className="mt-3 text-[15px] leading-[1.8] text-slate-600">
+                <p className="mt-3 text-[15px] leading-[1.62] text-slate-600">
                   {started
                     ? currentStep.detail
                     : "Clique no botão para abrir uma visão rápida do que hoje pode estar limitando a evolução orgânica do site."}
@@ -216,7 +216,7 @@ export default function ExpertSuggestion() {
                         <h4 className="mt-4 font-display text-[22px] font-extrabold leading-[1.08] tracking-[-0.04em] text-primary">
                           {item.label}
                         </h4>
-                        <p className="mt-3 text-[14px] leading-[1.8] text-slate-600">{item.desc}</p>
+                        <p className="mt-3 text-[14px] leading-[1.6] text-slate-600">{item.desc}</p>
                       </article>
                     ))}
                   </div>
@@ -230,7 +230,7 @@ export default function ExpertSuggestion() {
                     </h4>
                     <ul className="mt-5 flex flex-col gap-3">
                       {quickWins.map((item) => (
-                        <li key={item} className="flex items-start gap-3 text-[15px] leading-[1.8] text-slate-600">
+                        <li key={item} className="flex items-start gap-3 text-[15px] leading-[1.62] text-slate-600">
                           <span className="mt-[10px] h-2 w-2 flex-shrink-0 rounded-full bg-accent" />
                           <span>{item}</span>
                         </li>

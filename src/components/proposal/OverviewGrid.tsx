@@ -61,7 +61,7 @@ export default function OverviewGrid() {
           <h2 className="mt-4 font-display text-[clamp(34px,4vw,56px)] font-extrabold leading-[1.02] tracking-[-0.05em] text-primary">
             Uma estrutura pensada para fortalecer marca, gerar leads e converter melhor.
           </h2>
-          <p className="mt-4 text-[16px] leading-[1.8] text-slate-600">
+          <p className="mt-4 text-[16px] leading-[1.64] text-slate-600">
             Cada frente cumpre um papel claro no crescimento: atrair atenção, capturar demanda,
             nutrir oportunidades e transformar interesse em ação comercial.
           </p>
@@ -92,7 +92,7 @@ export default function OverviewGrid() {
                 <h3 className="font-display text-[26px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
                   {g.title}
                 </h3>
-                <p className="mt-3 text-[15px] leading-[1.8] text-slate-600">{g.subtitle}</p>
+                <p className="mt-3 text-[15px] leading-[1.62] text-slate-600">{g.subtitle}</p>
 
                 <div className="mt-5 flex flex-wrap gap-2">
                   {g.items.map((item) => (

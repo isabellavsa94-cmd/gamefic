@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="mt-5 font-display text-[32px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
               Uma proposta para transformar presença digital em demanda qualificada.
             </div>
-            <p className="mt-4 text-[15px] leading-[1.8] text-slate-600">
+            <p className="mt-4 text-[15px] leading-[1.62] text-slate-600">
               Conteúdo, performance, inbound e conversão integrados para apoiar crescimento com
               mais clareza comercial.
             </p>

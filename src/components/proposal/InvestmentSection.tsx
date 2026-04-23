@@ -46,7 +46,7 @@ export default function InvestmentSection() {
           <h2 className="font-display text-[clamp(34px,4vw,54px)] font-extrabold leading-[1.02] tracking-[-0.05em] text-balance">
             Investimento para colocar a operação em movimento.
           </h2>
-          <p className="mt-3 max-w-[700px] text-[16px] leading-[1.8] text-white/80">
+          <p className="mt-3 max-w-[700px] text-[16px] leading-[1.64] text-white/80">
             A proposta foi organizada em dois blocos comerciais que podem ser contratados de forma
             independente ou combinada, conforme a prioridade da Gamefic.
           </p>
@@ -94,7 +94,7 @@ export default function InvestmentSection() {
                 </div>
               </div>
 
-              <p className="mt-4 max-w-[54ch] text-[15px] leading-[1.8] text-white/80">
+              <p className="mt-4 max-w-[54ch] text-[15px] leading-[1.62] text-white/80">
                 {module.note}
               </p>
 
@@ -137,7 +137,7 @@ export default function InvestmentSection() {
                       </div>
                     ))}
                   </div>
-                  <p className="mt-4 text-[13px] leading-[1.7] text-white/72">
+                  <p className="mt-4 text-[13px] leading-[1.56] text-white/72">
                     {module.breakdownNote}
                   </p>
                 </div>

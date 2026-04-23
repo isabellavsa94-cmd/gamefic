@@ -291,7 +291,7 @@ export default function ServicesDetail() {
                         <h4 className="mt-3 font-display text-[24px] font-extrabold leading-[1.08] tracking-[-0.04em] text-primary">
                           {service.title}
                         </h4>
-                        <div className="mt-3 space-y-3 text-[14px] leading-[1.75] text-slate-600">
+                        <div className="mt-3 space-y-3 text-[14px] leading-[1.6] text-slate-600">
                           {service.descriptions.map((description, index) => (
                             <p
                               key={index}
@@ -306,7 +306,7 @@ export default function ServicesDetail() {
                     {service.highlight && (
                       <div className="mt-5 rounded-[24px] border border-primary/10 bg-[linear-gradient(135deg,rgba(35,71,255,0.06),rgba(136,0,227,0.08))] p-4">
                         <p
-                          className="text-[13px] leading-[1.7] text-slate-700 [&_strong]:font-semibold [&_strong]:text-primary"
+                          className="text-[13px] leading-[1.55] text-slate-700 [&_strong]:font-semibold [&_strong]:text-primary"
                           dangerouslySetInnerHTML={{ __html: service.highlight }}
                         />
                       </div>

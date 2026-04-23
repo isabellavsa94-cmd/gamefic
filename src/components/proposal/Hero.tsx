@@ -30,7 +30,7 @@ export default function Hero() {
             <h1 className="max-w-[12ch] font-display text-[clamp(38px,5.8vw,68px)] font-extrabold leading-[0.98] tracking-[-0.05em] text-balance">
               A estratégia para colocar a Gamefic no próximo level.
             </h1>
-            <p className="mt-6 max-w-[620px] text-[17px] leading-[1.8] text-white/80 md:text-[19px]">
+            <p className="mt-6 max-w-[620px] text-[17px] leading-[1.62] text-white/80 md:text-[19px]">
               <strong className="font-semibold text-white">Social Media</strong>,
               <strong className="font-semibold text-white"> Tráfego Pago</strong>,
               <strong className="font-semibold text-white"> Inbound</strong> e

@@ -51,7 +51,7 @@ export default function TimelineSection() {
           <h2 className="mt-4 font-display text-[clamp(34px,4vw,54px)] font-extrabold leading-[1.02] tracking-[-0.05em] text-primary">
             Como colocamos a operação em prática.
           </h2>
-          <p className="mt-4 text-[16px] leading-[1.8] text-slate-600">
+          <p className="mt-4 text-[16px] leading-[1.64] text-slate-600">
             Um fluxo claro de execução reduz ruído, acelera alinhamento e ajuda a Gamefic a ganhar
             consistência logo nos primeiros meses.
           </p>
@@ -78,7 +78,7 @@ export default function TimelineSection() {
                 <h3 className="mt-5 font-display text-[26px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
                   {phase.title}
                 </h3>
-                <p className="mt-4 text-[15px] leading-[1.8] text-slate-600">{phase.desc}</p>
+                <p className="mt-4 text-[15px] leading-[1.62] text-slate-600">{phase.desc}</p>
 
                 <div className="mt-6 flex flex-wrap gap-2">
                   {phase.tags.map((tag) => (

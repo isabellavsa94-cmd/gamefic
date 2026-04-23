@@ -42,12 +42,12 @@ export default function ContextSection() {
             <h2 className="mt-4 font-display text-[clamp(34px,4vw,54px)] font-extrabold leading-[1.02] tracking-[-0.05em] text-balance text-primary">
               Por que este escopo faz sentido agora.
             </h2>
-            <p className="mt-5 text-[16px] leading-[1.85] text-slate-600">
+            <p className="mt-5 text-[16px] leading-[1.66] text-slate-600">
               A Gamefic já tem espaço para crescer com mais força no digital. O ponto aqui não é
               apenas publicar ou anunciar, mas criar uma operação que conecte presença, geração de
               demanda, captação e relacionamento em uma lógica comercial mais madura.
             </p>
-            <p className="mt-4 text-[16px] leading-[1.85] text-slate-600">
+            <p className="mt-4 text-[16px] leading-[1.66] text-slate-600">
               Este escopo foi desenhado para atacar os pontos que mais impactam resultado:
               posicionamento, tráfego qualificado, conversão e organização do funil.
             </p>
@@ -70,7 +70,7 @@ export default function ContextSection() {
                     {item.icon}
                   </div>
                   <div
-                    className="text-[15px] leading-[1.85] text-slate-600 [&_strong]:font-semibold [&_strong]:text-slate-900"
+                    className="text-[15px] leading-[1.64] text-slate-600 [&_strong]:font-semibold [&_strong]:text-slate-900"
                     dangerouslySetInnerHTML={{ __html: item.text }}
                   />
                 </div>

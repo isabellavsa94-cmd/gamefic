@@ -49,7 +49,7 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
           <h1 className="mt-6 text-center font-display text-[34px] font-extrabold tracking-[-0.04em]">
             Acesso restrito
           </h1>
-          <p className="mt-3 text-center text-[15px] leading-[1.75] text-white/76">
+          <p className="mt-3 text-center text-[15px] leading-[1.62] text-white/76">
             Digite a senha para visualizar a proposta comercial da Gamefic.
           </p>
 
