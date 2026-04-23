@@ -11,8 +11,8 @@ const modules = [
     titleNote: "Instagram e LinkedIn",
     value: "R$ 3.000",
     cadence: "/mês",
-    note: "Operação recorrente para fortalecer presença, constância e autoridade em dois canais. Prazo mínimo de 6 meses.",
-    highlights: ["Instagram + LinkedIn", "Conteúdo recorrente", "Prazo mínimo de 6 meses"],
+    note: "Operação recorrente para fortalecer presença, constância e autoridade em dois canais. Tempo mínimo de projeto: 6 meses.",
+    highlights: ["Instagram + LinkedIn", "Conteúdo recorrente", "Tempo mínimo de projeto: 6 meses"],
   },
   {
     eyebrow: "Pacote 2",
