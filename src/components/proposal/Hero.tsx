@@ -14,6 +14,7 @@ export default function Hero() {
 
   return (
     <section
+      id="hero"
       ref={ref}
       className="relative overflow-hidden bg-[linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)] pt-28 text-white"
     >

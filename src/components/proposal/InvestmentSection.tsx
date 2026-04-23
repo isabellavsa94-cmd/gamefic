@@ -1,3 +1,5 @@
+import InvestmentBreakdown from "@/components/proposal/InvestmentBreakdown";
+import ProposalValidityBadge from "@/components/proposal/ProposalValidityBadge";
 import { useReveal } from "@/hooks/useReveal";
 
 const coinIcon = `${import.meta.env.BASE_URL}coin-icon.svg`;
@@ -9,7 +11,6 @@ const modules = [
     value: "R$ 3.000",
     cadence: "/mês",
     note: "Operação recorrente para fortalecer presença, constância e autoridade em dois canais. Prazo mínimo de 6 meses.",
-    status: "definido",
     highlights: ["Instagram + LinkedIn", "Conteúdo recorrente", "Prazo mínimo de 6 meses"],
   },
   {
@@ -18,7 +19,6 @@ const modules = [
     value: "R$ 5.900",
     cadence: "/mês",
     note: "Inclui tráfego pago, e-mail marketing, landing page, tracking avançado server side e integração com RD Station.",
-    status: "sugerido",
     highlights: ["Google + Meta Ads", "Landing page", "RD Station + tracking"],
     breakdown: [
       { label: "Tráfego pago", value: "R$ 2.500" },
@@ -59,17 +59,8 @@ export default function InvestmentSection() {
               className="rounded-[32px] border border-white/16 bg-white/10 p-6 text-white shadow-[0_24px_60px_rgba(10,18,90,0.16)] backdrop-blur-sm md:p-7"
             >
               <div className="flex flex-wrap items-center gap-2">
-                <span className="rounded-full bg-white/14 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-white">
+                <span className="rounded-full bg-accent px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-primary">
                   {module.eyebrow}
-                </span>
-                <span
-                  className={`rounded-full px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] ${
-                    module.status === "definido"
-                      ? "bg-accent text-primary"
-                      : "bg-white/14 text-white"
-                  }`}
-                >
-                  {module.status === "definido" ? "valor definido" : "pacote sugerido"}
                 </span>
               </div>
 
@@ -94,6 +85,8 @@ export default function InvestmentSection() {
                 </div>
               </div>
 
+              <ProposalValidityBadge />
+
               <p className="mt-4 max-w-[54ch] text-[15px] leading-[1.62] text-white/80">
                 {module.note}
               </p>
@@ -110,37 +103,7 @@ export default function InvestmentSection() {
               </div>
 
               {"breakdown" in module && module.breakdown && (
-                <div className="mt-6 rounded-[24px] border border-white/14 bg-[rgba(3,10,60,0.18)] p-4">
-                  <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
-                    Desdobramento do escopo proposto
-                  </div>
-                  <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                    {module.breakdown.map((item) => (
-                      <div
-                        key={item.label}
-                        className="rounded-[18px] border border-white/12 bg-white/8 px-4 py-4"
-                      >
-                        <div className="text-[12px] font-semibold uppercase tracking-[0.12em] text-white/70">
-                          {item.label}
-                        </div>
-                        <div className="mt-2 flex items-center gap-2">
-                          <img
-                            src={coinIcon}
-                            alt=""
-                            aria-hidden="true"
-                            className="h-6 w-6 flex-shrink-0"
-                          />
-                          <div className="font-display text-[24px] font-extrabold leading-none tracking-[-0.04em] text-white">
-                            {item.value}
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <p className="mt-4 text-[13px] leading-[1.56] text-white/72">
-                    {module.breakdownNote}
-                  </p>
-                </div>
+                <InvestmentBreakdown items={module.breakdown} note={module.breakdownNote} />
               )}
             </article>
           ))}

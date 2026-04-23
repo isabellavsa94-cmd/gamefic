@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import BrandLogo from "@/components/proposal/BrandLogo";
 
 const navLinks = [
@@ -16,9 +17,34 @@ const scrollTo = (href: string) => {
 };
 
 export default function Navbar() {
+  const [pastHero, setPastHero] = useState(false);
+
+  useEffect(() => {
+    const update = () => {
+      const hero = document.getElementById("hero");
+      if (!hero) return;
+
+      const rect = hero.getBoundingClientRect();
+      setPastHero(rect.bottom <= 96);
+    };
+
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
+
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 px-3 pt-3 md:px-6">
-      <div className="mx-auto flex h-[74px] max-w-[1240px] items-center justify-between rounded-[28px] border border-white/70 bg-white/90 px-4 shadow-[0_20px_60px_rgba(25,48,130,0.08)] backdrop-blur-xl md:px-7">
+      <div
+        className={`mx-auto flex h-[74px] max-w-[1240px] items-center justify-between rounded-[28px] px-4 shadow-[0_20px_60px_rgba(25,48,130,0.08)] backdrop-blur-xl transition-all duration-300 md:px-7 ${
+          pastHero ? "border border-white/50 bg-white/80" : "border border-white/70 bg-white/90"
+        }`}
+      >
         <button
           type="button"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

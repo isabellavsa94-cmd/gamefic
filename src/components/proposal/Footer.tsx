@@ -1,6 +1,24 @@
 import BrandLogo from "@/components/proposal/BrandLogo";
 
 export default function Footer() {
+  const contactItems = [
+    {
+      label: "Proposta conduzida por",
+      value: "Isabella Vieira Souto",
+      href: null,
+    },
+    {
+      label: "E-mail para contato",
+      value: "isabellavsa94@gmail.com",
+      href: "mailto:isabellavsa94@gmail.com",
+    },
+    {
+      label: "WhatsApp",
+      value: "(21) 99767-8292",
+      href: "https://wa.me/5521997678292",
+    },
+  ];
+
   return (
     <footer className="border-t border-border bg-white py-16">
       <div className="container">
@@ -19,16 +37,25 @@ export default function Footer() {
           </div>
 
           <div className="grid gap-4 text-[14px] text-slate-600 md:grid-cols-3">
-            {[
-              { label: "Responsável pela proposta", value: "Isabella Vieira Souto" },
-              { label: "E-mail", value: "isabellavsa94@gmail.com" },
-              { label: "WhatsApp", value: "+55 21 99767-8292" },
-            ].map((item) => (
+            {contactItems.map((item) => (
               <div key={item.label} className="gamefic-surface rounded-[24px] p-5">
-                <div className="font-display text-[18px] font-extrabold text-primary">{item.value}</div>
-                <div className="mt-1 text-[12px] uppercase tracking-[0.16em] text-slate-500">
+                <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500">
                   {item.label}
                 </div>
+                {item.href ? (
+                  <a
+                    href={item.href}
+                    target={item.href.startsWith("http") ? "_blank" : undefined}
+                    rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+                    className="mt-2 block font-display text-[18px] font-extrabold text-primary transition-colors hover:text-purple"
+                  >
+                    {item.value}
+                  </a>
+                ) : (
+                  <div className="mt-2 font-display text-[18px] font-extrabold text-primary">
+                    {item.value}
+                  </div>
+                )}
               </div>
             ))}
           </div>
