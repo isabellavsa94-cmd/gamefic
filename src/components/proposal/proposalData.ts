@@ -189,7 +189,7 @@ export const proposalGroups: ProposalGroupData[] = [
           "Integração do ativo de captação com o RD Station",
           "Configuração do formulário para envio correto dos leads",
           "Mapeamento dos campos essenciais de captação",
-          "Parametrização básica da origem do lead",
+          "Parametrização da origem do lead",
           "Organização da entrada dos leads para uso comercial e automações",
           "Testes de envio e recebimento das informações",
         ],
