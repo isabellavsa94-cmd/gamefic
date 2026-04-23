@@ -28,6 +28,15 @@ const modules = [
     breakdownNote:
       "Landing page, tracking avançado e integração com RD Station seguem incluídos na composição do pacote.",
   },
+  {
+    eyebrow: "Pacote 3",
+    title: "Criação de Site",
+    titleNote: "Landing page principal",
+    value: "Sob consulta",
+    cadence: "pontual",
+    note: "Projeto pontual para estruturar uma landing page de conversão com copy, captação e publicação inicial.",
+    highlights: ["1 landing page", "Entrega pontual", "Escopo sob medida"],
+  },
 ];
 
 export default function InvestmentSection() {
@@ -53,11 +62,11 @@ export default function InvestmentSection() {
           </p>
         </div>
 
-        <div className="reveal mt-12 grid gap-5 lg:grid-cols-2">
+        <div className="reveal mt-12 grid gap-4 lg:grid-cols-3">
           {modules.map((module) => (
             <article
               key={module.title}
-              className="rounded-[32px] border border-white/16 bg-white/10 p-6 text-white shadow-[0_24px_60px_rgba(10,18,90,0.16)] backdrop-blur-sm md:p-7"
+              className="rounded-[30px] border border-white/16 bg-white/10 p-5 text-white shadow-[0_24px_60px_rgba(10,18,90,0.16)] backdrop-blur-sm md:p-6"
             >
               <div className="flex flex-wrap items-center gap-2">
                 <span className="rounded-full bg-accent px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.12em] text-primary">
@@ -65,11 +74,11 @@ export default function InvestmentSection() {
                 </span>
               </div>
 
-              <h3 className="mt-4 max-w-[18ch] font-display text-[clamp(28px,4vw,34px)] font-extrabold leading-[1.04] tracking-[-0.04em]">
+              <h3 className="mt-4 max-w-[16ch] font-display text-[clamp(24px,3.2vw,31px)] font-extrabold leading-[1.04] tracking-[-0.04em]">
                 {module.title}
               </h3>
               {"titleNote" in module && module.titleNote && (
-                <div className="mt-2 text-[15px] font-medium leading-[1.3] text-white/68">
+                <div className="mt-2 text-[14px] font-medium leading-[1.28] text-white/68">
                   {module.titleNote}
                 </div>
               )}
@@ -79,19 +88,19 @@ export default function InvestmentSection() {
                   src={coinIcon}
                   alt=""
                   aria-hidden="true"
-                  className="h-10 w-10 flex-shrink-0"
+                  className="h-9 w-9 flex-shrink-0"
                 />
                 <div className="flex items-end gap-2">
-                  <div className="font-display text-[clamp(38px,6vw,50px)] font-extrabold leading-none tracking-[-0.05em] text-accent">
+                  <div className="font-display text-[clamp(28px,4.2vw,42px)] font-extrabold leading-none tracking-[-0.05em] text-accent">
                     {module.value}
                   </div>
-                  <div className="whitespace-nowrap pb-1 text-[15px] font-medium text-white/76">
+                  <div className="whitespace-nowrap pb-1 text-[14px] font-medium uppercase tracking-[0.04em] text-white/76">
                     {module.cadence}
                   </div>
                 </div>
               </div>
 
-              <p className="mt-4 max-w-[54ch] text-[15px] leading-[1.62] text-white/80">
+              <p className="mt-4 max-w-[42ch] text-[14px] leading-[1.58] text-white/80">
                 {module.note}
               </p>
 
@@ -99,7 +108,7 @@ export default function InvestmentSection() {
                 {module.highlights.map((highlight) => (
                   <div
                     key={highlight}
-                    className="rounded-[18px] border border-white/10 bg-[rgba(3,10,60,0.18)] px-4 py-3 text-center text-[12px] font-medium leading-[1.45] text-white/82"
+                    className="rounded-[16px] border border-white/10 bg-[rgba(3,10,60,0.18)] px-3 py-2.5 text-center text-[11px] font-medium leading-[1.4] text-white/82"
                   >
                     {highlight}
                   </div>
