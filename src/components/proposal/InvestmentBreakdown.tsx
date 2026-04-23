@@ -38,6 +38,11 @@ export default function InvestmentBreakdown({ items }: InvestmentBreakdownProps)
         <div className="border-t border-white/10 px-4 pb-4 pt-4">
           <div className="grid gap-3 sm:grid-cols-2">
             {items.map((item) => (
+              (() => {
+                const [currency, ...rest] = item.value.split(" ");
+                const amount = rest.join(" ") || item.value;
+
+                return (
               <div
                 key={item.label}
                 className="relative rounded-[16px] border border-white/12 bg-white/8 px-4 py-4 md:rounded-[18px]"
@@ -49,14 +54,19 @@ export default function InvestmentBreakdown({ items }: InvestmentBreakdownProps)
                   src={coinIcon}
                   alt=""
                   aria-hidden="true"
-                  className="absolute right-3 top-[-12px] h-7 w-7 flex-shrink-0 md:right-4"
+                  className="absolute right-2 top-[-14px] h-8 w-8 flex-shrink-0 md:right-3 md:h-9 md:w-9"
                 />
-                <div className="mt-3 flex items-end justify-start">
-                  <div className="text-left font-display text-[22px] font-extrabold leading-[0.95] tracking-[-0.04em] text-white md:text-[24px]">
-                    {item.value}
-                  </div>
+                <div className="mt-3 flex items-baseline justify-start gap-1.5 whitespace-nowrap">
+                  <span className="font-display text-[13px] font-extrabold leading-none tracking-[-0.02em] text-white/92 md:text-[14px]">
+                    {currency}
+                  </span>
+                  <span className="text-left font-display text-[22px] font-extrabold leading-none tracking-[-0.04em] text-white md:text-[24px]">
+                    {amount}
+                  </span>
                 </div>
               </div>
+                );
+              })()
             ))}
           </div>
         </div>
