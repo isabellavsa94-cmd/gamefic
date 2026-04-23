@@ -40,7 +40,7 @@ export default function Navbar() {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 px-3 pt-2 md:px-6 md:pt-3">
       <div
-        className={`mx-auto flex h-[56px] max-w-[1240px] items-center justify-center rounded-[20px] px-3 shadow-[0_20px_60px_rgba(25,48,130,0.08)] backdrop-blur-xl transition-all duration-300 md:h-[72px] md:max-w-[1120px] md:justify-between md:rounded-[28px] md:px-5 ${
+        className={`mx-auto flex h-[56px] w-fit min-w-[200px] items-center justify-center rounded-[20px] px-4 shadow-[0_20px_60px_rgba(25,48,130,0.08)] backdrop-blur-xl transition-all duration-300 md:h-[72px] md:max-w-[1120px] md:w-auto md:min-w-0 md:justify-between md:rounded-[28px] md:px-5 ${
           pastHero ? "border border-white/50 bg-white/80" : "border border-white/70 bg-white/90"
         }`}
       >
