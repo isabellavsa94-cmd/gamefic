@@ -17,7 +17,7 @@ const modules = [
   {
     eyebrow: "Pacote 2",
     title: "Performance e automação comercial",
-    value: "R$ 5.900",
+    value: "R$ 4.300",
     cadence: "/mês",
     note: "Inclui tráfego pago, e-mail marketing e integração com RD Station para apoiar geração e aproveitamento comercial dos leads.",
     highlights: ["Google + Meta Ads", "E-mail marketing", "RD Station"],
