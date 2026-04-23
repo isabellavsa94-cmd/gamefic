@@ -74,9 +74,9 @@ export default function OverviewGrid() {
               key={g.num}
               type="button"
               onClick={() => scrollTo(g.href)}
-              className="reveal group gamefic-surface overflow-hidden rounded-[32px] border border-white/80 text-left transition-all duration-300 hover:-translate-y-1"
+              className="reveal group gamefic-surface flex h-full flex-col overflow-hidden rounded-[32px] border border-white/80 text-left transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="relative h-[220px] overflow-hidden">
+              <div className="relative h-[260px] overflow-hidden">
                 <img
                   src={g.image}
                   alt={g.title}
@@ -94,8 +94,8 @@ export default function OverviewGrid() {
                 )}
               </div>
 
-              <div className="p-6">
-                <h3 className="font-display text-[26px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
+              <div className="flex flex-1 flex-col p-6">
+                <h3 className="min-h-[2.2em] font-display text-[26px] font-extrabold leading-[1.05] tracking-[-0.04em] text-primary">
                   {g.title}
                 </h3>
                 <p className="mt-3 text-[15px] leading-[1.62] text-slate-600">{g.subtitle}</p>
