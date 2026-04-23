@@ -113,7 +113,7 @@ export default function InvestmentSection() {
           ))}
         </div>
 
-        <div className="reveal">
+        <div className="reveal flex w-full justify-center">
           <ProposalValidityBadge />
         </div>
 

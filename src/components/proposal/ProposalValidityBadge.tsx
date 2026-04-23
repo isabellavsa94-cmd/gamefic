@@ -57,19 +57,21 @@ export default function ProposalValidityBadge() {
   const formatted = useMemo(() => formatRemaining(remaining), [remaining]);
 
   return (
-    <div className="mx-auto mt-6 inline-flex min-w-[220px] flex-col items-center rounded-[20px] border border-white/16 bg-[rgba(3,10,60,0.24)] px-5 py-3 text-center">
-      <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/62">
-        Validade desta proposta
-      </div>
-      <div className="mt-2 flex flex-wrap items-end justify-center gap-x-3 gap-y-1">
-        <div className="font-display text-[20px] font-extrabold leading-none tracking-[-0.04em] text-white">
-          {isExpired
-            ? "Encerrada"
-            : `${formatted.days}d ${formatted.hours}h ${formatted.minutes}m`}
+    <div className="mt-6 flex w-full justify-center">
+      <div className="flex min-w-[240px] max-w-[320px] items-center justify-center gap-3 rounded-[20px] border border-white/16 bg-[rgba(3,10,60,0.24)] px-4 py-3 text-center">
+        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-[#ffbe17] text-[28px] font-black leading-none text-white shadow-[0_8px_20px_rgba(255,190,23,0.24)]">
+          !
         </div>
-        {!isExpired && (
-          <div className="pb-0.5 text-[11px] font-medium text-white/66">a partir da abertura</div>
-        )}
+        <div>
+          <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/62">
+            Validade da proposta
+          </div>
+          <div className="mt-1 font-display text-[20px] font-extrabold leading-none tracking-[-0.04em] text-white">
+            {isExpired
+              ? "Encerrada"
+              : `${formatted.days}d ${formatted.hours}h ${formatted.minutes}m`}
+          </div>
+        </div>
       </div>
     </div>
   );
