@@ -27,7 +27,7 @@ export default function OverviewGrid({ activeId, onSelect }: OverviewGridProps) 
           </p>
         </div>
 
-        <div className="reveal-stagger mt-10 grid gap-4 md:mt-14 md:gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="reveal mt-10 grid gap-4 md:mt-14 md:gap-6 md:grid-cols-2 xl:grid-cols-4">
           {proposalGroups.map((g) => {
             const isActive = activeId === g.id;
 
@@ -36,7 +36,7 @@ export default function OverviewGrid({ activeId, onSelect }: OverviewGridProps) 
                 key={g.num}
                 type="button"
                 onClick={() => onSelect(g.id)}
-                className={`reveal group flex h-full flex-col overflow-hidden rounded-[26px] text-left transition-all duration-300 hover:-translate-y-1 md:rounded-[32px] ${
+                className={`group flex h-full flex-col overflow-hidden rounded-[26px] text-left transition-all duration-300 hover:-translate-y-1 md:rounded-[32px] ${
                   g.suggested
                     ? "border border-[#f6c624] bg-[linear-gradient(180deg,#fff8e6_0%,#ffedb9_100%)] shadow-[0_24px_60px_rgba(232,182,5,0.14)]"
                     : "gamefic-surface border border-white/80"
