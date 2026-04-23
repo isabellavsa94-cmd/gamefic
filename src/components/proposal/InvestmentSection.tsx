@@ -96,14 +96,10 @@ export default function InvestmentSection() {
                   />
                   <div className="flex items-baseline gap-2 whitespace-nowrap">
                     <div className="font-display font-extrabold leading-none tracking-[-0.05em] text-accent">
-                      {isSiteModule ? (
-                        <span className="inline-flex items-baseline gap-1.5">
-                          <span className="text-[22px] md:text-[24px]">{currency}</span>
-                          <span className="text-[30px] md:text-[clamp(28px,4.2vw,42px)]">{amount}</span>
-                        </span>
-                      ) : (
-                        module.value
-                      )}
+                      <span className="inline-flex items-baseline gap-1.5">
+                        <span className="text-[22px] md:text-[24px]">{currency}</span>
+                        <span className="text-[30px] md:text-[clamp(28px,4.2vw,42px)]">{amount}</span>
+                      </span>
                     </div>
                     <div
                       className={`whitespace-nowrap text-[13px] font-medium tracking-[0.04em] text-white/76 md:text-[14px] ${
