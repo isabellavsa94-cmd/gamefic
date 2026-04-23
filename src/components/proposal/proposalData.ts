@@ -136,6 +136,7 @@ export const proposalGroups: ProposalGroupData[] = [
           "Estruturação das campanhas nas plataformas Google Ads e Meta Ads",
           "Definição de públicos, segmentações, objetivos e jornadas",
           "Criação da arquitetura de campanhas, conjuntos e anúncios",
+          "Criação de até 10 criativos por mês para suporte às campanhas",
           "Acompanhamento e otimização contínua das campanhas",
           "Ajustes de orçamento entre campanhas conforme performance",
           "Monitoramento de leads, CPL, CTR, conversão e volume",
@@ -143,7 +144,7 @@ export const proposalGroups: ProposalGroupData[] = [
           "Recomendações para melhoria de performance",
         ],
         highlight:
-          "<strong>Não inclui:</strong> verba de mídia, grande volume de criativos avulsos fora da rotina acordada e produção externa não prevista.",
+          "<strong>Investimento em mídia:</strong> até R$ 10.000/mês, pago à parte diretamente às plataformas.",
       },
       {
         id: "trafego-2",
