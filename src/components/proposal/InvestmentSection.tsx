@@ -85,8 +85,6 @@ export default function InvestmentSection() {
                 </div>
               </div>
 
-              <ProposalValidityBadge />
-
               <p className="mt-4 max-w-[54ch] text-[15px] leading-[1.62] text-white/80">
                 {module.note}
               </p>
@@ -107,6 +105,10 @@ export default function InvestmentSection() {
               )}
             </article>
           ))}
+        </div>
+
+        <div className="reveal">
+          <ProposalValidityBadge />
         </div>
 
       </div>
