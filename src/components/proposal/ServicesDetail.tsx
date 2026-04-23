@@ -1,4 +1,3 @@
-import { useReveal } from "@/hooks/useReveal";
 import { proposalGroups } from "@/components/proposal/proposalData";
 
 interface ServicesDetailProps {
@@ -6,7 +5,6 @@ interface ServicesDetailProps {
 }
 
 export default function ServicesDetail({ activeId }: ServicesDetailProps) {
-  const ref = useReveal();
   const activeGroup = proposalGroups.find((group) => group.id === activeId);
 
   if (!activeGroup) {
@@ -14,7 +12,7 @@ export default function ServicesDetail({ activeId }: ServicesDetailProps) {
   }
 
   return (
-    <div id="services-detail" ref={ref} className="reveal mt-8 md:mt-10">
+    <div id="services-detail" className="mt-8 md:mt-10">
       <div className="mb-5 rounded-[26px] bg-[linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)] px-5 py-5 text-white shadow-[0_24px_60px_rgba(25,48,130,0.16)] md:mb-6 md:rounded-[32px] md:px-8 md:py-8">
         <div className="flex flex-col items-start gap-3 md:flex-row md:items-center md:gap-5">
           <span className="font-numbers text-[34px] font-extrabold leading-none text-accent md:text-[clamp(36px,4vw,48px)]">
