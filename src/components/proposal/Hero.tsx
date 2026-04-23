@@ -52,9 +52,17 @@ export default function Hero() {
               <button
                 type="button"
                 onClick={() => scrollTo("#investimento")}
-                className="w-full rounded-full border border-white/24 bg-white/10 px-6 py-3 font-display text-[16px] font-extrabold text-white transition-colors hover:bg-white/16 sm:w-auto"
+                className="hero-slide-button w-full sm:w-auto"
               >
-                Analisar investimento
+                <span className="hero-slide-button__track" />
+                <span className="hero-slide-button__label-wrap">
+                  <span className="hero-slide-button__label hero-slide-button__label--base">
+                    Analisar investimento
+                  </span>
+                  <span className="hero-slide-button__label hero-slide-button__label--hover">
+                    Analisar investimento
+                  </span>
+                </span>
               </button>
             </div>
           </div>

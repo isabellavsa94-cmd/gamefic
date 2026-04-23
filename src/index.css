@@ -230,12 +230,107 @@
     0 1px 0 rgba(0, 84, 48, 0.45);
 }
 
+.hero-slide-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  backdrop-filter: blur(8px);
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.hero-slide-button__track {
+  position: absolute;
+  inset: 0;
+  transform: translateX(-102%);
+  background: linear-gradient(90deg, #22ff9d 0%, #76ffbe 100%);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-slide-button__label-wrap {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  min-width: clamp(220px, 26vw, 280px);
+  padding: 0 28px;
+}
+
+.hero-slide-button__label {
+  grid-area: 1 / 1;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.35s ease;
+}
+
+.hero-slide-button__label--base {
+  color: #fff;
+}
+
+.hero-slide-button__label--hover {
+  color: #1437d6;
+  opacity: 0;
+  transform: translateY(125%);
+}
+
+.hero-slide-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.44);
+  box-shadow: 0 14px 28px rgba(22, 22, 80, 0.22);
+}
+
+.hero-slide-button:hover .hero-slide-button__track {
+  transform: translateX(0);
+}
+
+.hero-slide-button:hover .hero-slide-button__label--base {
+  opacity: 0;
+  transform: translateY(-125%);
+}
+
+.hero-slide-button:hover .hero-slide-button__label--hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-slide-button:active {
+  transform: translateY(0);
+}
+
 @media (max-width: 640px) {
   .login-3d-button__top {
     min-height: 54px;
   }
 
   .login-3d-button__label {
+    font-size: 15px;
+  }
+
+  .hero-slide-button {
+    min-height: 52px;
+  }
+
+  .hero-slide-button__label-wrap {
+    min-width: 100%;
+    padding: 0 24px;
+  }
+
+  .hero-slide-button__label {
     font-size: 15px;
   }
 }
