@@ -71,7 +71,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="reveal relative z-0 flex min-h-[220px] items-start justify-center overflow-visible sm:min-h-[320px] lg:min-h-[620px] lg:justify-end lg:self-start lg:pt-0">
+          <div className="reveal relative z-0 flex min-h-[180px] items-start justify-center overflow-visible sm:min-h-[260px] lg:min-h-[500px] lg:justify-end lg:self-start lg:pt-0">
             <HeroMascot />
           </div>
         </div>
