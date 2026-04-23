@@ -31,12 +31,12 @@ const groups = [
   {
     num: "04",
     title: "Criação de Site",
-    subtitle: "Landing page e tracking para converter melhor e mensurar com mais precisão.",
+    subtitle: "Site completo com blog para SEO, GEO, AEO e LLMO, estruturado para autoridade e crescimento orgânico.",
     href: "#g4",
     suggested: true,
     disclaimer: "Sugestão da especialista",
     image: `${import.meta.env.BASE_URL}site-card-photo.jpg`,
-    items: ["Landing page", "Conversão", "Tracking"],
+    items: ["Site completo", "Blog SEO", "GEO / AEO / LLMO"],
   },
 ];
 

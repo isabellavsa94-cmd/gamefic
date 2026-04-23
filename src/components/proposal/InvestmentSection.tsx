@@ -19,8 +19,8 @@ const modules = [
     title: "Performance e automação comercial",
     value: "R$ 5.900",
     cadence: "/mês",
-    note: "Inclui tráfego pago, e-mail marketing, landing page, tracking avançado server side e integração com RD Station.",
-    highlights: ["Google + Meta Ads", "Landing page", "RD Station + tracking"],
+    note: "Inclui tráfego pago, e-mail marketing e integração com RD Station para apoiar geração e aproveitamento comercial dos leads.",
+    highlights: ["Google + Meta Ads", "E-mail marketing", "RD Station"],
     breakdown: [
       { label: "Tráfego pago", value: "R$ 2.500" },
       { label: "E-mail marketing", value: "R$ 1.800" },
@@ -31,11 +31,11 @@ const modules = [
   {
     eyebrow: "Pacote 3",
     title: "Criação de Site",
-    titleNote: "Landing page principal",
+    titleNote: "Site completo com blog",
     value: "Sob consulta",
     cadence: "pontual",
-    note: "Projeto pontual para estruturar uma landing page de conversão com copy, captação e publicação inicial.",
-    highlights: ["1 landing page", "Entrega pontual", "Escopo sob medida"],
+    note: "Projeto para estruturar um site completo com blog, base de SEO, GEO, AEO e LLMO. Prazo ainda indefinido, a depender da profundidade final do escopo.",
+    highlights: ["Site completo + blog", "SEO / GEO / AEO / LLMO", "Prazo ainda indefinido"],
   },
 ];
 
@@ -57,7 +57,7 @@ export default function InvestmentSection() {
             Investimento para colocar a operação em movimento.
           </h2>
           <p className="mt-3 max-w-[700px] text-[15px] leading-[1.56] text-white/80 md:text-[16px] md:leading-[1.64]">
-            A proposta foi organizada em dois blocos comerciais que podem ser contratados de forma
+            A proposta foi organizada em três blocos comerciais que podem ser contratados de forma
             independente ou combinada, conforme a prioridade da Gamefic.
           </p>
         </div>
