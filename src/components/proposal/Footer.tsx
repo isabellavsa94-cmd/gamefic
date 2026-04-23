@@ -25,8 +25,8 @@ export default function Footer() {
   return (
     <footer className="border-t border-border bg-white py-16">
       <div className="container">
-        <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-[440px]">
+        <div className="flex flex-col gap-10">
+          <div className="max-w-[540px]">
             <div className="flex items-center">
               <BrandLogo className="h-10 w-auto md:h-11" />
             </div>
@@ -39,13 +39,13 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="grid gap-4 text-[14px] text-slate-600 lg:grid-cols-3">
+          <div className="grid gap-4 text-[14px] text-slate-600 md:grid-cols-2 xl:grid-cols-3">
             {contactItems.map((item) => (
               <div
                 key={item.label}
-                className="gamefic-surface flex min-h-[168px] flex-col justify-between rounded-[28px] p-6"
+                className="gamefic-surface flex min-h-[156px] flex-col justify-between rounded-[28px] p-6 md:min-h-[172px]"
               >
-                <div className="max-w-[16ch] text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+                <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
                   {item.label}
                 </div>
                 {item.href ? (
@@ -55,16 +55,16 @@ export default function Footer() {
                     rel={item.href.startsWith("http") ? "noreferrer" : undefined}
                     className={`mt-5 block text-primary transition-colors hover:text-purple ${
                       item.kind === "email"
-                        ? "font-body break-all text-[clamp(17px,1.55vw,21px)] font-semibold leading-[1.28]"
+                        ? "font-body whitespace-nowrap text-[17px] font-semibold leading-[1.2] md:text-[18px]"
                         : item.kind === "phone"
-                          ? "font-display text-[clamp(22px,2vw,28px)] font-extrabold leading-[1.06] tracking-[-0.04em]"
-                          : "font-display text-[clamp(24px,2.2vw,31px)] font-extrabold leading-[1.04] tracking-[-0.04em]"
+                          ? "font-display whitespace-nowrap text-[clamp(24px,2vw,30px)] font-extrabold leading-[1.04] tracking-[-0.04em]"
+                          : "font-display whitespace-nowrap text-[clamp(24px,2.2vw,31px)] font-extrabold leading-[1.04] tracking-[-0.04em]"
                     }`}
                   >
                     {item.value}
                   </a>
                 ) : (
-                  <div className="mt-5 font-display text-[clamp(24px,2.2vw,31px)] font-extrabold leading-[1.04] tracking-[-0.04em] text-primary">
+                  <div className="mt-5 font-display whitespace-nowrap text-[clamp(24px,2.2vw,31px)] font-extrabold leading-[1.04] tracking-[-0.04em] text-primary">
                     {item.value}
                   </div>
                 )}
