@@ -98,7 +98,7 @@ export default function OverviewGrid({ activeId, onSelect }: OverviewGridProps) 
                           : "bg-primary text-white"
                     }`}
                   >
-                    {isActive ? "Recolher frente" : "Explorar frente"}
+                    {isActive ? "Recolher escopo" : "Abrir escopo"}
                     <span>{isActive ? "−" : ">"}</span>
                   </div>
                 </div>
