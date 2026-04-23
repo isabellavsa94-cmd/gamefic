@@ -16,7 +16,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={ref}
-      className="relative overflow-hidden bg-[linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)] pt-20 text-white md:pt-24"
+      className="relative overflow-hidden bg-[linear-gradient(135deg,#2447ff_8%,#2f35f5_38%,#8800e3_100%)] pt-20 text-white md:pt-24 lg:h-[900px]"
     >
       <div className="absolute inset-0 opacity-20 gamefic-pattern" />
       <div className="absolute left-[-10%] top-[10%] h-[360px] w-[360px] rounded-full bg-[radial-gradient(circle,rgba(0,255,141,0.22)_0%,transparent_72%)]" />
